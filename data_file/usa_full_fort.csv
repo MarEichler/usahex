@@ -1,0 +1,393 @@
+long,lat,order,hole,piece,group,id,abb_gpo,name,type
+278.012702,-180,1,FALSE,1,AL.1,AL,Ala.,Alabama,state
+295.33321,-190,2,FALSE,1,AL.1,AL,Ala.,Alabama,state
+295.33321,-210,3,FALSE,1,AL.1,AL,Ala.,Alabama,state
+278.012702,-220,4,FALSE,1,AL.1,AL,Ala.,Alabama,state
+260.692194,-210,5,FALSE,1,AL.1,AL,Ala.,Alabama,state
+260.692194,-190,6,FALSE,1,AL.1,AL,Ala.,Alabama,state
+278.012702,-180,7,FALSE,1,AL.1,AL,Ala.,Alabama,state
+35.5255888,0,1,FALSE,1,AK.1,AK,Alaska,Alaska,state
+52.8460969,-10,2,FALSE,1,AK.1,AK,Alaska,Alaska,state
+52.8460969,-30,3,FALSE,1,AK.1,AK,Alaska,Alaska,state
+35.5255888,-40,4,FALSE,1,AK.1,AK,Alaska,Alaska,state
+18.2050808,-30,5,FALSE,1,AK.1,AK,Alaska,Alaska,state
+18.2050808,-10,6,FALSE,1,AK.1,AK,Alaska,Alaska,state
+35.5255888,0,7,FALSE,1,AK.1,AK,Alaska,Alaska,state
+52.845997,-270,1,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+70.1665051,-280,2,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+70.1665051,-300,3,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+52.845997,-310,4,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+35.5254889,-300,5,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+35.5254889,-280,6,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+52.845997,-270,7,FALSE,1,AS.1,AS,A.S.,American Samoa,territory
+139.448637,-180,1,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+156.769145,-190,2,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+156.769145,-210,3,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+139.448637,-220,4,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+122.128129,-210,5,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+122.128129,-190,6,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+139.448637,-180,7,FALSE,1,AZ.1,AZ,Ariz.,Arizona,state
+226.051178,-150,1,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+243.371686,-160,2,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+243.371686,-180,3,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+226.051178,-190,4,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+208.73067,-180,5,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+208.73067,-160,6,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+226.051178,-150,7,FALSE,1,AR.1,AR,Ark.,Arkansas,state
+87.4871131,-150,1,FALSE,1,CA.1,CA,Calif.,California,state
+104.807621,-160,2,FALSE,1,CA.1,CA,Calif.,California,state
+104.807621,-180,3,FALSE,1,CA.1,CA,Calif.,California,state
+87.4871131,-190,4,FALSE,1,CA.1,CA,Calif.,California,state
+70.166605,-180,5,FALSE,1,CA.1,CA,Calif.,California,state
+70.166605,-160,6,FALSE,1,CA.1,CA,Calif.,California,state
+87.4871131,-150,7,FALSE,1,CA.1,CA,Calif.,California,state
+139.448637,-120,1,FALSE,1,CO.1,CO,Colo.,Colorado,state
+156.769145,-130,2,FALSE,1,CO.1,CO,Colo.,Colorado,state
+156.769145,-150,3,FALSE,1,CO.1,CO,Colo.,Colorado,state
+139.448637,-160,4,FALSE,1,CO.1,CO,Colo.,Colorado,state
+122.128129,-150,5,FALSE,1,CO.1,CO,Colo.,Colorado,state
+122.128129,-130,6,FALSE,1,CO.1,CO,Colo.,Colorado,state
+139.448637,-120,7,FALSE,1,CO.1,CO,Colo.,Colorado,state
+399.256258,-90,1,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+416.576766,-100,2,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+416.576766,-120,3,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+399.256258,-130,4,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+381.93575,-120,5,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+381.93575,-100,6,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+399.256258,-90,7,FALSE,1,CT.1,CT,Conn.,Connecticut,state
+381.93575,-120,1,FALSE,1,DE.1,DE,Del.,Delaware,state
+399.256258,-130,2,FALSE,1,DE.1,DE,Del.,Delaware,state
+399.256258,-150,3,FALSE,1,DE.1,DE,Del.,Delaware,state
+381.93575,-160,4,FALSE,1,DE.1,DE,Del.,Delaware,state
+364.615242,-150,5,FALSE,1,DE.1,DE,Del.,Delaware,state
+364.615242,-130,6,FALSE,1,DE.1,DE,Del.,Delaware,state
+381.93575,-120,7,FALSE,1,DE.1,DE,Del.,Delaware,state
+364.615242,-150,1,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+381.93575,-160,2,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+381.93575,-180,3,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+364.615242,-190,4,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+347.294734,-180,5,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+347.294734,-160,6,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+364.615242,-150,7,FALSE,1,DC.1,DC,D.C.,District of Columbia,federal district
+295.33321,-210,1,FALSE,1,FL.1,FL,Fla.,Florida,state
+312.653718,-220,2,FALSE,1,FL.1,FL,Fla.,Florida,state
+312.653718,-240,3,FALSE,1,FL.1,FL,Fla.,Florida,state
+295.33321,-250,4,FALSE,1,FL.1,FL,Fla.,Florida,state
+278.012702,-240,5,FALSE,1,FL.1,FL,Fla.,Florida,state
+278.012702,-220,6,FALSE,1,FL.1,FL,Fla.,Florida,state
+295.33321,-210,7,FALSE,1,FL.1,FL,Fla.,Florida,state
+312.653718,-180,1,FALSE,1,GA.1,GA,Ga.,Georgia,state
+329.974226,-190,2,FALSE,1,GA.1,GA,Ga.,Georgia,state
+329.974226,-210,3,FALSE,1,GA.1,GA,Ga.,Georgia,state
+312.653718,-220,4,FALSE,1,GA.1,GA,Ga.,Georgia,state
+295.33321,-210,5,FALSE,1,GA.1,GA,Ga.,Georgia,state
+295.33321,-190,6,FALSE,1,GA.1,GA,Ga.,Georgia,state
+312.653718,-180,7,FALSE,1,GA.1,GA,Ga.,Georgia,state
+18.204981,-270,1,FALSE,1,GU.1,GU,Guam,Guam,territory
+35.5254891,-280,2,FALSE,1,GU.1,GU,Guam,Guam,territory
+35.5254891,-300,3,FALSE,1,GU.1,GU,Guam,Guam,territory
+18.204981,-310,4,FALSE,1,GU.1,GU,Guam,Guam,territory
+0.8844729,-300,5,FALSE,1,GU.1,GU,Guam,Guam,territory
+0.8844729,-280,6,FALSE,1,GU.1,GU,Guam,Guam,territory
+18.204981,-270,7,FALSE,1,GU.1,GU,Guam,Guam,territory
+70.166605,-240,1,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+87.4871131,-250,2,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+87.4871131,-270,3,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+70.166605,-280,4,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+52.8460969,-270,5,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+52.8460969,-250,6,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+70.166605,-240,7,FALSE,1,HI.1,HI,Hawaii,Hawaii,state
+87.4871131,-90,1,FALSE,1,ID.1,ID,Idaho,Idaho,state
+104.807621,-100,2,FALSE,1,ID.1,ID,Idaho,Idaho,state
+104.807621,-120,3,FALSE,1,ID.1,ID,Idaho,Idaho,state
+87.4871131,-130,4,FALSE,1,ID.1,ID,Idaho,Idaho,state
+70.166605,-120,5,FALSE,1,ID.1,ID,Idaho,Idaho,state
+70.166605,-100,6,FALSE,1,ID.1,ID,Idaho,Idaho,state
+87.4871131,-90,7,FALSE,1,ID.1,ID,Idaho,Idaho,state
+226.051178,-90,1,FALSE,1,IL.1,IL,Ill.,Illinois,state
+243.371686,-100,2,FALSE,1,IL.1,IL,Ill.,Illinois,state
+243.371686,-120,3,FALSE,1,IL.1,IL,Ill.,Illinois,state
+226.051178,-130,4,FALSE,1,IL.1,IL,Ill.,Illinois,state
+208.73067,-120,5,FALSE,1,IL.1,IL,Ill.,Illinois,state
+208.73067,-100,6,FALSE,1,IL.1,IL,Ill.,Illinois,state
+226.051178,-90,7,FALSE,1,IL.1,IL,Ill.,Illinois,state
+260.692194,-90,1,FALSE,1,IN.1,IN,Ind.,Indiana,state
+278.012702,-100,2,FALSE,1,IN.1,IN,Ind.,Indiana,state
+278.012702,-120,3,FALSE,1,IN.1,IN,Ind.,Indiana,state
+260.692194,-130,4,FALSE,1,IN.1,IN,Ind.,Indiana,state
+243.371686,-120,5,FALSE,1,IN.1,IN,Ind.,Indiana,state
+243.371686,-100,6,FALSE,1,IN.1,IN,Ind.,Indiana,state
+260.692194,-90,7,FALSE,1,IN.1,IN,Ind.,Indiana,state
+191.410162,-90,1,FALSE,1,IA.1,IA,Iowa,Iowa,state
+208.73067,-100,2,FALSE,1,IA.1,IA,Iowa,Iowa,state
+208.73067,-120,3,FALSE,1,IA.1,IA,Iowa,Iowa,state
+191.410162,-130,4,FALSE,1,IA.1,IA,Iowa,Iowa,state
+174.089653,-120,5,FALSE,1,IA.1,IA,Iowa,Iowa,state
+174.089653,-100,6,FALSE,1,IA.1,IA,Iowa,Iowa,state
+191.410162,-90,7,FALSE,1,IA.1,IA,Iowa,Iowa,state
+191.410162,-150,1,FALSE,1,KS.1,KS,Kans.,Kansas,state
+208.73067,-160,2,FALSE,1,KS.1,KS,Kans.,Kansas,state
+208.73067,-180,3,FALSE,1,KS.1,KS,Kans.,Kansas,state
+191.410162,-190,4,FALSE,1,KS.1,KS,Kans.,Kansas,state
+174.089653,-180,5,FALSE,1,KS.1,KS,Kans.,Kansas,state
+174.089653,-160,6,FALSE,1,KS.1,KS,Kans.,Kansas,state
+191.410162,-150,7,FALSE,1,KS.1,KS,Kans.,Kansas,state
+243.371686,-120,1,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+260.692194,-130,2,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+260.692194,-150,3,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+243.371686,-160,4,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+226.051178,-150,5,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+226.051178,-130,6,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+243.371686,-120,7,FALSE,1,KY.1,KY,Ky.,Kentucky,state
+208.73067,-180,1,FALSE,1,LA.1,LA,La.,Louisiana,state
+226.051178,-190,2,FALSE,1,LA.1,LA,La.,Louisiana,state
+226.051178,-210,3,FALSE,1,LA.1,LA,La.,Louisiana,state
+208.73067,-220,4,FALSE,1,LA.1,LA,La.,Louisiana,state
+191.410162,-210,5,FALSE,1,LA.1,LA,La.,Louisiana,state
+191.410162,-190,6,FALSE,1,LA.1,LA,La.,Louisiana,state
+208.73067,-180,7,FALSE,1,LA.1,LA,La.,Louisiana,state
+416.576766,0,1,FALSE,1,ME.1,ME,Maine,Maine,state
+433.897275,-10,2,FALSE,1,ME.1,ME,Maine,Maine,state
+433.897275,-30,3,FALSE,1,ME.1,ME,Maine,Maine,state
+416.576766,-40,4,FALSE,1,ME.1,ME,Maine,Maine,state
+399.256258,-30,5,FALSE,1,ME.1,ME,Maine,Maine,state
+399.256258,-10,6,FALSE,1,ME.1,ME,Maine,Maine,state
+416.576766,0,7,FALSE,1,ME.1,ME,Maine,Maine,state
+347.294734,-120,1,FALSE,1,MD.1,MD,Md.,Maryland,state
+364.615242,-130,2,FALSE,1,MD.1,MD,Md.,Maryland,state
+364.615242,-150,3,FALSE,1,MD.1,MD,Md.,Maryland,state
+347.294734,-160,4,FALSE,1,MD.1,MD,Md.,Maryland,state
+329.974226,-150,5,FALSE,1,MD.1,MD,Md.,Maryland,state
+329.974226,-130,6,FALSE,1,MD.1,MD,Md.,Maryland,state
+347.294734,-120,7,FALSE,1,MD.1,MD,Md.,Maryland,state
+381.93575,-60,1,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+399.256258,-70,2,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+399.256258,-90,3,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+381.93575,-100,4,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+364.615242,-90,5,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+364.615242,-70,6,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+381.93575,-60,7,FALSE,1,MA.1,MA,Mass.,Massachusetts,state
+278.012702,-60,1,FALSE,1,MI.1,MI,Mich.,Michigan,state
+295.33321,-70,2,FALSE,1,MI.1,MI,Mich.,Michigan,state
+295.33321,-90,3,FALSE,1,MI.1,MI,Mich.,Michigan,state
+278.012702,-100,4,FALSE,1,MI.1,MI,Mich.,Michigan,state
+260.692194,-90,5,FALSE,1,MI.1,MI,Mich.,Michigan,state
+260.692194,-70,6,FALSE,1,MI.1,MI,Mich.,Michigan,state
+278.012702,-60,7,FALSE,1,MI.1,MI,Mich.,Michigan,state
+174.089653,-60,1,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+191.410162,-70,2,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+191.410162,-90,3,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+174.089653,-100,4,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+156.769145,-90,5,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+156.769145,-70,6,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+174.089653,-60,7,FALSE,1,MN.1,MN,Minn.,Minnesota,state
+243.371686,-180,1,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+260.692194,-190,2,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+260.692194,-210,3,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+243.371686,-220,4,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+226.051178,-210,5,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+226.051178,-190,6,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+243.371686,-180,7,FALSE,1,MS.1,MS,Miss.,Mississippi,state
+208.73067,-120,1,FALSE,1,MO.1,MO,Mo.,Missouri,state
+226.051178,-130,2,FALSE,1,MO.1,MO,Mo.,Missouri,state
+226.051178,-150,3,FALSE,1,MO.1,MO,Mo.,Missouri,state
+208.73067,-160,4,FALSE,1,MO.1,MO,Mo.,Missouri,state
+191.410162,-150,5,FALSE,1,MO.1,MO,Mo.,Missouri,state
+191.410162,-130,6,FALSE,1,MO.1,MO,Mo.,Missouri,state
+208.73067,-120,7,FALSE,1,MO.1,MO,Mo.,Missouri,state
+104.807621,-60,1,FALSE,1,MT.1,MT,Mont.,Montana,state
+122.128129,-70,2,FALSE,1,MT.1,MT,Mont.,Montana,state
+122.128129,-90,3,FALSE,1,MT.1,MT,Mont.,Montana,state
+104.807621,-100,4,FALSE,1,MT.1,MT,Mont.,Montana,state
+87.4871131,-90,5,FALSE,1,MT.1,MT,Mont.,Montana,state
+87.4871131,-70,6,FALSE,1,MT.1,MT,Mont.,Montana,state
+104.807621,-60,7,FALSE,1,MT.1,MT,Mont.,Montana,state
+174.089653,-120,1,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+191.410162,-130,2,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+191.410162,-150,3,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+174.089653,-160,4,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+156.769145,-150,5,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+156.769145,-130,6,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+174.089653,-120,7,FALSE,1,NE.1,NE,Nebr.,Nebraska,state
+104.807621,-120,1,FALSE,1,NV.1,NV,Nev.,Nevada,state
+122.128129,-130,2,FALSE,1,NV.1,NV,Nev.,Nevada,state
+122.128129,-150,3,FALSE,1,NV.1,NV,Nev.,Nevada,state
+104.807621,-160,4,FALSE,1,NV.1,NV,Nev.,Nevada,state
+87.4871131,-150,5,FALSE,1,NV.1,NV,Nev.,Nevada,state
+87.4871131,-130,6,FALSE,1,NV.1,NV,Nev.,Nevada,state
+104.807621,-120,7,FALSE,1,NV.1,NV,Nev.,Nevada,state
+399.256258,-30,1,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+416.576766,-40,2,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+416.576766,-60,3,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+399.256258,-70,4,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+381.93575,-60,5,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+381.93575,-40,6,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+399.256258,-30,7,FALSE,1,NH.1,NH,N.H.,New Hampshire,state
+364.615242,-90,1,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+381.93575,-100,2,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+381.93575,-120,3,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+364.615242,-130,4,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+347.294734,-120,5,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+347.294734,-100,6,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+364.615242,-90,7,FALSE,1,NJ.1,NJ,N.J.,New Jersey,state
+156.769145,-150,1,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+174.089653,-160,2,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+174.089653,-180,3,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+156.769145,-190,4,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+139.448637,-180,5,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+139.448637,-160,6,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+156.769145,-150,7,FALSE,1,NM.1,NM,N. Mex.,New Mexico,state
+347.294734,-60,1,FALSE,1,NY.1,NY,N.Y.,New York,state
+364.615242,-70,2,FALSE,1,NY.1,NY,N.Y.,New York,state
+364.615242,-90,3,FALSE,1,NY.1,NY,N.Y.,New York,state
+347.294734,-100,4,FALSE,1,NY.1,NY,N.Y.,New York,state
+329.974226,-90,5,FALSE,1,NY.1,NY,N.Y.,New York,state
+329.974226,-70,6,FALSE,1,NY.1,NY,N.Y.,New York,state
+347.294734,-60,7,FALSE,1,NY.1,NY,N.Y.,New York,state
+295.33321,-150,1,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+312.653718,-160,2,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+312.653718,-180,3,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+295.33321,-190,4,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+278.012702,-180,5,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+278.012702,-160,6,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+295.33321,-150,7,FALSE,1,NC.1,NC,N.C.,North Carolina,state
+139.448637,-60,1,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+156.769145,-70,2,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+156.769145,-90,3,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+139.448637,-100,4,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+122.128129,-90,5,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+122.128129,-70,6,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+139.448637,-60,7,FALSE,1,ND.1,ND,N. Dak.,North Dakota,state
+35.5255888,-240,1,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+52.8460969,-250,2,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+52.8460969,-270,3,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+35.5255888,-280,4,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+18.2050808,-270,5,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+18.2050808,-250,6,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+35.5255888,-240,7,FALSE,1,MP.1,MP,M.P.,Northern Mariana Islands,territory
+295.33321,-90,1,FALSE,1,OH.1,OH,Ohio,Ohio,state
+312.653718,-100,2,FALSE,1,OH.1,OH,Ohio,Ohio,state
+312.653718,-120,3,FALSE,1,OH.1,OH,Ohio,Ohio,state
+295.33321,-130,4,FALSE,1,OH.1,OH,Ohio,Ohio,state
+278.012702,-120,5,FALSE,1,OH.1,OH,Ohio,Ohio,state
+278.012702,-100,6,FALSE,1,OH.1,OH,Ohio,Ohio,state
+295.33321,-90,7,FALSE,1,OH.1,OH,Ohio,Ohio,state
+174.089653,-180,1,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+191.410162,-190,2,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+191.410162,-210,3,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+174.089653,-220,4,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+156.769145,-210,5,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+156.769145,-190,6,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+174.089653,-180,7,FALSE,1,OK.1,OK,Okla.,Oklahoma,state
+70.166605,-120,1,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+87.4871131,-130,2,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+87.4871131,-150,3,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+70.166605,-160,4,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+52.8460969,-150,5,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+52.8460969,-130,6,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+70.166605,-120,7,FALSE,1,OR.1,OR,Oreg.,Oregon,state
+329.974226,-90,1,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+347.294734,-100,2,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+347.294734,-120,3,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+329.974226,-130,4,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+312.653718,-120,5,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+312.653718,-100,6,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+329.974226,-90,7,FALSE,1,PA.1,PA,Pa.,Pennsylvania,state
+381.93575,-240,1,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+399.256258,-250,2,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+399.256258,-270,3,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+381.93575,-280,4,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+364.615242,-270,5,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+364.615242,-250,6,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+381.93575,-240,7,FALSE,1,PR.1,PR,P.R.,Puerto Rico,territory
+416.576766,-60,1,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+433.897275,-70,2,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+433.897275,-90,3,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+416.576766,-100,4,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+399.256258,-90,5,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+399.256258,-70,6,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+416.576766,-60,7,FALSE,1,RI.1,RI,R.I.,Rhode Island,state
+329.974226,-150,1,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+347.294734,-160,2,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+347.294734,-180,3,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+329.974226,-190,4,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+312.653718,-180,5,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+312.653718,-160,6,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+329.974226,-150,7,FALSE,1,SC.1,SC,S.C.,South Carolina,state
+156.769145,-90,1,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+174.089653,-100,2,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+174.089653,-120,3,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+156.769145,-130,4,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+139.448637,-120,5,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+139.448637,-100,6,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+156.769145,-90,7,FALSE,1,SD.1,SD,S. Dak.,South Dakota,state
+260.692194,-150,1,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+278.012702,-160,2,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+278.012702,-180,3,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+260.692194,-190,4,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+243.371686,-180,5,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+243.371686,-160,6,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+260.692194,-150,7,FALSE,1,TN.1,TN,Tenn.,Tennessee,state
+191.410162,-210,1,FALSE,1,TX.1,TX,Tex.,Texas,state
+208.73067,-220,2,FALSE,1,TX.1,TX,Tex.,Texas,state
+208.73067,-240,3,FALSE,1,TX.1,TX,Tex.,Texas,state
+191.410162,-250,4,FALSE,1,TX.1,TX,Tex.,Texas,state
+174.089653,-240,5,FALSE,1,TX.1,TX,Tex.,Texas,state
+174.089653,-220,6,FALSE,1,TX.1,TX,Tex.,Texas,state
+191.410162,-210,7,FALSE,1,TX.1,TX,Tex.,Texas,state
+416.576766,-240,1,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+433.897275,-250,2,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+433.897275,-270,3,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+416.576766,-280,4,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+399.256258,-270,5,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+399.256258,-250,6,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+416.576766,-240,7,FALSE,1,VI.1,VI,V.I.,Virgin Islands,territory
+122.128129,-150,1,FALSE,1,UT.1,UT,Utah,Utah,state
+139.448637,-160,2,FALSE,1,UT.1,UT,Utah,Utah,state
+139.448637,-180,3,FALSE,1,UT.1,UT,Utah,Utah,state
+122.128129,-190,4,FALSE,1,UT.1,UT,Utah,Utah,state
+104.807621,-180,5,FALSE,1,UT.1,UT,Utah,Utah,state
+104.807621,-160,6,FALSE,1,UT.1,UT,Utah,Utah,state
+122.128129,-150,7,FALSE,1,UT.1,UT,Utah,Utah,state
+364.615242,-30,1,FALSE,1,VT.1,VT,Vt.,Vermont,state
+381.93575,-40,2,FALSE,1,VT.1,VT,Vt.,Vermont,state
+381.93575,-60,3,FALSE,1,VT.1,VT,Vt.,Vermont,state
+364.615242,-70,4,FALSE,1,VT.1,VT,Vt.,Vermont,state
+347.294734,-60,5,FALSE,1,VT.1,VT,Vt.,Vermont,state
+347.294734,-40,6,FALSE,1,VT.1,VT,Vt.,Vermont,state
+364.615242,-30,7,FALSE,1,VT.1,VT,Vt.,Vermont,state
+312.653718,-120,1,FALSE,1,VA.1,VA,Va.,Virginia,state
+329.974226,-130,2,FALSE,1,VA.1,VA,Va.,Virginia,state
+329.974226,-150,3,FALSE,1,VA.1,VA,Va.,Virginia,state
+312.653718,-160,4,FALSE,1,VA.1,VA,Va.,Virginia,state
+295.33321,-150,5,FALSE,1,VA.1,VA,Va.,Virginia,state
+295.33321,-130,6,FALSE,1,VA.1,VA,Va.,Virginia,state
+312.653718,-120,7,FALSE,1,VA.1,VA,Va.,Virginia,state
+70.166605,-60,1,FALSE,1,WA.1,WA,Wash.,Washington,state
+87.4871131,-70,2,FALSE,1,WA.1,WA,Wash.,Washington,state
+87.4871131,-90,3,FALSE,1,WA.1,WA,Wash.,Washington,state
+70.166605,-100,4,FALSE,1,WA.1,WA,Wash.,Washington,state
+52.8460969,-90,5,FALSE,1,WA.1,WA,Wash.,Washington,state
+52.8460969,-70,6,FALSE,1,WA.1,WA,Wash.,Washington,state
+70.166605,-60,7,FALSE,1,WA.1,WA,Wash.,Washington,state
+278.012702,-120,1,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+295.33321,-130,2,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+295.33321,-150,3,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+278.012702,-160,4,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+260.692194,-150,5,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+260.692194,-130,6,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+278.012702,-120,7,FALSE,1,WV.1,WV,W. Va.,West Virginia,state
+208.73067,-60,1,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+226.051178,-70,2,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+226.051178,-90,3,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+208.73067,-100,4,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+191.410162,-90,5,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+191.410162,-70,6,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+208.73067,-60,7,FALSE,1,WI.1,WI,Wis.,Wisconsin,state
+122.128129,-90,1,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+139.448637,-100,2,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+139.448637,-120,3,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+122.128129,-130,4,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+104.807621,-120,5,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+104.807621,-100,6,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
+122.128129,-90,7,FALSE,1,WY.1,WY,Wyo.,Wyoming,state
