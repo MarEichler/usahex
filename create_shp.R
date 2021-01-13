@@ -170,6 +170,9 @@ shapefile(spdf, "data_file/usa_full.shp", overwrite = TRUE)
 #calculate centers of polygons (for labels) 
 centers <- cbind.data.frame(rgeos::gCentroid(spdf, byid = TRUE), id = spdf@data$id)
 
+#add other data to centers 
+centers <- left_join(centers, data, by = "id")
+
 #export
 write_csv(centers, "data_file/usa_full_centers.csv")
 
