@@ -14,7 +14,7 @@ spdf_fort <- read_csv("state_and_territories/hex_file/usa_st_fort.csv")
 # estimated population change, 2010-2020
 # data taken from Wikipedia on 2021-01-14
 #source: https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population
-extra_data <- read_csv("state_and_territories/examples/population_change.csv") %>%
+extra_data <- read_csv("example_data/population_change.csv") %>%
   #convert character to numeric 
   mutate(
       pop_change = str_replace(pop_change, "%", "")
