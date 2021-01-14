@@ -6,10 +6,9 @@ US Hex Map with just States: [r-graph-gallery.com/hexbin-map](https://www.r-grap
 I've copied the coordinates from the NPR Graphics team: [github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html](https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html)
 
 
-# Examples    
+# State and Territories 
 
-## Base Map  
-![USA Hex Map with States and Territories](img/usa_full_base.png)
+This map is an 'exact' copy of the NPR graphics team's hex map.  (I had to reverse the y values to have the plot not be upside down).  
+![USA Hex Map with States and Territories](state_and_territories/img/usa_st_base.png)
 
-## Color by Population Change  
-![USA Hex Map with States and Territories by Population Change](img/usa_full_color.png)
+

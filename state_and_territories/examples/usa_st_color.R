@@ -1,17 +1,20 @@
+## USA HEX MAP - STATES AND TERRITORIES 
+# COLOR
+
 library(tidyverse)
 library(geojsonio)
 
 ####################
 #import centers/fort from csv
-centers   <- read_csv("data_file/usa_full_centers.csv")
-spdf_fort <- read_csv("data_file/usa_full_fort.csv")
+centers   <- read_csv("state_and_territories/hex_file/usa_st_centers.csv")
+spdf_fort <- read_csv("state_and_territories/hex_file/usa_st_fort.csv")
 
 
 ####################
 # estimated population change, 2010-2020
 # data taken from Wikipedia on 2021-01-14
 #source: https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population
-extra_data <- read_csv("examples/population_change.csv") %>%
+extra_data <- read_csv("state_and_territories/examples/population_change.csv") %>%
   #convert character to numeric 
   mutate(
       pop_change = str_replace(pop_change, "%", "")
@@ -58,4 +61,4 @@ ggplot(combined_spdf_fort) +
     , labels = scales::percent
   )
 
-ggsave("img/usa_full_color.png", width = 8, height = 5.75, units = c("in"))
+ggsave("state_and_territories/img/usa_st_color.png", width = 8, height = 5.75, units = c("in"))
