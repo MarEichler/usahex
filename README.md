@@ -12,3 +12,8 @@ This map is an 'exact' copy of the NPR graphics team's hex map.  (I had to rever
 ![USA Hex Map with States and Territories](state_and_territories/img/usa_st_base.png)
 
 
+# State and Territories Plus
+
+This map adds Palau to the map.  
+
+![USA Hex Map with States and Territories](state_and_territories_plus/img/usa_stp_base.png)
