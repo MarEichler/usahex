@@ -28,7 +28,6 @@ combined_centers   <- left_join(centers,   extra_data, by = c("id" = "code"))
 
 
 
-
 #######################
 #plot using ggplot 
 ggplot(combined_spdf_fort) +
@@ -52,9 +51,9 @@ ggplot(combined_spdf_fort) +
   ) + 
   scale_fill_gradient2(
       name = "Population\nChange"
-    , low = "red"
-    , mid = "white"
-    , high = "green"
+    , low  = RColorBrewer::brewer.pal(3, "PiYG")[1]
+    , mid  = RColorBrewer::brewer.pal(3, "PiYG")[2]
+    , high = RColorBrewer::brewer.pal(3, "PiYG")[3]
     , midpoint = 0
     , labels = scales::percent
     , na.value = "grey70"
