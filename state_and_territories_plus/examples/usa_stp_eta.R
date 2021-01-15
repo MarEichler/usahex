@@ -11,7 +11,8 @@ spdf_fort <- read_csv("state_and_territories_plus/hex_file/usa_stp_fort.csv")
 ####################
 # US Department of Labor (DOL) Employment and Training Administration (ETA Regions)
 #source: https://www.dol.gov/agencies/eta/regions
-extra_data <- read_csv("example_data/eta_regions.csv") 
+extra_data <- read_csv("example_data/eta_regions.csv") %>%
+  mutate(eta_region = factor(eta_region, levels = c(6, 4, 5, 3, 2, 1)))
 
 ####################
 #combine with data sets 
@@ -21,7 +22,7 @@ combined_spdf_fort <- left_join(spdf_fort, extra_data)
 #######################
 #plot using ggplot 
 ggplot(combined_spdf_fort) +
-  geom_polygon(aes( x = long, y = lat, group = group, fill = as.factor(eta_region)), color = "grey50") +
+  geom_polygon(aes( x = long, y = lat, group = group, fill = eta_region), color = "grey50") +
   geom_text(
     data=centers
     , aes(x=x, y=y, label=id)
