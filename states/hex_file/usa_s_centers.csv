@@ -1,0 +1,52 @@
+x,y,id,abb_gpo,name,type
+278.012702,-200,AL,Ala.,Alabama,state
+35.52558884,-20,AK,Alaska,Alaska,state
+139.448637,-200,AZ,Ariz.,Arizona,state
+226.051178,-170,AR,Ark.,Arkansas,state
+87.48711301,-170,CA,Calif.,California,state
+139.448637,-140,CO,Colo.,Colorado,state
+399.256258,-110,CT,Conn.,Connecticut,state
+381.93575,-140,DE,Del.,Delaware,state
+364.615242,-170,DC,D.C.,District of Columbia,federal district
+295.33321,-230,FL,Fla.,Florida,state
+312.653718,-200,GA,Ga.,Georgia,state
+18.20508075,-230,HI,Hawaii,Hawaii,state
+87.48711301,-110,ID,Idaho,Idaho,state
+226.051178,-110,IL,Ill.,Illinois,state
+260.692194,-110,IN,Ind.,Indiana,state
+191.41016156,-110,IA,Iowa,Iowa,state
+191.41016156,-170,KS,Kans.,Kansas,state
+243.371686,-140,KY,Ky.,Kentucky,state
+208.73067,-200,LA,La.,Louisiana,state
+416.57676644,-20,ME,Maine,Maine,state
+347.294734,-140,MD,Md.,Maryland,state
+381.93575,-80,MA,Mass.,Massachusetts,state
+278.012702,-80,MI,Mich.,Michigan,state
+174.08965344,-80,MN,Minn.,Minnesota,state
+243.371686,-200,MS,Miss.,Mississippi,state
+208.73067,-140,MO,Mo.,Missouri,state
+104.80762104,-80,MT,Mont.,Montana,state
+174.08965344,-140,NE,Nebr.,Nebraska,state
+104.80762104,-140,NV,Nev.,Nevada,state
+399.256258,-50,NH,N.H.,New Hampshire,state
+364.615242,-110,NJ,N.J.,New Jersey,state
+156.769145,-170,NM,N. Mex.,New Mexico,state
+347.294734,-80,NY,N.Y.,New York,state
+295.33321,-170,NC,N.C.,North Carolina,state
+139.448637,-80,ND,N. Dak.,North Dakota,state
+295.33321,-110,OH,Ohio,Ohio,state
+174.08965344,-200,OK,Okla.,Oklahoma,state
+70.166605,-140,OR,Oreg.,Oregon,state
+329.974226,-110,PA,Pa.,Pennsylvania,state
+416.57676644,-80,RI,R.I.,Rhode Island,state
+329.974226,-170,SC,S.C.,South Carolina,state
+156.769145,-110,SD,S. Dak.,South Dakota,state
+260.692194,-170,TN,Tenn.,Tennessee,state
+191.41016156,-230,TX,Tex.,Texas,state
+122.128129,-170,UT,Utah,Utah,state
+364.615242,-50,VT,Vt.,Vermont,state
+312.653718,-140,VA,Va.,Virginia,state
+70.166605,-80,WA,Wash.,Washington,state
+278.012702,-140,WV,W. Va.,West Virginia,state
+208.73067,-80,WI,Wis.,Wisconsin,state
+122.128129,-110,WY,Wyo.,Wyoming,state
