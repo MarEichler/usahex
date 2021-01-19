@@ -168,7 +168,7 @@ spdf <- SpatialPolygonsDataFrame(spdf, data = data, match.ID = TRUE)
 
 ######################
 #write shapefile
-shapefile(spdf, "state_and_territories_plus/hex_file/usa_stp.shp", overwrite = TRUE)
+shapefile(spdf, "states_and_territories_plus/hex_file/usa_stp.shp", overwrite = TRUE)
 
 
 ######################
@@ -179,7 +179,7 @@ centers <- cbind.data.frame(rgeos::gCentroid(spdf, byid = TRUE), id = spdf@data$
 centers <- left_join(centers, data, by = "id")
 
 #export
-write_csv(centers, "state_and_territories_plus/hex_file/usa_stp_centers.csv")
+write_csv(centers, "states_and_territories_plus/hex_file/usa_stp_centers.csv")
 
 #########################
 #fortify spdf data (make it a 'dataframe' rather than a 'sp' list)
@@ -187,5 +187,5 @@ write_csv(centers, "state_and_territories_plus/hex_file/usa_stp_centers.csv")
 spdf_fort <- left_join(tidy(spdf), data.frame(spdf@data), by = "id")
 
 #export
-write_csv(spdf_fort, "state_and_territories_plus/hex_file/usa_stp_fort.csv")
+write_csv(spdf_fort, "states_and_territories_plus/hex_file/usa_stp_fort.csv")
 

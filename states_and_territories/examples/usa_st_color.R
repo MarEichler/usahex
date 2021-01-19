@@ -2,12 +2,11 @@
 # COLOR
 
 library(tidyverse)
-library(geojsonio)
 
 ####################
 #import centers/fort from csv
-centers   <- read_csv("state_and_territories/hex_file/usa_st_centers.csv")
-spdf_fort <- read_csv("state_and_territories/hex_file/usa_st_fort.csv")
+centers   <- read_csv("states_and_territories/hex_file/usa_st_centers.csv")
+spdf_fort <- read_csv("states_and_territories/hex_file/usa_st_fort.csv")
 
 
 ####################
@@ -61,4 +60,4 @@ ggplot(combined_spdf_fort) +
     , labels = scales::percent
   )
 
-ggsave("state_and_territories/img/usa_st_color.png", width = 8, height = 5.75, units = c("in"))
+ggsave("states_and_territories/img/usa_st_color.png", width = 8, height = 5.75, units = c("in"))

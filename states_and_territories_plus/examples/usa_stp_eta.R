@@ -4,8 +4,8 @@ library(tidyverse)
 
 ####################
 #import centers/fort from csv
-centers   <- read_csv("state_and_territories_plus/hex_file/usa_stp_centers.csv")
-spdf_fort <- read_csv("state_and_territories_plus/hex_file/usa_stp_fort.csv")
+centers   <- read_csv("states_and_territories_plus/hex_file/usa_stp_centers.csv")
+spdf_fort <- read_csv("states_and_territories_plus/hex_file/usa_stp_fort.csv")
 
 
 ####################
@@ -37,4 +37,4 @@ ggplot(combined_spdf_fort) +
   ) +
   scale_fill_discrete(name = "ETA\nRegion")
 
-ggsave("state_and_territories_plus/img/usa_stp_eta.png", width = 8, height = 5.75, units = c("in"))
+ggsave("states_and_territories_plus/img/usa_stp_eta.png", width = 8, height = 5.75, units = c("in"))

@@ -2,12 +2,11 @@
 # BASE
 
 library(tidyverse)
-library(geojsonio)
 
 ####################
 #import centers/fort from csv
-centers   <- read_csv("state_and_territories_plus/hex_file/usa_stp_centers.csv")
-spdf_fort <- read_csv("state_and_territories_plus/hex_file/usa_stp_fort.csv")
+centers   <- read_csv("states_and_territories/hex_file/usa_st_centers.csv")
+spdf_fort <- read_csv("states_and_territories/hex_file/usa_st_fort.csv")
 
 
 #######################
@@ -18,4 +17,4 @@ ggplot(spdf_fort) +
   coord_fixed() + #keeps all items square (do not use coord_map(); causes issues)
   theme_void()
 
-ggsave("state_and_territories_plus/img/usa_stp_base.png", width = 8, height = 5.75, units = c("in"))
+ggsave("states_and_territories/img/usa_st_base.png", width = 8, height = 5.75, units = c("in"))
