@@ -35,10 +35,10 @@ ggplot(combined_spdf_fort, aes(fill = eta_region)) +
     , caption = "Source: https://www.dol.gov/agencies/eta/regions as of January 14, 2021"
   ) +
   theme(
-      strip.text.x = element_text(size = 12)
-    , strip.background.x = element_rect(fill = "grey80")
+      strip.text.x = element_text(size = 10, margin = margin(2, 0, 2, 0, unit = "pt"))
+    , strip.background.x = element_rect(fill = "grey80", color = NA)
     , plot.title = element_text(margin = margin(0, 0, 7, 0, unit = "pt"),hjust = 0.5)
-    , aspect.ratio = 370 
+    , aspect.ratio = 350
   )
   
 
