@@ -12,4 +12,6 @@
 # ETA Regions  
 ![USA ETA Regions](img/usa_stp_eta.png)  
 
-![USA ETa Regions Facet](img/usa_stp_eta_facet.png)
+![USA ETA Regions Facet](img/usa_stp_eta_facet.png)
+
+![USA ETA Regions with Borders](img/usa_stp_eta_border.png)
