@@ -57,6 +57,40 @@ ggplot(combined_spdf_fort) +
     , midpoint = 0
     , labels = scales::percent
     , na.value = "grey70"
-  )
+  ) 
+
+
+ggplot(combined_spdf_fort) +
+  geom_polygon(aes( x = long, y = lat, group = group, fill = pop_change, color = "")) +
+  geom_polygon(aes( x = long, y = lat, group = group),fill = NA,  color = "grey50") +
+  geom_text(
+    data=combined_centers
+    , aes(x=x, y=y+5, label=id)
+    , fontface = "bold"
+    , size = 4
+  ) +
+  geom_text(
+    data=combined_centers
+    , aes(x=x, y=y-5, label=scales::percent(pop_change, accuracy = 0.1))
+    , size = 3
+  ) +
+  coord_fixed() + #keeps all items square (do not use coord_map(); causes issues)
+  theme_void() +
+  labs(
+    title = "Population Change, 2010 - 2020"
+    , caption = "Source: https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population as of January 14, 2021"
+  ) + 
+  scale_fill_gradient2(
+      name = "Population\nChange"
+    , low  = RColorBrewer::brewer.pal(3, "PiYG")[1]
+    , mid  = RColorBrewer::brewer.pal(3, "PiYG")[2]
+    , high = RColorBrewer::brewer.pal(3, "PiYG")[3]
+    , midpoint = 0
+    , labels = scales::percent
+    , na.value = "grey70"
+  ) +
+  scale_colour_manual(values=NA) +              
+  guides(colour=guide_legend("No data", override.aes=list(fill = "grey70"))) 
+
 
 ggsave("states_and_territories_plus/img/usa_stp_color.png", width = 8, height = 5.75, units = c("in"))
