@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 *.html
+*eta_regions.csv
+*spdf_data.csv
+*.xlsx
