@@ -1,6 +1,6 @@
 .Rproj.user
 .Rhistory
-*.RData
+.RData
 .Ruserdata
 *.html
 *eta_regions.csv
