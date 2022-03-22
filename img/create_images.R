@@ -103,7 +103,7 @@ ggplot(combined) +
   ) +
   theme_void()
 
-ggsave("img/data-wioa_eta.png", width = 8, height = 5.75, units = c("in"))
+ggsave("img/plot-wioa_eta-otherdata.png", width = 8, height = 5.75, units = c("in"))
 
 
 #######################
@@ -128,3 +128,36 @@ ggplot(wioa_eta) +
   theme_void()
 
 ggsave("img/region-wioa_eta.png", width = 9, height = 5.75, units = c("in"))
+
+
+################
+## plot different types of files 
+
+states        <- readRDS("data/states/1_rds/states.RDS")
+states_labels <- readRDS("data/states/1_rds/states_labels.RDS")
+
+ggplot(states) + 
+  geom_sf(color = "white", fill = "grey35") + 
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") 
+
+ggsave("img/plot-states-rds.png", width = 8, height = 5.75, units = c("in"))
+
+states        <- sf::read_sf("data/states/2_shp/states.shp")
+states_labels <- sf::read_sf("data/states/2_shp/states_labels.shp")
+
+ggplot(states) + 
+  geom_sf(color = "white", fill = "grey35") + 
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") 
+
+ggsave("img/plot-states-shp.png", width = 8, height = 5.75, units = c("in"))
+
+
+states        <- readr::read_csv("data/states/3_csv/states.csv"       , show_col_types = FALSE)
+states_labels <- readr::read_csv("data/states/3_csv/states_labels.csv", show_col_types = FALSE)
+
+ggplot(states, aes(x=X, y=Y, group=id)) + 
+  geom_polygon(color = "white", fill = "grey35") + 
+  geom_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
+  coord_fixed()  #don't use coord_map(), only coord_fixed()
+
+ggsave("img/plot-states-csv.png", width = 8, height = 5.75, units = c("in"))
