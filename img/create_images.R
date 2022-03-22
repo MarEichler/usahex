@@ -12,6 +12,9 @@ states_outlyingareas_labels <- readRDS("data/states_outlyingareas/1_rds/states_o
 wioa_eta        <- readRDS("data/wioa_eta/1_rds/wioa_eta.RDS")
 wioa_eta_labels <- readRDS("data/wioa_eta/1_rds/wioa_eta_labels.RDS")
 
+wioa_regions        <- readRDS("data/wioa_regions/1_rds/wioa_regions.RDS")
+wioa_regions_labels <- readRDS("data/wioa_regions/1_rds/wioa_regions_labels.RDS") 
+
 #########################################
 # PLAIN PLOTS  
 
@@ -31,13 +34,23 @@ ggplot(states_outlyingareas) +
 
 ggsave("img/plain-states_outlyingareas.png", width = 8, height = 5.75, units = c("in"))
 
-# wioa/eta geos  
+# wioa eta   
 ggplot(wioa_eta) + 
   geom_sf(color = "white", fill = "grey35") + 
   geom_sf_text(data=wioa_eta_labels, aes(label=abb_gpo), color = "white") + 
   theme_void()
 
 ggsave("img/plain-wioa_eta.png", width = 8, height = 5.75, units = c("in"))
+
+# wioa regions 
+Pwioaregions <- ggplot(wioa_regions) + 
+  geom_sf(color = "white", fill = "grey35") + 
+  geom_sf_text(data=wioa_regions_labels, aes(label=eta_region_city), color = "white", fontface="bold") +
+  theme_void()
+
+Pwioaregions
+ggsave("img/plain-wioa_regions.png", width = 8, height = 5.75, units = c("in"))
+
 
 
 #######################
@@ -121,13 +134,30 @@ ggsave("img/type-wioa_eta.png", width = 10.25, height = 5.75, units = c("in"))
 #######################
 # region 
 
-ggplot(wioa_eta) + 
+Pregionwioeta <- ggplot(wioa_eta) + 
   geom_sf(color = "white", aes(fill = as.character(eta_region))) + 
   geom_sf_text(data=wioa_eta_labels, aes(label=abb_gpo)) + 
+  geom_sf(data=wioa_regions, fill = NA, color = "grey35", size = 0.75) + 
   scale_fill_discrete(name = "ETA Region") + 
+  guides(fill = guide_legend(override.aes = list(color = "grey35", size = 0.75))) +
   theme_void()
 
+Pregionwioeta
 ggsave("img/region-wioa_eta.png", width = 9, height = 5.75, units = c("in"))
+
+
+##########################
+#combine plain-wioa_regions and region-wioa_eta
+
+cowplot::plot_grid(
+    Pwioaregions 
+  , Pregionwioeta 
+  , align = "hv"
+  , axis = "tblr"
+  )
+ggsave("img/region-2-plots.png", width = 17, height = 5.75, units = c("in"))
+
+
 
 
 ################
