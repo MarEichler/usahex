@@ -7,13 +7,27 @@ I've copied the coordinates from the NPR Graphics team: [github.com/nprapps/dail
 
 # Available Maps
 
-![Geographies availalbe in hex map and their types](img/type-wioa_eta.png)
+## Individual Geographies 
 
 | Name | Geography Types Included | Description | 
 |:----- |:------|:-------------|
 | States | - states<br>- federal district | This is a direct copy of the NPR state map. | 
 | States and Outlying Areas | - states<br>- federal district<br>- outlying areas (territories) | This is a direct copy of the NPR state and outlying areas map. | 
 | WIOA ETA | - states<br>- federal district<br>- outlying areas (territories)<br>- Palau | - WIOA: Workforce Innovation and Opportunity (workforce dev. legislation)<br>- ETA: Department of Labor's Employment and Training Administration<br>- Palau is added to the map as Palau is included in [ETA regions](https://www.dol.gov/agencies/eta/regions)<br>- To add Palau, change the location of Guam and American Samoa  |
+
+![Geographies availalbe in hex map and their types](img/type-wioa_eta.png)
+
+
+## Groups of Greographies  
+
+Likely won't plot *just* the regions, but use it as a border around the geography hexagons.  
+
+| Name | Geography Types Included | Description | 
+|:----- |:------|:-------------|
+| WIOA ETA Regions | - states<br>- federal district<br>- outlying areas (territories)<br>- Palau | - Group [ETA regions](https://www.dol.gov/agencies/eta/regions) together |  
+
+![Wioa Regions Only and WIOA Regions as Borders](img/region-2-plots.png)  
+
 
 # Plotting with Different File Types 
 
@@ -29,8 +43,7 @@ states_labels <- readRDS("data/states/1_rds/states_labels.RDS")
 
 ggplot(states) + 
   geom_sf(color = "white", fill = "grey35") + 
-  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
-  theme_void()
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") 
 ```
 ![USA Hex Map plot with RDS](img/plot-states-rds.png)  
 
@@ -42,8 +55,7 @@ states_labels <- sf::read_sf("../data/states/2_shp/states_labels.shp")
 
 ggplot(states) + 
   geom_sf(color = "white", fill = "grey35") + 
-  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
-  theme_void()
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") 
 ```
 
 ![USA Hex Map plot with SHP](img/plot-states-shp.png)  
@@ -57,8 +69,7 @@ states_labels <- readr::read_csv("../data/states/3_csv/states_labels.csv", show_
 ggplot(states, aes(x=X, y=Y, group=id)) + 
   geom_polygon(color = "white", fill = "grey35") + 
   geom_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
-  coord_fixed() + #don't use coord_map(), only coord_fixed()
-  theme_void()
+  coord_fixed() #don't use coord_map(), only coord_fixed()
 ```
 
 ![USA Hex Map plot with CSV](img/plot-states-csv.png)  
