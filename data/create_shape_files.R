@@ -84,11 +84,11 @@ create_data <- function(){
     , "WV", "W. Va." , "West Virginia"           ,  "54",           2, "state"
     , "WI", "Wis."   , "Wisconsin"               ,  "55",           5, "state"
     , "WY", "Wyo."   , "Wyoming"                 ,  "56",           4, "state"
-    , "AS", "A.S."   , "American Samoa"          ,  "60",           6, "outlying area under US sovereignty"
-    , "GU", "Guam"   , "Guam"                    ,  "66",           6, "outlying area under US sovereignty"
-    , "MP", "M.P."   , "Northern Mariana Islands",  "69",           6, "outlying area under US sovereignty"
-    , "PR", "P.R."   , "Puerto Rico"             ,  "72",           1, "outlying area under US sovereignty"
-    , "VI", "V.I."   , "Virgin Islands"          ,  "78",           1, "outlying area under US sovereignty"
+    , "AS", "A.S."   , "American Samoa"          ,  "60",           6, "outlying area" #under US sovereignty"
+    , "GU", "Guam"   , "Guam"                    ,  "66",           6, "outlying area" #under US sovereignty"
+    , "MP", "M.P."   , "Northern Mariana Islands",  "69",           6, "outlying area" #under US sovereignty"
+    , "PR", "P.R."   , "Puerto Rico"             ,  "72",           1, "outlying area" #under US sovereignty"
+    , "VI", "V.I."   , "Virgin Islands"          ,  "78",           1, "outlying area" #under US sovereignty"
     , "PW", "Palau"  , "Palau"                   ,  "70",           6, "freely associated state"
     ) 
    
@@ -98,7 +98,36 @@ create_data <- function(){
     #add factor levels based on id (so consistent accross abbreviations and names) 
     mutate_at(vars(abb_usps, abb_gpo, name), ~fct_reorder(., id)) %>%
     #add factors for type 
-    mutate(type = factor(type, levels = unique(.$type)))
+    mutate(type = factor(type, levels = unique(.$type))) %>% 
+    #add in region data 
+    dplyr::left_join(., select(create_rdata(), -id), by = "eta_region")
+  
+  return(data) 
+  
+} #end create_data
+
+
+#######################################
+#' Create Region Data 
+#'  
+#' @return A tibble (dataframe) 
+create_rdata <- function(){
+  # raw data 
+  raw <- tribble( # https://www.dol.gov/agencies/eta/regions
+    ~eta_region, ~eta_region_name, ~eta_region_city
+    ,         1,       "Region 1", "Boston"
+    ,         2,       "Region 2", "Philadelphia"
+    ,         3,       "Region 3", "Atlanta"
+    ,         4,       "Region 4", "Dallas" 
+    ,         5,       "Region 5", "Chicago" 
+    ,         6,       "Region 6", "San Francisco" 
+  ) 
+  
+  data <- raw %>% 
+    #add id that matches column number (also used to create factor levels) 
+    mutate(id = eta_region) %>% 
+    #add factor levels based on id (so consistent accross abbreviations and names) 
+    mutate_at(vars(eta_region_name, eta_region_city), ~fct_reorder(., id)) 
   
   return(data) 
   
@@ -197,6 +226,20 @@ create_coord <- function(){
 
 
 #######################################
+#' Create coordinates for unified pacific islands 
+#'
+#' @return A coordinates 
+create_pacislands <- function(){
+  pacislands <-  c(
+    35.5255888, -240, 52.8460969, -250, 70.166605 , -240, 87.4871131, -250, 87.4871131, -270, 104.8075   , -280, 104.8075   , -300, 
+    87.4871131, -310, 70.1665051, -300, 52.845997 , -310, 35.5254889, -300, 18.204981 , -310,   0.8844729, -300,   0.8844729, -280,  
+    18.204981 , -270, 18.2050808, -270, 18.2050808, -250, 35.5255888, -240 
+  )
+  return(pacislands)
+}
+
+
+#######################################
 #' Create sf hex data frame
 #'
 #' @param hex_lst A list of each coordinates for hex map 
@@ -219,6 +262,21 @@ create_hex <- function(coord_lst){
     hex   <- st_sf(gdat[order(gdat$abb_usps),], geometry = gcol) 
     hex_lst[[i]] <- hex
   } #end for loop
+  
+  gdat_r <- rdata
+  gcol_r <- hex_lst$wioa_eta  %>% 
+    dplyr::filter(!abb_usps %in% c("MP", "HI", "PW", "GU", "AS")) %>% 
+    dplyr::group_by(eta_region) %>% 
+    dplyr::summarize(geometry = sf::st_union(geometry, is_coverage = TRUE)) %>%
+    dplyr::arrange(eta_region) %>% 
+    dplyr::pull(geometry) %>% 
+    st_sfc()
+  #add pacific islands 
+  gcol_r[6] <- sf::st_union(c(gcol_r[6], sf::st_geometry(make_hex(create_pacislands() ) ) ) ) 
+  hex_r <- st_sf(gdat_r, geometry = gcol_r)
+  
+  hex_lst[[l+1]] <- hex_r
+  names(hex_lst)[l+1] <- "wioa_regions"
   
   return(hex_lst)
 } #end create_hex
@@ -245,8 +303,17 @@ create_lab <- function(hex_lst){
     lab_lst[[i]] <- lab
   } #end for loop
   
+  #adjustment to wioa regions labels 
+  lab_lst$wioa_regions[1,]$geometry <- lab_lst$wioa_regions[1,]$geometry + c(-6, 25)
+  lab_lst$wioa_regions[2,]$geometry <- lab_lst$wioa_regions[2,]$geometry + c( 0,  4)
+  lab_lst$wioa_regions[3,]$geometry <- lab_lst$wioa_regions[3,]$geometry + c( 5,  0)
+  lab_lst$wioa_regions[4,]$geometry <- sf::st_geometry(sf::st_point(c(191.4102, -205)))
+  lab_lst$wioa_regions[5,]$geometry <- lab_lst$wioa_regions[5,]$geometry + c( 0,  5)
+  lab_lst$wioa_regions[6,]$geometry <- sf::st_geometry(sf::st_point(c(87.48711, -140)))
+  
   return(lab_lst)
 } #end create_lab
+
 
 
 #######################################
@@ -260,9 +327,10 @@ create_lab <- function(hex_lst){
 #' create_fhex(hex_lst)
 create_fhex <- function(hex_lst){
   
-  l               <- length(hex_lst)
-  fhex_lst        <- vector(mode='list', length=l)
-  names(fhex_lst) <- names(hex_lst)
+  reg_n           <- which(names(hex_lst) == "wioa_regions")
+  l               <- length(hex_lst[-reg_n])
+  fhex_lst        <- vector(mode='list', length=l+1)
+  names(fhex_lst) <- c(names(hex_lst[-reg_n]), names(hex_lst[reg_n]))
   
   for (i in 1:l){
     hex  <- hex_lst[[i]]
@@ -271,6 +339,28 @@ create_fhex <- function(hex_lst){
     fhex <- full_join(fdat, fcor, by = "id")
     fhex_lst[[i]] <- fhex
   } #end for loop
+  
+  ## special case for regions fortified hex map (because multipolygon & polygon )
+  one <- hex_lst$wioa_regions[1,] %>% st_coordinates() %>%
+    as_tibble() %>%
+    mutate(id = 1) %>%
+    dplyr::rename(group = L2) %>%
+    select(X, Y, id, group)
+  
+  two <- hex_lst$wioa_regions[2:5,] %>% st_coordinates() %>%
+    as_tibble() %>%
+    mutate(id = L2+1, group=L2+2) %>%
+    select(X, Y, id, group)
+  
+  three <- hex_lst$wioa_regions[6,] %>% st_coordinates() %>%
+    as_tibble() %>%
+    mutate(id = 6, group = L2 + 6) %>%
+    select(X, Y, id, group)
+  
+  fhex <- dplyr::bind_rows(one, two, three) %>% 
+    dplyr::left_join(., rdata, by = "id")
+  
+  fhex_lst[[l+1]] <- fhex
   
   return(fhex_lst)
 } #end create_fhex 
@@ -357,24 +447,27 @@ save_fort <- function(flst, label = FALSE){
 } #end save_hex
 
 
+
+
 #######################################
 #' build and save all data files 
 #'
   
   data      <- create_data()
+  rdata     <- create_rdata()
   coord_lst <- create_coord()
-  
+
   hex_lst  <- create_hex(coord_lst)
   lab_lst  <- create_lab(hex_lst)
-  
+
   fhex_lst <- create_fhex(hex_lst)
   flab_lst <- create_flab(lab_lst)
-  
+
   save_shp(hex_lst)
   save_shp(lab_lst, label = TRUE)
-  
+
   save_fort(fhex_lst)
   save_fort(flab_lst, label = TRUE)
   
-
+  
 
