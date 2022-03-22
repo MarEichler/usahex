@@ -21,8 +21,6 @@ this_w <- 7.15
 this_h <- this_w/(x/y)
 knitr::opts_chunk$set(fig.width=this_w, fig.height=this_h)
 
-
-
 ```
 
 # Plot with {ggplot2} 
@@ -35,8 +33,8 @@ library(ggplot2)
 ## RDS Shape files 
 
 ```{r plot-rds}
-states        <- readRDS("../states/1_rds/states.RDS")
-states_labels <- readRDS("../states/1_rds/states_labels.RDS")
+states        <- readRDS("../data/states/1_rds/states.RDS")
+states_labels <- readRDS("../data/states/1_rds/states_labels.RDS")
 
 ggplot(states) + 
   geom_sf(color = "white", fill = "grey35") + 
@@ -47,8 +45,8 @@ ggplot(states) +
 ## Shape files 
 
 ```{r plot-shp}
-states        <- sf::read_sf("../states/2_shp/states.shp")
-states_labels <- sf::read_sf("../states/2_shp/states_labels.shp")
+states        <- sf::read_sf("../data/states/2_shp/states.shp")
+states_labels <- sf::read_sf("../data/states/2_shp/states_labels.shp")
 
 ggplot(states) + 
   geom_sf(color = "white", fill = "grey35") + 
@@ -59,8 +57,8 @@ ggplot(states) +
 ## Fortified CSV files 
 
 ```{r plot-csv}
-states        <- readr::read_csv("../states/3_csv/states.csv"       , show_col_types = FALSE)
-states_labels <- readr::read_csv("../states/3_csv/states_labels.csv", show_col_types = FALSE)
+states        <- readr::read_csv("../data/states/3_csv/states.csv"       , show_col_types = FALSE)
+states_labels <- readr::read_csv("../data/states/3_csv/states_labels.csv", show_col_types = FALSE)
 
 ggplot(states, aes(x=X, y=Y, group=id)) + 
   geom_polygon(color = "white", fill = "grey35") + 
