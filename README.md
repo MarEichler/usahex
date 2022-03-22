@@ -3,7 +3,7 @@
 US Hex Map with just States: [r-graph-gallery.com/hexbin-map](https://www.r-graph-gallery.com/hexbin-map)
 
 
-I've copied the coordinates from the NPR Graphics team: [github.com/nprapps/dailygraphics-templates](github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html). The y values have been reversed so that the plot is not upside down.  
+I've copied the coordinates from the NPR Graphics team: [github.com/nprapps/dailygraphics-templates](https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html). The y values have been reversed so that the plot is not upside down.  
 
 # Available Maps
 
