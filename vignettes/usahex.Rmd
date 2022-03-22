@@ -1,0 +1,68 @@
+---
+title: "Get started"
+date: "`r Sys.Date()`"
+output:
+    rmarkdown::html_vignette:
+        toc: true
+    md_document:
+        variant: gfm
+vignette: >
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteIndexEntry{Get started}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+y <- (250-0)              #y range
+x <- (433.8973-0.8845727) #x range
+this_w <- 7.15
+this_h <- this_w/(x/y)
+knitr::opts_chunk$set(fig.width=this_w, fig.height=this_h)
+
+```
+
+# Plot with {ggplot2} 
+
+```{r load-ggplot2}
+library(ggplot2)
+```
+
+
+## RDS Shape files 
+
+```{r plot-rds}
+states        <- readRDS("../data/states/1_rds/states.RDS")
+states_labels <- readRDS("../data/states/1_rds/states_labels.RDS")
+
+ggplot(states) + 
+  geom_sf(color = "white", fill = "grey35") + 
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
+  theme_void()
+```
+
+## Shape files 
+
+```{r plot-shp}
+states        <- sf::read_sf("../data/states/2_shp/states.shp")
+states_labels <- sf::read_sf("../data/states/2_shp/states_labels.shp")
+
+ggplot(states) + 
+  geom_sf(color = "white", fill = "grey35") + 
+  geom_sf_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
+  theme_void()
+```
+
+## Fortified CSV files 
+
+```{r plot-csv}
+states        <- readr::read_csv("../data/states/3_csv/states.csv"       , show_col_types = FALSE)
+states_labels <- readr::read_csv("../data/states/3_csv/states_labels.csv", show_col_types = FALSE)
+
+ggplot(states, aes(x=X, y=Y, group=id)) + 
+  geom_polygon(color = "white", fill = "grey35") + 
+  geom_text(data=states_labels, aes(label=abb_gpo), size = 3.25, color = "white") + 
+  coord_fixed() + #don't use coord_map(), only coord_fixed()
+  theme_void()
+```

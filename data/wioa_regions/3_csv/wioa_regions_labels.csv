@@ -1,0 +1,7 @@
+eta_region,eta_region_name,eta_region_city,id,X,Y
+1,Region 1,Boston,1,382.8639535733334,-85.0000000866025
+2,Region 2,Philadelphia,2,335.7477286666667,-136
+3,Region 3,Atlanta,3,287.342829,-184.99999999999994
+4,Region 4,Dallas,4,191.4102,-205
+5,Region 5,Chicago,5,220.8550249600001,-108.00000013856409
+6,Region 6,San Francisco,6,87.48711,-140
