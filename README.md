@@ -28,6 +28,75 @@ Likely won't plot *just* the regions, but use it as a border around the geograph
 
 ![Wioa Regions Only and WIOA Regions as Borders](img/region-2-plots.png)  
 
+# File Types 
+
+## RDS 
+
+Shape file saved as a single 'RDS file'. 
+
+```r
+states <- readRDS("data/states/1_rds/states.RDS")
+head(states)
+
+#> Simple feature collection with 6 features and 9 fields
+#> Geometry type: POLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 18.20508 ymin: -220 xmax: 295.3332 ymax: 0
+#> CRS:           NA
+#>   id abb_usps abb_gpo       name fips eta_region  type eta_region_name eta_region_city       geometry
+#> 1  1       AL    Ala.    Alabama   01          3 state        Region 3         Atlanta POLYGON ((27...
+#> 2  2       AK  Alaska     Alaska   02          6 state        Region 6   San Francisco POLYGON ((35...
+#> 3  3       AZ   Ariz.    Arizona   04          6 state        Region 6   San Francisco POLYGON ((13...
+#> 4  4       AR    Ark.   Arkansas   05          4 state        Region 4          Dallas POLYGON ((22...
+#> 5  5       CA  Calif. California   06          6 state        Region 6   San Francisco POLYGON ((87...
+#> 6  6       CO   Colo.   Colorado   08          4 state        Region 4          Dallas POLYGON ((13...
+
+```
+
+## Shape Files 
+
+Each 'shape file' includes: 
+
+- .dbf 
+- .shp (only need to import the .shp file)
+- .shx 
+
+```r
+states <- sf::read_sf("data/states/2_shp/states.shp")
+head(states)  
+#> Simple feature collection with 6 features and 9 fields
+#> Geometry type: POLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: 18.20508 ymin: -220 xmax: 295.3332 ymax: 0
+#> CRS:           NA
+#> # A tibble: 6 x 10
+#>      id abb_sps abb_gpo name       fips  eta_rgn type  et_rgn_n et_rgn_c                   geometry
+#>   <int> <chr>   <chr>   <chr>      <chr>   <dbl> <chr> <chr>    <chr>                     <POLYGON>
+#> 1     1 AL      Ala.    Alabama    01          3 state Region 3 Atlanta       ((278.0127 -180, 295.~
+#> 2     2 AK      Alaska  Alaska     02          6 state Region 6 San Francisco ((35.52559 0, 52.8461~
+#> 3     3 AZ      Ariz.   Arizona    04          6 state Region 6 San Francisco ((139.4486 -180, 156.~
+#> 4     4 AR      Ark.    Arkansas   05          4 state Region 4 Dallas        ((226.0512 -150, 243.~
+#> 5     5 CA      Calif.  California 06          6 state Region 6 San Francisco ((87.48711 -150, 104.~
+#> 6     6 CO      Colo.   Colorado   08          4 state Region 4 Dallas        ((139.4486 -120, 156.~
+```
+
+## Fortified CSV files 
+
+CSV files that a fortified and are not designated as a shape file, but just a regular data set.  
+
+```r
+states  <- readr::read_csv("data/states/3_csv/states.csv", show_col_types = FALSE)
+#> # A tibble: 6 x 11
+#>      id abb_usps abb_gpo name    fips  eta_region type  eta_region_name eta_region_city     X     Y
+#>   <dbl> <chr>    <chr>   <chr>   <chr>      <dbl> <chr> <chr>           <chr>           <dbl> <dbl>
+#> 1     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          278.  -180
+#> 2     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          295.  -190
+#> 3     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          295.  -210
+#> 4     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          278.  -220
+#> 5     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          261.  -210
+#> 6     1 AL       Ala.    Alabama 01             3 state Region 3        Atlanta          261.  -190
+```
+
 
 # Plotting with Different File Types 
 
@@ -50,8 +119,8 @@ ggplot(states) +
 ## 2. Shape Files 
 
 ```r
-states        <- sf::read_sf("../data/states/2_shp/states.shp")
-states_labels <- sf::read_sf("../data/states/2_shp/states_labels.shp")
+states        <- sf::read_sf("data/states/2_shp/states.shp")
+states_labels <- sf::read_sf("data/states/2_shp/states_labels.shp")
 
 ggplot(states) + 
   geom_sf(color = "white", fill = "grey35") + 
@@ -63,8 +132,8 @@ ggplot(states) +
 ## 3. CSV (fortified)
 
 ```r
-states        <- readr::read_csv("../data/states/3_csv/states.csv"       , show_col_types = FALSE)
-states_labels <- readr::read_csv("../data/states/3_csv/states_labels.csv", show_col_types = FALSE)
+states        <- readr::read_csv("data/states/3_csv/states.csv"       , show_col_types = FALSE)
+states_labels <- readr::read_csv("data/states/3_csv/states_labels.csv", show_col_types = FALSE)
 
 ggplot(states, aes(x=X, y=Y, group=id)) + 
   geom_polygon(color = "white", fill = "grey35") + 
