@@ -50,9 +50,9 @@ WA,Wash.,Wash.,Washington,53,6,state
 WV,W. Va.,W.Va.,West Virginia,54,2,state
 WI,Wis.,Wis.,Wisconsin,55,5,state
 WY,Wyo.,Wyo.,Wyoming,56,4,state
-AS,A.S.,A.S.,American Samoa,60,6,outlying area under US sovereignty
-GU,Guam,Guam,Guam,66,6,outlying area under US sovereignty
-MP,M.P.,M.P.,Northern Mariana Islands,69,6,outlying area under US sovereignty
-PR,P.R.,P.R.,Puerto Rico,72,1,outlying area under US sovereignty
-VI,V.I.,V.I.,Virgin Islands,78,1,outlying area under US sovereignty
+AS,A.S.,A.S.,American Samoa,60,6,territory
+GU,Guam,Guam,Guam,66,6,territory
+MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory
+PR,P.R.,P.R.,Puerto Rico,72,1,territory
+VI,V.I.,V.I.,Virgin Islands,78,1,territory
 PW,Palau,Palau,Palau,70,6,freely associated state
