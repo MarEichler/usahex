@@ -1,5 +1,5 @@
 ---
-title: "Add Other Data"
+title: "Multiple Labels on Hex Map"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 library(usahex) 
 library(sf)
 library(tidyverse)
-library(rvest)
+require(rvest)
 ```
 
 
@@ -120,6 +120,7 @@ ggplot(combined) +
   ) +
   theme_void()
 ```
+
 
 
 

@@ -28,43 +28,37 @@ library(usahex)
 get_coordinates(map = "states50", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("states50", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
 ## `statesDC` 
 
-50 US States and District of Columbia (DC) 
+50 US States and District of Columbia.  
 
 ```{r map-statesDC}
 get_coordinates(map = "statesDC", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("statesDC", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
 ## `statesTerr` 
 
-50 US States, District of Columbia (DC), Puerto Rico, Virgin Islands, American Samoa, and the Marshall Islands
+50 US States, District of Columbia, and 5 territories: Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands. 
 
 ```{r map-statesTerr}
 get_coordinates(map = "statesTerr", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("statesTerr", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
 ## `WIOAETA` and `WIOAETAregions` 
 
-50 US States, District of Columbia (DC), Puerto Rico, Virgin Islands, American Samoa, the Marshall Islands, and Palau.  
+50 US States, District of Columbia (DC), 5 territories (Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands), and the freely associated state of Palau. 
 
 WIOA: Workforce Innovation and Opportunity (workforce dev. legislation)  
 ETA: Department of Labor's Employment and Training Administration
@@ -78,8 +72,6 @@ get_coordinates(map = "WIOAETA", coords = "hexmap") |>
   geom_sf(aes(fill = eta_region_name), color = "white") + 
   geom_sf(data = get_coordinates("WIOAETAregions", "hexmap"), 
           fill = NA, color = "grey35", linewidth = 1) + 
-  geom_sf_text(
-    data = get_coordinates("WIOAETA", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```

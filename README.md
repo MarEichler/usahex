@@ -33,7 +33,7 @@ get_coordinates(map = "states50", coords = "hexmap") |>
 
 ## `statesDC`
 
-50 US States and District of Columbia (DC)
+50 US States and District of Columbia.
 
 ``` r
 get_coordinates(map = "statesDC", coords = "hexmap") |> 
@@ -49,8 +49,8 @@ get_coordinates(map = "statesDC", coords = "hexmap") |>
 
 ## `statesTerr`
 
-50 US States, District of Columbia (DC), Puerto Rico, Virgin Islands,
-American Samoa, and the Marshall Islands
+50 US States, District of Columbia, and 5 territories: Puerto Rico,
+Virgin Islands, American Samoa, and the Northern Marina Islands.
 
 ``` r
 get_coordinates(map = "statesTerr", coords = "hexmap") |> 
@@ -66,8 +66,9 @@ get_coordinates(map = "statesTerr", coords = "hexmap") |>
 
 ## `WIOAETA` and `WIOAETAregions`
 
-50 US States, District of Columbia (DC), Puerto Rico, Virgin Islands,
-American Samoa, the Marshall Islands, and Palau.
+50 US States, District of Columbia (DC), 5 territories (Puerto Rico,
+Virgin Islands, American Samoa, and the Northern Marina Islands), and
+the freely associated state of Palau.
 
 WIOA: Workforce Innovation and Opportunity (workforce dev.
 legislation)  
