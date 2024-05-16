@@ -4,7 +4,7 @@
 \alias{get_coordinates}
 \title{Import hex map coordinates}
 \usage{
-get_coordinates(map, coords = "hexmap")
+get_coordinates(map = NULL, coords = "hexmap")
 }
 \arguments{
 \item{map}{A \code{character} string specifying which map.

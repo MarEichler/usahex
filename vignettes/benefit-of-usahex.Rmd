@@ -23,7 +23,6 @@ knitr::opts_chunk$set(
 library(usahex) 
 library(sf)
 library(tidyverse)
-require(patchwork)
 ```
 
 
@@ -36,7 +35,7 @@ Download the Hexagon boundaries at geojson format here: https://team.carto.com/u
 
 ```{r import-data}
 sf_usahex <- usahex::statesDC
-sf_other <- read_sf("../data-raw/us_states_hexgrid.geojson") |> 
+sf_other <- read_sf("us_states_hexgrid.geojson") |> 
   mutate(google_name = gsub(" \\(United States\\)", "", google_name))
 ```
 
