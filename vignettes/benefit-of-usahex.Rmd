@@ -1,5 +1,5 @@
 ---
-title: "Benefit of `{usahex}`"
+title: "Benefit of usahex"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
