@@ -18,8 +18,10 @@ knitr::opts_chunk$set(
 ```
 
 
+There may be instances where you want to include the geography label as well as another label (such as a value) on the hex map.  
 
-```{r setup}
+
+```{r setup, warning=FALSE, message = FALSE}
 library(usahex) 
 library(sf)
 library(tidyverse)
@@ -27,6 +29,7 @@ require(rvest)
 ```
 
 
+The code below pulls in population data from Wikipedia using `{rvest}` and the cleans it so it can be used in the hex map.  
 
 
 ```{r prep-other-data}
@@ -39,7 +42,6 @@ remove_end_brackets <- function(string){
   }
   return(out)
 }
-
 
 url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population"
 
@@ -62,39 +64,40 @@ other_data <- wikiTable[[1]][-1,] |>
 ```
 
 
+Pull the hexagon coordinates  using `get_coordinates()` function.  
+
 ```{r pull-hex-coords}
 hexmap <- get_coordinates("WIOAETA", "hexmap")
-labels <- get_coordinates("WIOAETA", "labels")
 ```
+
+
+Join the coordinates data with the the population change data. 
 
 ```{r combine-data}
-combined        <- left_join(hexmap, other_data, by = "name")
-combined_labels <- left_join(labels, other_data, by = "name")
+combined <- left_join(hexmap, other_data, by = "name")
 ```
 
-
+Plot data with state label and value label of percentage change in population.  
 
 ```{r create-chart, fig.width=7.15, fig.height=5.2, warning = FALSE}
 
 NA_color <- "grey80"
-
-# RColorBrewer::brewer.pal(3, "PiYG")
-scale_colors <- c("#E9A3C9", "#F7F7F7", "#A1D76A")
+scale_colors <- c("#E9A3C9", "#F7F7F7", "#A1D76A") # RColorBrewer::brewer.pal(3, "PiYG")
 
 ggplot(combined) + 
   geom_sf(aes(fill = pop_change),     color = NA       ) +  #color (non-NA) hex
   geom_sf(    fill = NA,          aes(color = "NA")    ) +  #dummy legend for NA values 
   geom_sf(    fill = NA,              color = "grey50" ) +  #hex borders 
   geom_sf_text(
-    data=mutate(combined_labels, geometry=geometry+c(0, 5)) # adjust state label up by 5
+    data=mutate(combined, geometry=geometry+c(0, 5)) # adjust state label up by 5
     , aes(label=abbr_usps)
     , fontface="bold"
     , size=3.25
   ) + 
   geom_sf_text(
-    data=mutate(combined_labels, geometry=geometry+c(0,-5)) # adjust percent label down by 5
+    data=mutate(combined, geometry=geometry+c(0,-5)) # adjust percent label down by 5
     , aes(label=perc_label)
-    , size=2.75
+    , size=2.5
   ) + 
   scale_fill_gradient2(
     name = "Percent\nChange"
