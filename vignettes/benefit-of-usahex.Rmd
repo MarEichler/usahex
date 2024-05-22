@@ -3,7 +3,7 @@ title: "Benefit of `{usahex}`"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Add Other Data}
+    %\VignetteIndexEntry{Benefit of usahex}
     %\VignetteEncoding{UTF-8}
     %\VignetteEngine{knitr::rmarkdown}
 editor_options: 

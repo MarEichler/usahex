@@ -3,7 +3,7 @@ title: "Multiple Labels on Hex Map"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{Add Other Data}
+    %\VignetteIndexEntry{Multiple Labels on Hex Map}
     %\VignetteEncoding{UTF-8}
     %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
