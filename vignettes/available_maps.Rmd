@@ -1,0 +1,82 @@
+---
+title: "Available Maps"
+date: "2025-07-18"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Available Maps}
+    %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(usahex)
+```
+
+
+## `states50`
+
+50 US states only
+
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "states50", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
+## `statesDC` 
+
+50 US States and District of Columbia.  
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "statesDC", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
+## `statesTerr` 
+
+50 US States, District of Columbia, and 5 territories: Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands. 
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "statesTerr", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
+## `WIOAETA` and `WIOAETAregions` 
+
+50 US States, District of Columbia (DC), 5 territories (Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands), and the freely associated state of Palau. 
+
+WIOA: Workforce Innovation and Opportunity (workforce dev. legislation)  
+ETA: Department of Labor's Employment and Training Administration
+
+The [ETA regions](https://www.dol.gov/agencies/eta/regions) will rarely be plotted on their own, but they are nice to add as a border to group states in the same region together.   
+
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "WIOAETA", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(aes(fill = eta_region_name), color = "white") + 
+  geom_sf(data = get_coordinates("WIOAETAregions", "hexmap"), 
+          fill = NA, color = "grey35", linewidth = 1) + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```

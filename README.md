@@ -1,93 +1,30 @@
 
 # usahex
 
-US Hex Map with just States:
-[r-graph-gallery.com/hexbin-map](https://www.r-graph-gallery.com/hexbin-map)
+## Installation
+
+``` r
+# install.packages("devtools")
+devtools::install_github("mareichler/usahex")
+```
+
+## Hex Maps
 
 I’ve copied the coordinates from the NPR Graphics team:
-[github.com/nprapps/dailygraphics-templates](https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html).
+[github.com/nprapps/dailygraphics-templates](https://github.com/nprapps/dailygraphics-templates/blob/129967a4ae36f14cf299f434f9814f7314a00cde/state_grid_map/index.html#L50-L110).
 The y values have been reversed so that the plot is not upside down.
 
-# Available Maps
-
 ``` r
-library(tidyverse)
 library(usahex)
+library(tidyverse)
 ```
-
-## `states50`
-
-50 US states only
-
-``` r
-get_coordinates(map = "states50", coords = "hexmap") |> 
-  ggplot() + 
-  geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("states50", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
-  theme_void()
-```
-
-![](README_files/figure-gfm/map-states50-1.png)<!-- -->
-
-## `statesDC`
-
-50 US States and District of Columbia.
-
-``` r
-get_coordinates(map = "statesDC", coords = "hexmap") |> 
-  ggplot() + 
-  geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("statesDC", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
-  theme_void()
-```
-
-![](README_files/figure-gfm/map-statesDC-1.png)<!-- -->
-
-## `statesTerr`
-
-50 US States, District of Columbia, and 5 territories: Puerto Rico,
-Virgin Islands, American Samoa, and the Northern Marina Islands.
-
-``` r
-get_coordinates(map = "statesTerr", coords = "hexmap") |> 
-  ggplot() + 
-  geom_sf(fill = "grey35", color = "white") + 
-  geom_sf_text(
-    data = get_coordinates("statesTerr", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
-  theme_void()
-```
-
-![](README_files/figure-gfm/map-statesTerr-1.png)<!-- -->
-
-## `WIOAETA` and `WIOAETAregions`
-
-50 US States, District of Columbia (DC), 5 territories (Puerto Rico,
-Virgin Islands, American Samoa, and the Northern Marina Islands), and
-the freely associated state of Palau.
-
-WIOA: Workforce Innovation and Opportunity (workforce dev.
-legislation)  
-ETA: Department of Labor’s Employment and Training Administration
-
-The [ETA regions](https://www.dol.gov/agencies/eta/regions) will rarely
-be plotted on their own, but they are nice to add as a border to group
-states in the same region together.
 
 ``` r
 get_coordinates(map = "WIOAETA", coords = "hexmap") |> 
   ggplot() + 
-  geom_sf(aes(fill = eta_region_name), color = "white") + 
-  geom_sf(data = get_coordinates("WIOAETAregions", "hexmap"), 
-          fill = NA, color = "grey35", linewidth = 1) + 
-  geom_sf_text(
-    data = get_coordinates("WIOAETA", "labels"), 
-    aes(label = abbr_usps), color = "white") + 
+  geom_sf(aes(fill = geo_type)) + 
+  geom_sf_text(aes(label = abbr_usps)) + 
   theme_void()
 ```
 
-![](README_files/figure-gfm/map-WIOAETA-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->

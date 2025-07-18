@@ -1,6 +1,6 @@
 ---
 title: "Multiple Labels on Hex Map"
-date: "`r Sys.Date()`"
+date: "2025-07-18"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Multiple Labels on Hex Map}

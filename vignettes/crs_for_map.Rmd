@@ -1,0 +1,147 @@
+---
+title: "CSR for Map"
+date: "2025-07-18"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{CSR for Map}
+    %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+```{r setup, warning = FALSE, message = FALSE}
+library(usahex) 
+library(sf)
+library(tidyverse)
+require(cowplot) 
+```
+
+
+Another type of hex map for the 50 US states and DC is shown in the [R Graph Gallery](https://r-graph-gallery.com/hexbin-map). Data for this hex map can be downloaded as a geojson file [here](https://team.carto.com/u/andrew/tables/andrew.us_states_hexgrid/public/map). The hexagon's for each state are based on the latitude and longitude coordinates.  
+
+Start with downloading the data for both lat/long-based hex map and the **usahex** hex map.  
+
+```{r import-data}
+sf_usahex <- usahex::statesDC
+sf_other <- read_sf("us_states_hexgrid.geojson") |> 
+  # rename abbreviation to match usahex variable nam e
+  rename(abbr_usps = iso3166_2) |> 
+  # join to add other abbreviations and fips 
+  full_join(st_drop_geometry(sf_usahex), by = "abbr_usps")
+```
+
+
+```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
+gg1 <- ggplot(sf_other) + 
+  geom_sf() +
+  labs(title = "Other hex map - hexagons vary in size") + 
+  theme_void()
+
+gg2 <- ggplot(sf_usahex) + 
+  geom_sf() + 
+  labs(title = "usahex map - all hexagons are the same size") + 
+  theme_void()
+
+plot_grid(gg1, gg2)
+```
+
+The map with hexagon's based on actual lat/long coordinates results in the hexagons looking slightly 'warped' when plotted in ggplot; the hexagons at the top of the map look smaller than the hexagons at the bottom of the map.  **usahex** hex map is not based on lat/long coordinates.  All hexagons are the same size when plotted.  
+
+In order to 'square' the hexagons based on lat/long coordinates, you need to [update the CRS](#update-crs-to-square-hexagons). 
+
+**Because usahex coordinates are not based on lat/long, a CRS is not required for plotting.** Additionally, because **usahex** hexagons are not based on lat/long, it's easier to add/subtract/move hexagons.  
+
+## Update CRS to Square Hexagons  
+
+
+It's possible to 'square' the other hex map by changing the coordinate reference system (CRS) to the WGS 84 / Pseudo-Mercator CRS ([EPSG code 3857](https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html?sessionkey=330b562ysa)).  
+
+
+```{r}
+sf_other <- st_transform(sf_other, 3857)
+```
+
+```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
+gg1 <- ggplot(sf_other) + 
+  geom_sf() +
+  geom_sf_text(aes(label=abbr_usps)) +
+  labs(title = "Other hex map - hexagons look the same size when change CRS to 3857") + 
+  theme_void()
+
+gg2 <- ggplot(sf_usahex) + 
+  geom_sf() + 
+  geom_sf_text(aes(label=abbr_usps)) +
+  labs(title = "usahex map - all hexagons are the same size") + 
+  theme_void()
+
+plot_grid(gg1, gg2, nrow = 1)
+```
+
+
+## Two Labels with Same Style 
+
+```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
+gg1 <- ggplot(sf_other) + 
+  geom_sf() +
+  geom_sf_text(aes(label=paste0(abbr_usps, "\n", fips))) +
+  labs(title = "Other hex map - labels evenly spaced since single label with line break") + 
+  theme_void()
+
+gg2 <- ggplot(sf_usahex) + 
+  geom_sf() + 
+  geom_sf_text(aes(label=paste0(abbr_usps, "\n", fips))) +
+  labs(title = "usahex map - labels evenly spaced since single label with line break") + 
+  theme_void()
+
+plot_grid(gg1, gg2, nrow = 1)
+```
+
+
+## Two Labels with Different Styles  
+
+```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
+gg1 <-ggplot(sf_other) + 
+  geom_sf() +
+  geom_sf_text(
+    data = mutate(sf_other, geometry = geometry + c(0, 100000)) |> sf::st_set_crs(3857),  
+    aes(label=abbr_usps), 
+    fontface = "bold", 
+    size = 3.25
+  ) +
+  geom_sf_text(
+    data = mutate(sf_other, geometry = geometry + c(0, -100000)) |> sf::st_set_crs(3857),  
+    aes(label=fips), 
+    size = 2.25
+  ) +
+  labs(title = "Other hex map - labels evenly spaced since single label with line break") + 
+  theme_void()
+
+gg2 <- ggplot(sf_usahex) + 
+  geom_sf() + 
+    geom_sf_text(
+    data = mutate(sf_usahex, geometry = geometry + c(0, 5)),  
+    aes(label=abbr_usps), 
+    fontface = "bold", 
+    size = 3.25
+  ) +
+  geom_sf_text(
+    data = mutate(sf_usahex, geometry = geometry + c(0, -5)),  
+    aes(label=fips), 
+    size = 2.25
+  ) +
+  labs(title = "usahex map - labels evenly spaced since single label with line break") + 
+  theme_void()
+
+plot_grid(gg1, gg2, nrow = 1)
+```
+

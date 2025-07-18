@@ -3,11 +3,11 @@ Title: Hex Maps of US States and Territories
 Version: 0.0.0.9000
 Authors@R: 
     person("Martha", "Eichlersmith", , "myeichlersmith@pm.me", role = c("aut", "cre"))
-Description: Easily create labeled hex maps for different selections of US states.
+Description: Easily create labeled hex maps for different selections of US geographies.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
 Imports: 
@@ -16,6 +16,9 @@ Suggests:
     tidyverse, 
     scales, 
     knitr,
-    rmarkdown
+    rmarkdown, 
+    rvest, 
+    cowplot
 LazyData: true
 VignetteBuilder: knitr
+URL: https://mareichler.github.io/usahex/
