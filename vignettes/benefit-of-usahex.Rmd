@@ -1,0 +1,106 @@
+---
+title: "Benefit of usahex"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Benefit of usahex}
+    %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+```{r setup, warning = FALSE, message = FALSE}
+library(usahex) 
+library(sf)
+library(tidyverse)
+```
+
+Another type of hex map for the 50 US states and DC is shown in the [R Graph Gallery](https://r-graph-gallery.com/hexbin-map). Data for this hex map can be downloaded as a geojson file [here](https://team.carto.com/u/andrew/tables/andrew.us_states_hexgrid/public/map). The hexagon's for each state are based on the latitude and longitude coordinates.  
+
+Start with downloading the data for both lat/long-based hex map and the usahex hex map.  
+
+```{r import-data}
+sf_usahex <- usahex::statesDC
+sf_other <- read_sf("us_states_hexgrid.geojson") |> 
+  mutate(google_name = gsub(" \\(United States\\)", "", google_name))
+```
+
+
+The map with hexagon's based on actual lat/long coordinates results in the hexagons looking slightly 'warped' when plotted in ggplot; the hexagons at the top of the map look smaller than the hexagons at the bottom of the map.    
+
+```{r, onelabel-other, out.width="100%", fig.height = 5, fig.width = 10}
+ggplot(sf_other) + 
+  geom_sf() +
+  geom_sf_text(aes(label = iso3166_2)) + 
+  labs(title = "Lat/Long based hex map - hexagons vary in size") + 
+  theme_void()
+```
+
+
+usahex hex map is not based on lat/long coordinates.  All hexagons are the same size when plotted.  
+
+```{r onelabel-usahex, out.width="100%", fig.height = 5, fig.width = 10}
+ggplot(sf_usahex) + 
+  geom_sf() + 
+  geom_sf_text(aes(label = abbr_usps)) + 
+  labs(title = "{usahex} - all hexagons are the same size") + 
+  theme_void()
+```
+
+
+This difference is more noticeable when plotting multiple labels onto each hexagon.  
+
+
+```{r twolabel-other, out.width="100%", fig.height = 5, fig.width = 10}
+ggplot(sf_other) + 
+  geom_sf() +
+  geom_sf_text(
+    data = mutate(sf_other, geometry = geometry + c(0, 0.5)) |> sf::st_set_crs(4326),  
+    aes(label = iso3166_2), 
+    fontface = "bold", 
+    size = 3.25
+  ) + 
+  geom_sf_text(
+    label = "Line item 1\nLine Item 2", 
+    size = 2, 
+    vjust = 1
+  ) + 
+  labs(title = "Other data source - 
+       2nd line falls off hexagon for AK and ME, but there is plenty of room for TX and FL") + 
+  theme_void()
+```
+
+
+```{r twolabel-usahex, out.width="100%", fig.height = 5, fig.width = 10}
+ggplot(sf_usahex) + 
+  geom_sf() + 
+  geom_sf_text(
+    data=mutate(sf_usahex, geometry=geometry+c(0, 5)), 
+    aes(label=abbr_usps), 
+    fontface="bold", 
+    size=3.25
+  ) + 
+  geom_sf_text(
+    label = "Line item 1\nLine Item 2", 
+    size=2, 
+    vjust = 1
+  ) + 
+  labs(title = "{usahex} - 
+       since all hexagons are the same size, all labels are in the same spot") + 
+  theme_void()
+```
+
+
+
+
+

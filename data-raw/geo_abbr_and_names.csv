@@ -1,0 +1,58 @@
+abbr_usps,abbr_gpo,abbr_ap,name,fips,eta_region,geo_type
+AL,Ala.,Ala.,Alabama,01,3,state
+AK,Alaska,Alaska,Alaska,02,6,state
+AZ,Ariz.,Ariz.,Arizona,04,6,state
+AR,Ark.,Ark.,Arkansas,05,4,state
+CA,Calif.,Calif.,California,06,6,state
+CO,Colo.,Colo.,Colorado,08,4,state
+CT,Conn.,Conn.,Connecticut,09,1,state
+DE,Del.,Del.,Delaware,10,2,state
+DC,D.C.,D.C.,District of Columbia,11,2,federal district
+FL,Fla.,Fla.,Florida,12,3,state
+GA,Ga.,Ga.,Georgia,13,3,state
+HI,Hawaii,Hawaii,Hawaii,15,6,state
+ID,Idaho,Idaho,Idaho,16,6,state
+IL,Ill.,Ill.,Illinois,17,5,state
+IN,Ind.,Ind.,Indiana,18,5,state
+IA,Iowa,Iowa,Iowa,19,5,state
+KS,Kans.,Kan.,Kansas,20,5,state
+KY,Ky.,Ky.,Kentucky,21,3,state
+LA,La.,La.,Louisiana,22,4,state
+ME,Maine,Maine,Maine,23,1,state
+MD,Md.,Md.,Maryland,24,2,state
+MA,Mass.,Mass.,Massachusetts,25,1,state
+MI,Mich.,Mich.,Michigan,26,5,state
+MN,Minn.,Minn.,Minnesota,27,5,state
+MS,Miss.,Miss.,Mississippi,28,3,state
+MO,Mo.,Mo.,Missouri,29,5,state
+MT,Mont.,Mont.,Montana,30,4,state
+NE,Nebr.,Neb.,Nebraska,31,5,state
+NV,Nev.,Nev.,Nevada,32,6,state
+NH,N.H.,N.H.,New Hampshire,33,1,state
+NJ,N.J.,N.J.,New Jersey,34,1,state
+NM,N. Mex.,N.M.,New Mexico,35,4,state
+NY,N.Y.,N.Y.,New York,36,1,state
+NC,N.C.,N.C.,North Carolina,37,3,state
+ND,N. Dak.,N.D.,North Dakota,38,4,state
+OH,Ohio,Ohio,Ohio,39,5,state
+OK,Okla.,Okla.,Oklahoma,40,4,state
+OR,Oreg.,Ore.,Oregon,41,6,state
+PA,Pa.,Pa.,Pennsylvania,42,2,state
+RI,R.I.,R.I.,Rhode Island,44,1,state
+SC,S.C.,S.C.,South Carolina,45,3,state
+SD,S. Dak.,S.D.,South Dakota,46,4,state
+TN,Tenn.,Tenn.,Tennessee,47,3,state
+TX,Tex.,Texas,Texas,48,4,state
+UT,Utah,Utah,Utah,49,4,state
+VT,Vt.,Vt.,Vermont,50,1,state
+VA,Va.,Va.,Virginia,51,2,state
+WA,Wash.,Wash.,Washington,53,6,state
+WV,W. Va.,W.Va.,West Virginia,54,2,state
+WI,Wis.,Wis.,Wisconsin,55,5,state
+WY,Wyo.,Wyo.,Wyoming,56,4,state
+AS,A.S.,A.S.,American Samoa,60,6,territory
+GU,Guam,Guam,Guam,66,6,territory
+MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory
+PR,P.R.,P.R.,Puerto Rico,72,1,territory
+VI,V.I.,V.I.,Virgin Islands,78,1,territory
+PW,Palau,Palau,Palau,70,6,freely associated state
