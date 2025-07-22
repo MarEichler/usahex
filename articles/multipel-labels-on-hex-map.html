@@ -108,7 +108,7 @@ map.</p>
 <p>Pull the hexagon coordinates using <code><a href="../reference/get_coordinates.html">get_coordinates()</a></code>
 function.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">hexmap</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="st">"WIOAETA"</span>, <span class="st">"hexmap"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">hexmap</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="st">"usaETA"</span>, <span class="st">"hexmap"</span><span class="op">)</span></span></code></pre></div>
 <p>Join the coordinates data with the the population change data.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">combined</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">hexmap</span>, <span class="va">other_data</span>, by <span class="op">=</span> <span class="st">"name"</span><span class="op">)</span></span></code></pre></div>

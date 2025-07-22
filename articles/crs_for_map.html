@@ -79,7 +79,7 @@ coordinates.</p>
 <p>Start with downloading the data for both lat/long-based hex map and
 the <strong>usahex</strong> hex map.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">sf_usahex</span> <span class="op">&lt;-</span> <span class="fu">usahex</span><span class="fu">::</span><span class="va"><a href="../reference/statesDC.html">statesDC</a></span></span>
+<code class="sourceCode R"><span><span class="va">sf_usahex</span> <span class="op">&lt;-</span> <span class="fu">usahex</span><span class="fu">::</span><span class="va"><a href="../reference/usa51.html">usa51</a></span></span>
 <span><span class="va">sf_other</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">read_sf</a></span><span class="op">(</span><span class="st">"us_states_hexgrid.geojson"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># rename abbreviation to match usahex variable nam e</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>abbr_usps <span class="op">=</span> <span class="va">iso3166_2</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
