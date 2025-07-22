@@ -32,7 +32,7 @@ Another type of hex map for the 50 US states and DC is shown in the [R Graph Gal
 Start with downloading the data for both lat/long-based hex map and the **usahex** hex map.  
 
 ```{r import-data}
-sf_usahex <- usahex::statesDC
+sf_usahex <- usahex::usa51
 sf_other <- read_sf("us_states_hexgrid.geojson") |> 
   # rename abbreviation to match usahex variable nam e
   rename(abbr_usps = iso3166_2) |> 

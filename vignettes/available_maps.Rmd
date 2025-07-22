@@ -17,6 +17,15 @@ knitr::opts_chunk$set(
 )
 ```
 
+| map name / geos include |50 states| District of Columbia | Puerto Rico | U.S. Virgin Islands | Guam | American Samoa | Northern Mariana Islands | Palau | 
+|:-----                   |:----:   |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| usa50                  | X       | -  | -  | -  | -  | -  | -  | -  |
+| usa51                  | X       | X  | -  | -  | -  | -  | -  | -  |
+| usa52                  | X       | X  | X  | -  | -  | -  | -  | -  |
+| usa53                  | X       | X  | X  | X  | -  | -  | -  | -  |
+| usa56                  | X       | X  | X  | X  | X  | X  | X  | -  |
+| usaETA                 | X       | X  | X  | X  | X  | X  | X  | X  |
+| ETAregions\*           | x       | x  | x  | x  | x  | x  | x  | x  |
 
 ```{r, message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -24,44 +33,68 @@ library(usahex)
 ```
 
 
-## `states50`
+## `usa50`
 
 50 US states only
 
 
 ```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
-get_coordinates(map = "states50", coords = "hexmap") |> 
+get_coordinates(map = "usa50", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
-## `statesDC` 
+## `usa51` 
 
 50 US States and District of Columbia.  
 
 ```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
-get_coordinates(map = "statesDC", coords = "hexmap") |> 
+get_coordinates(map = "usa51", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
-## `statesTerr` 
+## `usa52` 
+
+50 US States, District of Columbia and Puerto Rico   
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "usa52", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
+## `usa53` 
+
+50 US States, District of Columbia, Puerto Rico and US Virgin Islands   
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "usa53", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
+## `usa56` 
 
 50 US States, District of Columbia, and 5 territories: Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands. 
 
 ```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
-get_coordinates(map = "statesTerr", coords = "hexmap") |> 
+get_coordinates(map = "usa56", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(fill = "grey35", color = "white") + 
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
 
-## `WIOAETA` and `WIOAETAregions` 
+## `usaETA` and `ETAregions` 
 
 50 US States, District of Columbia (DC), 5 territories (Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands), and the freely associated state of Palau. 
 
@@ -72,10 +105,10 @@ The [ETA regions](https://www.dol.gov/agencies/eta/regions) will rarely be plott
 
 
 ```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
-get_coordinates(map = "WIOAETA", coords = "hexmap") |> 
+get_coordinates(map = "usaETA", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(aes(fill = eta_region_name), color = "white") + 
-  geom_sf(data = get_coordinates("WIOAETAregions", "hexmap"), 
+  geom_sf(data = get_coordinates("ETAregions", "hexmap"), 
           fill = NA, color = "grey35", linewidth = 1) + 
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
