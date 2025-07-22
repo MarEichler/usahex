@@ -9,13 +9,15 @@ get_coordinates(map = NULL, coords = "hexmap")
 \arguments{
 \item{map}{A \code{character} string specifying which map.
 Current options are
-\code{"states50"} (50 US States only),
-\code{"statesDC"} (50 states and DC),
-\code{"statesTerr"} (50 states, DC, Puerto Rico, Virgin Islands, Guam,
+\code{"usa50"} (50 US States only),
+\code{"usa51"} (50 states and DC),
+\code{"usa52"} (50 states, DC, and Puerto Rico),
+\code{"usa53"} (50 states, DC, PUerto Rico and Virgin Islands),
+\code{"usa56"} (50 states, DC, Puerto Rico, Virgin Islands, Guam,
 American Samoa, and Marshall Islands),
-\code{"WIOAETA"} (WIOA ETA geographies, same as statesTerr with the addition
+\code{"usaETA"} (WIOA ETA geographies, same as statesTerr with the addition
 of Palau), and
-\code{"WIOAETARegions"} (unified maps of WIOA ETA regions) .}
+\code{"ETARegions"} (unified maps of WIOA ETA regions) .}
 
 \item{coords}{A \code{character} string specifying \code{"hexmap"} for the
 hexagon coordinates or \code{"labels"} for the label coordinates for the hex map}
@@ -27,6 +29,6 @@ sf object for map, either the hexagons (polygon) or labels (point).
 Import hex map coordinates
 }
 \examples{
-get_coordinates(map = "states50", coords = "hexmap")
-get_coordinates(map = "states50", coords = "labels")
+get_coordinates(map = "usa50", coords = "hexmap")
+get_coordinates(map = "usa50", coords = "labels")
 }

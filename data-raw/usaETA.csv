@@ -1,0 +1,400 @@
+hexmap,abbr_usps,abbr_gpo,abbr_ap,name,fips,eta_region,geo_type,eta_region_name,eta_region_city,X,Y,cX,cY
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,35.5255888,0,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,52.8460969,-10,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,52.8460969,-30,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,35.5255888,-40,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,18.2050808,-30,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,18.2050808,-10,35.52558884444444,-19.999999999999996
+usaETA,AK,Alaska,Alaska,Alaska,02,6,state,Region 6,San Francisco,35.5255888,0,35.52558884444444,-19.999999999999996
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,278.012702,-180,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,295.33321,-190,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,295.33321,-210,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,278.012702,-220,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,260.692194,-210,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,260.692194,-190,278.012702,-200
+usaETA,AL,Ala.,Ala.,Alabama,01,3,state,Region 3,Atlanta,278.012702,-180,278.012702,-200
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,226.051178,-150,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,243.371686,-160,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,243.371686,-180,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,226.051178,-190,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,208.73067,-180,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,208.73067,-160,226.051178,-169.99999999999997
+usaETA,AR,Ark.,Ark.,Arkansas,05,4,state,Region 4,Dallas,226.051178,-150,226.051178,-169.99999999999997
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,87.4871131,-270,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,104.8075,-280,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,104.8075,-300,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,87.4871131,-310,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,70.1665051,-300,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,70.1665051,-280,87.48701483333332,-290
+usaETA,AS,A.S.,A.S.,American Samoa,60,6,territory,Region 6,San Francisco,87.4871131,-270,87.48701483333332,-290
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,139.448637,-180,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,156.769145,-190,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,156.769145,-210,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,139.448637,-220,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,122.128129,-210,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,122.128129,-190,139.44863700000002,-200
+usaETA,AZ,Ariz.,Ariz.,Arizona,04,6,state,Region 6,San Francisco,139.448637,-180,139.44863700000002,-200
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,87.4871131,-150,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,104.807621,-160,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,104.807621,-180,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,87.4871131,-190,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,70.166605,-180,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,70.166605,-160,87.4871130111111,-169.99999999999994
+usaETA,CA,Calif.,Calif.,California,06,6,state,Region 6,San Francisco,87.4871131,-150,87.4871130111111,-169.99999999999994
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,139.448637,-120,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,156.769145,-130,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,156.769145,-150,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,139.448637,-160,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,122.128129,-150,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,122.128129,-130,139.44863700000002,-140
+usaETA,CO,Colo.,Colo.,Colorado,08,4,state,Region 4,Dallas,139.448637,-120,139.44863700000002,-140
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,399.256258,-90,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,416.576766,-100,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,416.576766,-120,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,399.256258,-130,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,381.93575,-120,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,381.93575,-100,399.256258,-109.99999999999999
+usaETA,CT,Conn.,Conn.,Connecticut,09,1,state,Region 1,Boston,399.256258,-90,399.256258,-109.99999999999999
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-160,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-180,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-190,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-180,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-160,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,381.93575,-120,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,399.256258,-130,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,399.256258,-150,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,381.93575,-160,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,364.615242,-150,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,364.615242,-130,381.93575000000004,-140.00000000000003
+usaETA,DE,Del.,Del.,Delaware,10,2,state,Region 2,Philadelphia,381.93575,-120,381.93575000000004,-140.00000000000003
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,295.33321,-210,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,312.653718,-220,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,312.653718,-240,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,295.33321,-250,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,278.012702,-240,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,278.012702,-220,295.33321,-230
+usaETA,FL,Fla.,Fla.,Florida,12,3,state,Region 3,Atlanta,295.33321,-210,295.33321,-230
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,312.653718,-180,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,329.974226,-190,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,329.974226,-210,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,312.653718,-220,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,295.33321,-210,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,295.33321,-190,312.653718,-200.00000000000003
+usaETA,GA,Ga.,Ga.,Georgia,13,3,state,Region 3,Atlanta,312.653718,-180,312.653718,-200.00000000000003
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,52.845997,-270,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,70.1665051,-280,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,70.1665051,-300,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,52.845997,-310,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,35.5254889,-300,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,35.5254889,-280,52.84599699999999,-290
+usaETA,GU,Guam,Guam,Guam,66,6,territory,Region 6,San Francisco,52.845997,-270,52.84599699999999,-290
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,70.166605,-240,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,87.4871131,-250,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,87.4871131,-270,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,70.166605,-280,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,52.8460969,-270,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,52.8460969,-250,70.16660499999999,-260.00000000000006
+usaETA,HI,Hawaii,Hawaii,Hawaii,15,6,state,Region 6,San Francisco,70.166605,-240,70.16660499999999,-260.00000000000006
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,191.410162,-90,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,208.73067,-100,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,208.73067,-120,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,191.410162,-130,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,174.089653,-120,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,174.089653,-100,191.41016155555556,-110.00000000000001
+usaETA,IA,Iowa,Iowa,Iowa,19,5,state,Region 5,Chicago,191.410162,-90,191.41016155555556,-110.00000000000001
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,87.4871131,-90,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,104.807621,-100,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,104.807621,-120,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,87.4871131,-130,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,70.166605,-120,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,70.166605,-100,87.4871130111111,-110
+usaETA,ID,Idaho,Idaho,Idaho,16,6,state,Region 6,San Francisco,87.4871131,-90,87.4871130111111,-110
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,226.051178,-90,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,243.371686,-100,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,243.371686,-120,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,226.051178,-130,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,208.73067,-120,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,208.73067,-100,226.051178,-109.99999999999999
+usaETA,IL,Ill.,Ill.,Illinois,17,5,state,Region 5,Chicago,226.051178,-90,226.051178,-109.99999999999999
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,260.692194,-90,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,278.012702,-100,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,278.012702,-120,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,260.692194,-130,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,243.371686,-120,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,243.371686,-100,260.692194,-110.00000000000001
+usaETA,IN,Ind.,Ind.,Indiana,18,5,state,Region 5,Chicago,260.692194,-90,260.692194,-110.00000000000001
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,191.410162,-150,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,208.73067,-160,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,208.73067,-180,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,191.410162,-190,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,174.089653,-180,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,174.089653,-160,191.41016155555556,-170.00000000000003
+usaETA,KS,Kans.,Kan.,Kansas,20,5,state,Region 5,Chicago,191.410162,-150,191.41016155555556,-170.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,243.371686,-120,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,260.692194,-130,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,260.692194,-150,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,243.371686,-160,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,226.051178,-150,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,226.051178,-130,243.371686,-140.00000000000003
+usaETA,KY,Ky.,Ky.,Kentucky,21,3,state,Region 3,Atlanta,243.371686,-120,243.371686,-140.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,208.73067,-180,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,226.051178,-190,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,226.051178,-210,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,208.73067,-220,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,191.410162,-210,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,191.410162,-190,208.73067,-200.00000000000003
+usaETA,LA,La.,La.,Louisiana,22,4,state,Region 4,Dallas,208.73067,-180,208.73067,-200.00000000000003
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,381.93575,-60,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,399.256258,-70,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,399.256258,-90,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,381.93575,-100,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,364.615242,-90,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,364.615242,-70,381.93575000000004,-80.00000000000001
+usaETA,MA,Mass.,Mass.,Massachusetts,25,1,state,Region 1,Boston,381.93575,-60,381.93575000000004,-80.00000000000001
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,347.294734,-120,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,364.615242,-130,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,364.615242,-150,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,347.294734,-160,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,329.974226,-150,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,329.974226,-130,347.29473399999995,-140
+usaETA,MD,Md.,Md.,Maryland,24,2,state,Region 2,Philadelphia,347.294734,-120,347.29473399999995,-140
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,416.576766,0,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,433.897275,-10,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,433.897275,-30,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,416.576766,-40,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,399.256258,-30,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,399.256258,-10,416.5767664444444,-19.999999999999996
+usaETA,ME,Maine,Maine,Maine,23,1,state,Region 1,Boston,416.576766,0,416.5767664444444,-19.999999999999996
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,278.012702,-60,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,295.33321,-70,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,295.33321,-90,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,278.012702,-100,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,260.692194,-90,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,260.692194,-70,278.012702,-80.00000000000001
+usaETA,MI,Mich.,Mich.,Michigan,26,5,state,Region 5,Chicago,278.012702,-60,278.012702,-80.00000000000001
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,174.089653,-60,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,191.410162,-70,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,191.410162,-90,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,174.089653,-100,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,156.769145,-90,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,156.769145,-70,174.08965344444448,-80
+usaETA,MN,Minn.,Minn.,Minnesota,27,5,state,Region 5,Chicago,174.089653,-60,174.08965344444448,-80
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,208.73067,-120,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,226.051178,-130,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,226.051178,-150,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,208.73067,-160,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,191.410162,-150,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,191.410162,-130,208.73067,-140.00000000000003
+usaETA,MO,Mo.,Mo.,Missouri,29,5,state,Region 5,Chicago,208.73067,-120,208.73067,-140.00000000000003
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,35.5255888,-240,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,52.8460969,-250,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,52.8460969,-270,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,35.5255888,-280,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,18.2050808,-270,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,18.2050808,-250,35.52558884444444,-259.99999999999994
+usaETA,MP,M.P.,M.P.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,35.5255888,-240,35.52558884444444,-259.99999999999994
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,243.371686,-180,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,260.692194,-190,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,260.692194,-210,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,243.371686,-220,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,226.051178,-210,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,226.051178,-190,243.371686,-200.00000000000003
+usaETA,MS,Miss.,Miss.,Mississippi,28,3,state,Region 3,Atlanta,243.371686,-180,243.371686,-200.00000000000003
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,104.807621,-60,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,122.128129,-70,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,122.128129,-90,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,104.807621,-100,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,87.4871131,-90,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,87.4871131,-70,104.80762104444442,-80
+usaETA,MT,Mont.,Mont.,Montana,30,4,state,Region 4,Dallas,104.807621,-60,104.80762104444442,-80
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,295.33321,-150,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,312.653718,-160,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,312.653718,-180,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,295.33321,-190,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,278.012702,-180,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,278.012702,-160,295.33321,-169.99999999999997
+usaETA,NC,N.C.,N.C.,North Carolina,37,3,state,Region 3,Atlanta,295.33321,-150,295.33321,-169.99999999999997
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,139.448637,-60,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,156.769145,-70,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,156.769145,-90,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,139.448637,-100,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,122.128129,-90,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,122.128129,-70,139.44863700000002,-80
+usaETA,ND,N. Dak.,N.D.,North Dakota,38,4,state,Region 4,Dallas,139.448637,-60,139.44863700000002,-80
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,174.089653,-120,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,191.410162,-130,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,191.410162,-150,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,174.089653,-160,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,156.769145,-150,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,156.769145,-130,174.08965344444448,-140
+usaETA,NE,Nebr.,Neb.,Nebraska,31,5,state,Region 5,Chicago,174.089653,-120,174.08965344444448,-140
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,399.256258,-30,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,416.576766,-40,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,416.576766,-60,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,399.256258,-70,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,381.93575,-60,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,381.93575,-40,399.256258,-50
+usaETA,NH,N.H.,N.H.,New Hampshire,33,1,state,Region 1,Boston,399.256258,-30,399.256258,-50
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,364.615242,-90,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,381.93575,-100,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,381.93575,-120,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,364.615242,-130,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,347.294734,-120,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,347.294734,-100,364.615242,-110.00000000000001
+usaETA,NJ,N.J.,N.J.,New Jersey,34,1,state,Region 1,Boston,364.615242,-90,364.615242,-110.00000000000001
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,156.769145,-150,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,174.089653,-160,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,174.089653,-180,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,156.769145,-190,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,139.448637,-180,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,139.448637,-160,156.769145,-170
+usaETA,NM,N. Mex.,N.M.,New Mexico,35,4,state,Region 4,Dallas,156.769145,-150,156.769145,-170
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,104.807621,-120,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,122.128129,-130,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,122.128129,-150,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,104.807621,-160,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,87.4871131,-150,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,87.4871131,-130,104.80762104444442,-139.99999999999997
+usaETA,NV,Nev.,Nev.,Nevada,32,6,state,Region 6,San Francisco,104.807621,-120,104.80762104444442,-139.99999999999997
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,347.294734,-60,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,364.615242,-70,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,364.615242,-90,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,347.294734,-100,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,329.974226,-90,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,329.974226,-70,347.29473399999995,-80.00000000000001
+usaETA,NY,N.Y.,N.Y.,New York,36,1,state,Region 1,Boston,347.294734,-60,347.29473399999995,-80.00000000000001
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,295.33321,-90,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,312.653718,-100,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,312.653718,-120,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,295.33321,-130,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,278.012702,-120,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,278.012702,-100,295.33321,-109.99999999999999
+usaETA,OH,Ohio,Ohio,Ohio,39,5,state,Region 5,Chicago,295.33321,-90,295.33321,-109.99999999999999
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,174.089653,-180,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,191.410162,-190,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,191.410162,-210,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,174.089653,-220,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,156.769145,-210,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,156.769145,-190,174.08965344444448,-199.99999999999997
+usaETA,OK,Okla.,Okla.,Oklahoma,40,4,state,Region 4,Dallas,174.089653,-180,174.08965344444448,-199.99999999999997
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,70.166605,-120,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,87.4871131,-130,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,87.4871131,-150,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,70.166605,-160,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,52.8460969,-150,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,52.8460969,-130,70.16660499999999,-140
+usaETA,OR,Oreg.,Ore.,Oregon,41,6,state,Region 6,San Francisco,70.166605,-120,70.16660499999999,-140
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,329.974226,-90,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,347.294734,-100,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,347.294734,-120,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,329.974226,-130,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,312.653718,-120,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,312.653718,-100,329.9742260000001,-110.00000000000001
+usaETA,PA,Pa.,Pa.,Pennsylvania,42,2,state,Region 2,Philadelphia,329.974226,-90,329.9742260000001,-110.00000000000001
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,381.93575,-240,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,399.256258,-250,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,399.256258,-270,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,381.93575,-280,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,364.615242,-270,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,364.615242,-250,381.93575000000004,-260.00000000000006
+usaETA,PR,P.R.,P.R.,Puerto Rico,72,1,territory,Region 1,Boston,381.93575,-240,381.93575000000004,-260.00000000000006
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-280,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-300,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-310,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-300,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-280,18.204981,-290
+usaETA,PW,Palau,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,416.576766,-60,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,433.897275,-70,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,433.897275,-90,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,416.576766,-100,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,399.256258,-90,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,399.256258,-70,416.5767664444444,-79.99999999999999
+usaETA,RI,R.I.,R.I.,Rhode Island,44,1,state,Region 1,Boston,416.576766,-60,416.5767664444444,-79.99999999999999
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,329.974226,-150,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,347.294734,-160,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,347.294734,-180,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,329.974226,-190,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,312.653718,-180,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,312.653718,-160,329.9742260000001,-170.00000000000003
+usaETA,SC,S.C.,S.C.,South Carolina,45,3,state,Region 3,Atlanta,329.974226,-150,329.9742260000001,-170.00000000000003
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,156.769145,-90,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,174.089653,-100,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,174.089653,-120,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,156.769145,-130,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,139.448637,-120,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,139.448637,-100,156.769145,-109.99999999999999
+usaETA,SD,S. Dak.,S.D.,South Dakota,46,4,state,Region 4,Dallas,156.769145,-90,156.769145,-109.99999999999999
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,260.692194,-150,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,278.012702,-160,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,278.012702,-180,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,260.692194,-190,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,243.371686,-180,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,243.371686,-160,260.692194,-170.00000000000003
+usaETA,TN,Tenn.,Tenn.,Tennessee,47,3,state,Region 3,Atlanta,260.692194,-150,260.692194,-170.00000000000003
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,191.410162,-210,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,208.73067,-220,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,208.73067,-240,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,191.410162,-250,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,174.089653,-240,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,174.089653,-220,191.41016155555556,-230
+usaETA,TX,Tex.,Texas,Texas,48,4,state,Region 4,Dallas,191.410162,-210,191.41016155555556,-230
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,122.128129,-150,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,139.448637,-160,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,139.448637,-180,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,122.128129,-190,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,104.807621,-180,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,104.807621,-160,122.12812899999999,-169.99999999999997
+usaETA,UT,Utah,Utah,Utah,49,4,state,Region 4,Dallas,122.128129,-150,122.12812899999999,-169.99999999999997
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,312.653718,-120,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,329.974226,-130,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,329.974226,-150,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,312.653718,-160,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,295.33321,-150,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,295.33321,-130,312.653718,-140.00000000000003
+usaETA,VA,Va.,Va.,Virginia,51,2,state,Region 2,Philadelphia,312.653718,-120,312.653718,-140.00000000000003
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,416.576766,-240,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,433.897275,-250,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,433.897275,-270,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,416.576766,-280,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,399.256258,-270,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,399.256258,-250,416.5767664444444,-259.99999999999994
+usaETA,VI,V.I.,V.I.,Virgin Islands,78,1,territory,Region 1,Boston,416.576766,-240,416.5767664444444,-259.99999999999994
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,364.615242,-30,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,381.93575,-40,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,381.93575,-60,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,364.615242,-70,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,347.294734,-60,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,347.294734,-40,364.615242,-50.00000000000001
+usaETA,VT,Vt.,Vt.,Vermont,50,1,state,Region 1,Boston,364.615242,-30,364.615242,-50.00000000000001
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,70.166605,-60,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,87.4871131,-70,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,87.4871131,-90,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,70.166605,-100,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,52.8460969,-90,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,52.8460969,-70,70.16660499999999,-80
+usaETA,WA,Wash.,Wash.,Washington,53,6,state,Region 6,San Francisco,70.166605,-60,70.16660499999999,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,208.73067,-60,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,226.051178,-70,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,226.051178,-90,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,208.73067,-100,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,191.410162,-90,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,191.410162,-70,208.73067,-80
+usaETA,WI,Wis.,Wis.,Wisconsin,55,5,state,Region 5,Chicago,208.73067,-60,208.73067,-80
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,278.012702,-120,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,295.33321,-130,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,295.33321,-150,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,278.012702,-160,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,260.692194,-150,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,260.692194,-130,278.012702,-140
+usaETA,WV,W. Va.,W.Va.,West Virginia,54,2,state,Region 2,Philadelphia,278.012702,-120,278.012702,-140
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,122.128129,-90,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,139.448637,-100,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,139.448637,-120,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,122.128129,-130,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,104.807621,-120,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,104.807621,-100,122.12812899999999,-110.00000000000001
+usaETA,WY,Wyo.,Wyo.,Wyoming,56,4,state,Region 4,Dallas,122.128129,-90,122.12812899999999,-110.00000000000001

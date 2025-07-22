@@ -67,7 +67,7 @@ other_data <- wikiTable[[1]][-1,] |>
 Pull the hexagon coordinates  using `get_coordinates()` function.  
 
 ```{r pull-hex-coords}
-hexmap <- get_coordinates("WIOAETA", "hexmap")
+hexmap <- get_coordinates("usaETA", "hexmap")
 ```
 
 
