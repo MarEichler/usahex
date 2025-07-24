@@ -4,6 +4,7 @@
 <url><loc>https://mareichler.github.io/usahex/LICENSE.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/articles/available_maps.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/articles/crs_for_map.html</loc></url>
+<url><loc>https://mareichler.github.io/usahex/articles/geography_abbr_and_info.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/articles/index.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/articles/multipel-labels-on-hex-map.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/authors.html</loc></url>
@@ -22,6 +23,8 @@
 <url><loc>https://mareichler.github.io/usahex/reference/usa53_labels.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/reference/usa56.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/reference/usa56_labels.html</loc></url>
+<url><loc>https://mareichler.github.io/usahex/reference/usa59.html</loc></url>
+<url><loc>https://mareichler.github.io/usahex/reference/usa59_labels.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/reference/usaETA.html</loc></url>
 <url><loc>https://mareichler.github.io/usahex/reference/usaETA_labels.html</loc></url>
 </urlset>
