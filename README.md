@@ -2,21 +2,20 @@
 # usahex
 
 This is a simple packages that includes hex maps of the United States
-with multiple options of different geographies. The only other hexmap
-coordinates of the United States that are easily available only include
-the 50 states and DC: [R Graph
+with multiple options of different geographies. Other hex maps available
+for public use only have the 50 states + DC: [R Graph
 Gallery](https://r-graph-gallery.com/328-hexbin-map-of-the-usa.html) and
 [Datawrapper](https://www.datawrapper.de/basemaps/usa-states-hexagons.html).
 
 However, this ignores territories (also referred to as outlying areas)
 and freely associated states. The [CDC Open-Source Visualization Editor
 (COVE)](https://www.cdc.gov/cove/data-visualization-types/hex-map.html)
-addresses this by putting hexagons in a line at the bottom of the widly
-used 50 states + DC hex map. Although, I was unable to provide
-‘coordinates’ that include these hexagons at the bottom; the [json file
+addresses this by putting hexagons in a line at the bottom of the 50
+states + DC hex map. However, the coordinates provided on the [json file
 available on cdc-open-vis
 GitHub](https://github.com/CDCgov/cdc-open-viz/blob/main/packages/map/src/components/UsaMap/data/us-hex-topo.json)
-mirrored the R Graph Gallery version (50 states + DC).
+only has the 50 states + DC and **does not provide** coordinates for
+territories or freely associated states.
 
 ## Benefits of this package
 
@@ -70,14 +69,11 @@ devtools::install_github("mareichler/usahex")
 |:---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 50 states | X | X | X | X | X | X | X |
 | District of Columbia | \- | X | X | X | X | X | X |
-| Puerto Rico | \- | \- | X | X | X | X | X |
-| U.S. Virgin Islands | \- | \- | \- | X | X | X | X |
-| Guam | \- | \- | \- | \- | X | X | X |
-| American Samoa | \- | \- | \- | \- | X | X | X |
-| Northern Mariana Islands | \- | \- | \- | \- | X | X | X |
-| Palau | \- | \- | \- | \- | \- | X | X |
-| Micronesia | \- | \- | \- | \- | X | X | \- |
-| Marshall Islands | \- | \- | \- | \- | X | X | \- |
+| Puerto Rico - *territory* | \- | \- | X | X | X | X | X |
+| U.S. Virgin Islands - *territory* | \- | \- | \- | X | X | X | X |
+| GU, AS, MP - *territories* | \- | \- | \- | \- | X | X | X |
+| Palau - *freely associate state* | \- | \- | \- | \- | \- | X | X |
+| FM & MH - *freely associate states* | \- | \- | \- | \- | \- | X | \- |
 
 ``` r
 library(usahex)
@@ -116,36 +112,36 @@ csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data
 read.csv(csv)[1:14,]
 ```
 
-    ##    hexmap abbr_usps abbr_gpo abbr_ap    name fips geo_type         X    Y
-    ## 1   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0
-    ## 2   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -10
-    ## 3   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -30
-    ## 4   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559  -40
-    ## 5   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -30
-    ## 6   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -10
-    ## 7   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0
-    ## 8   usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180
-    ## 9   usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -190
-    ## 10  usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -210
-    ## 11  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -220
-    ## 12  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -210
-    ## 13  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -190
-    ## 14  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180
-    ##           cX   cY
-    ## 1   35.52559  -20
-    ## 2   35.52559  -20
-    ## 3   35.52559  -20
-    ## 4   35.52559  -20
-    ## 5   35.52559  -20
-    ## 6   35.52559  -20
-    ## 7   35.52559  -20
-    ## 8  278.01270 -200
-    ## 9  278.01270 -200
-    ## 10 278.01270 -200
-    ## 11 278.01270 -200
-    ## 12 278.01270 -200
-    ## 13 278.01270 -200
-    ## 14 278.01270 -200
+    ##    hexmap abbr_usps abbr_gpo abbr_ap abbr_short abbr_long    name fips geo_type
+    ## 1   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 2   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 3   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 4   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 5   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 6   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 7   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state
+    ## 8   usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 9   usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 10  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 11  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 12  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 13  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ## 14  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state
+    ##            X    Y        cX   cY
+    ## 1  278.01270 -180 278.01270 -200
+    ## 2  295.33321 -190 278.01270 -200
+    ## 3  295.33321 -210 278.01270 -200
+    ## 4  278.01270 -220 278.01270 -200
+    ## 5  260.69219 -210 278.01270 -200
+    ## 6  260.69219 -190 278.01270 -200
+    ## 7  278.01270 -180 278.01270 -200
+    ## 8   35.52559    0  35.52559  -20
+    ## 9   52.84610  -10  35.52559  -20
+    ## 10  52.84610  -30  35.52559  -20
+    ## 11  35.52559  -40  35.52559  -20
+    ## 12  18.20508  -30  35.52559  -20
+    ## 13  18.20508  -10  35.52559  -20
+    ## 14  35.52559    0  35.52559  -20
 
 The `X` and `Y` coordinates are the 7 coordinates for each state that
 create the hexagon. The `cX` and `cY` are repeated center coordinates

@@ -17,18 +17,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-| geos / map name |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`ETAregions`| 
-|:------------    |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| 50 states       | X     | X     | X     | X     | X     | X     | X     |
-| District of Columbia | -| X     | X     | X     | X     | X     | X     |
-| Puerto Rico     | -     | -     | X     | X     | X     | X     | X     |
-| U.S. Virgin Islands  | -| -     | -     | X     | X     | X     | X     |
-| Guam                 | -| -     | -     | -     | X     | X     | X     |
-| American Samoa       | -| -     | -     | -     | X     | X     | X     |
-| Northern Mariana Islands| -| -  | -     | -     | X     | X     | X     |
-| Palau                | -| -     | -     | -     | -     | X     | X     |
-| Micronesia           | -| -     | -     | -     | X     | X     | -     |
-| Marshall Islands     | -| -     | -     | -     | X     | X     | -     |
+| geos / map name              |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`ETAregions`| 
+|:------------                 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 50 states                    | X     | X     | X     | X     | X     | X     | X     |
+| District of Columbia         | -     | X     | X     | X     | X     | X     | X     |
+| Puerto Rico - *territory*     | -    | -     | X     | X     | X     | X     | X     |
+| U.S. Virgin Islands - *territory*  |-| -     | -     | X     | X     | X     | X     |
+| GU, AS, MP - *territories*         |-| -     | -     | -     | X     | X     | X     |
+| Palau - *freely associate state*   |-| -     | -     | -     | -     | X     | X     |
+| FM & MH - *freely associate states*|-| -     | -     | -     | -     | X     | -     |
 
 ```{r, message = FALSE, warning = FALSE}
 library(tidyverse)
