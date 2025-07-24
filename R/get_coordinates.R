@@ -30,7 +30,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
   
   stopifnot("Enter 'map' argument" = !is.null(map))
   stopifnot("Invlaid 'map' argument" = map %in% c("usa50", "usa51", "usa52", "usa53", 
-                                                  "usa56", "usaETA", 
+                                                  "usa56", "usa59", "usaETA", 
                                                   "ETAregions"))
   stopifnot("Invalid 'coords' argument, options are 'hexmap' or 'labels'" = 
               coords %in% c("hexmap", "labels"))
@@ -42,6 +42,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
       "usa52"      = usahex::usa52, 
       "usa53"      = usahex::usa53,
       "usa56"      = usahex::usa56, 
+      "usa59"      = usahex::usa59, 
       "usaETA"     = usahex::usaETA, 
       "ETAregions" = usahex::ETAregions
     )
@@ -52,6 +53,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
       "usa52"      = usahex::usa52_labels, 
       "usa53"      = usahex::usa53_labels,
       "usa56"      = usahex::usa56_labels, 
+      "usa59"      = usahex::usa59_labels, 
       "usaETA"     = usahex::usaETA_labels, 
       "ETAregions" = usahex::ETAregions_labels
     ) 

@@ -10,18 +10,13 @@ Simple feature collection
 \item{abbr_usps}{2-letter code used by the United States Postal Service}
 \item{abbr_gpo}{abbreviations from US Government Printing Office}
 \item{abbr_ap}{abbreviations from AP Stylebook}
+\item{abbr_short}{abbreviations that are between 3-4 characters}
+\item{abbr_long}{abbreviations that are between 4-8 characters, most are 5-6 characters}
 \item{name}{Name of geographic area}
 \item{fips}{2-digit FIPS code (Federal Information Processing Standard)}
 \item{geo_type}{Type of region: state, federal district, territory, freely associated state}
 \item{geometry}{point coordinates for the center of the hexagon}
 }
-}
-\source{
-Coordinates for hex map are based on NPR's daily graphic template,
-\url{https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html}
-
-Abbreviations are pulled from List of U.S. state and territory abbreviations,
-\url{https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations}
 }
 \usage{
 usa51_labels

@@ -4,15 +4,9 @@
 #' 
 #' These are based on ETA (Department of Labor's Employment and Training Administration) regions for reporting WIOA (Workforce Innovation and Opportunity Act) performance. 
 #'
-#' @source Coordinates for hex map are based on NPR's daily graphic template,
-#'  \url{https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html}
-#'  
 #' @source Department of Labor, Employment and Training Administration 
 #'  \url{https://www.dol.gov/agencies/eta}
-#'
-#' @source Workforce Innovation and Opportunity Act
-#'  \url{https://www.dol.gov/agencies/eta/wioa/}
-#'
+#'  
 #' @source ETA regions 
 #'  \url{https://www.dol.gov/agencies/eta/regions}  
 #'

@@ -18,7 +18,8 @@ Suggests:
     knitr,
     rmarkdown, 
     rvest, 
-    cowplot
+    cowplot, 
+    DT
 LazyData: true
 VignetteBuilder: knitr
 URL: https://mareichler.github.io/usahex/

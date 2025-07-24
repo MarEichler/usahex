@@ -1,0 +1,91 @@
+---
+title: "Geography Abbreviations and Information"
+date: "2025-07-18"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Geography Abbreviations and Information}
+    %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+## Abbreviations 
+
+### abbr_usps
+
+2-letter code used by the United States Postal Service (USPS). USPS abbreviations are pulled from Wikipedia's [List of U.S. state and territory abbreviations](https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations). 
+
+### abbr_gpo
+
+Abbreviations from US Government Printing Office (GPO). GPO abbreviations are pulled from Wikipedia's [List of U.S. state and territory abbreviations](https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations). 
+
+*Freely associated states (Micronesia, Marshall Islands, and Palau) do not have GPO abbreviations* 
+
+### abbr_ap 
+
+Abbreviations from the AP Stylebook.  AP abbreviations are pulled from Wikipedia's [List of U.S. state and territory abbreviations](https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations).  
+
+
+*Territories (Guam, Northern Mariana Islands, Puerto Rico, and U.S. Virgin Islands) and freely associated states (Micronesia, Marshall Islands, and Palau) do not have AP abbreviations* 
+
+
+### abbr_short 
+
+Abbreviation or name for each geography that is either 3-4 characters. 
+
+### abbr_long
+
+Abbreviation or name for each geography that is 5-6 characters, except for: 
+
+- 4 geographies whose name is less than 5 characters; use full names (Iowa, Ohio, Utah, Guam)
+- 3 geographies who long abbreviation is 7-8 characters: 
+  * Northern Mariana Islands = N.Mar.I.
+  * Marshall Islands = Mar.Is.
+  * U.S. Virgin Islands = U.S.V.I. 
+
+
+## Other Informaiton 
+
+### name 
+
+Name of geographic area.  Names are pulled from Wikipedia's [List of U.S. state and territory abbreviations](https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations). 
+
+### fips
+
+2-digit FIPS code (Federal Information Processing Standard). FIPS codes are pulled from Wikipedia's [List of U.S. state and territory abbreviations](https://en.wikipedia.org/wiki/List_of_U.S._state_and_territory_abbreviations). 
+
+### geo_type 
+
+Type of region: state, federal district, territory, freely associated state
+
+
+## Data Table of Geography Information 
+
+```{r, echo = FALSE}
+DT::datatable(
+  sf::st_drop_geometry(usahex::usa59), 
+  rownames = FALSE, 
+  options=list(
+    initComplete = DT::JS(
+    # makes headers smaller 
+        "function(settings, json) {",
+        "$(this.api().table().header()).css({'font-size': '80%'});",
+        "}"
+    ),
+    ordering = FALSE
+  )
+  ) |> 
+  # makes columns smaller 
+  DT::formatStyle(columns = c(1:9), fontSize = '80%')
+```
+

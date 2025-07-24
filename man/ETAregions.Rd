@@ -14,14 +14,8 @@ Simple feature collection
 }
 }
 \source{
-Coordinates for hex map are based on NPR's daily graphic template,
-\url{https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html}
-
 Department of Labor, Employment and Training Administration
 \url{https://www.dol.gov/agencies/eta}
-
-Workforce Innovation and Opportunity Act
-\url{https://www.dol.gov/agencies/eta/wioa/}
 
 ETA regions
 \url{https://www.dol.gov/agencies/eta/regions}

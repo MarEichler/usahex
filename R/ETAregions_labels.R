@@ -1,27 +1,31 @@
 #' ETAregions_labels shapefile data
 #' 
-#' Point coordinates for the labels on ETA regions.  
+#' Point coordinates for the center of the hexagon that includes:
+#' - 50 States  
+#' - 1 federal district: District of Columbia
+#' - 5 territories: Puerto Rico, Virgin Islands, American Samoa, and the Northern Mariana Islands  
+#' - 1 freely associated state: Palau
 #' 
-#' These are based on ETA (Department of Labor's Employment and Training Administration) regions for reporting WIOA (Workforce Innovation and Opportunity Act) performance. 
-#'
-#' @source Coordinates for hex map are based on NPR's daily graphic template,
-#'  \url{https://github.com/nprapps/dailygraphics-templates/blob/master/state_grid_map/index.html}
+#' These are based on ETA (Department of Labor's Employment and Training Administration) 
+#'   regions for reporting WIOA (Workforce Innovation and Opportunity Act) performance. 
 #'  
 #' @source Department of Labor, Employment and Training Administration 
 #'  \url{https://www.dol.gov/agencies/eta}
-#'
-#' @source Workforce Innovation and Opportunity Act
-#'  \url{https://www.dol.gov/agencies/eta/wioa/}
-#'
+#'  
 #' @source ETA regions 
 #'  \url{https://www.dol.gov/agencies/eta/regions}  
 #'
 #' @format Simple feature collection 
 #' \describe{
-#' \item{eta_region}{Number code representing ETA region, 1-6}
-#' \item{eta_region_name}{Name of region}
-#' \item{etaA_region_city}{City headquarters for ETA region}
-#' \item{geometry}{Point coordinates for labels on ETA regions}
+#' \item{abbr_usps}{2-letter code used by the United States Postal Service}
+#' \item{abbr_gpo}{abbreviations from US Government Printing Office}
+#' \item{abbr_ap}{abbreviations from AP Stylebook}
+#' \item{abbr_short}{abbreviations that are between 3-4 characters}
+#' \item{abbr_long}{abbreviations that are between 4-8 characters, most are 5-6 characters}
+#' \item{name}{Name of geographic area}
+#' \item{fips}{2-digit FIPS code (Federal Information Processing Standard)}
+#' \item{geo_type}{Type of region: state, federal district, territory, freely associated state}
+#' \item{geometry}{point coordinates for the center of the hexagon}
 #' }
 'ETAregions_labels'
 

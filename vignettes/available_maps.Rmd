@@ -17,15 +17,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-| map name / geos include |50 states| District of Columbia | Puerto Rico | U.S. Virgin Islands | Guam | American Samoa | Northern Mariana Islands | Palau | 
-|:-----                   |:----:   |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| usa50                  | X       | -  | -  | -  | -  | -  | -  | -  |
-| usa51                  | X       | X  | -  | -  | -  | -  | -  | -  |
-| usa52                  | X       | X  | X  | -  | -  | -  | -  | -  |
-| usa53                  | X       | X  | X  | X  | -  | -  | -  | -  |
-| usa56                  | X       | X  | X  | X  | X  | X  | X  | -  |
-| usaETA                 | X       | X  | X  | X  | X  | X  | X  | X  |
-| ETAregions\*           | x       | x  | x  | x  | x  | x  | x  | x  |
+| geos / map name |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`ETAregions`| 
+|:------------    |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 50 states       | X     | X     | X     | X     | X     | X     | X     |
+| District of Columbia | -| X     | X     | X     | X     | X     | X     |
+| Puerto Rico     | -     | -     | X     | X     | X     | X     | X     |
+| U.S. Virgin Islands  | -| -     | -     | X     | X     | X     | X     |
+| Guam                 | -| -     | -     | -     | X     | X     | X     |
+| American Samoa       | -| -     | -     | -     | X     | X     | X     |
+| Northern Mariana Islands| -| -  | -     | -     | X     | X     | X     |
+| Palau                | -| -     | -     | -     | -     | X     | X     |
+| Micronesia           | -| -     | -     | -     | X     | X     | -     |
+| Marshall Islands     | -| -     | -     | -     | X     | X     | -     |
 
 ```{r, message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -93,6 +96,19 @@ get_coordinates(map = "usa56", coords = "hexmap") |>
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()
 ```
+
+## `usa59` 
+
+50 US States, District of Columbia, territories (Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands) and freely associated states (Micronesia, Marshall Islands and Palau). 
+
+```{r, fig.width = 6.72, fig.height= 4.80, dpi = 96}
+get_coordinates(map = "usa59", coords = "hexmap") |> 
+  ggplot() + 
+  geom_sf(fill = "grey35", color = "white") + 
+  geom_sf_text(aes(label = abbr_usps), color = "white") + 
+  theme_void()
+```
+
 
 ## `usaETA` and `ETAregions` 
 

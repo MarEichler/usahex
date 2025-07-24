@@ -1,7 +1,63 @@
 
 # usahex
 
-## Installation
+This is a simple packages that includes hex maps of the United States
+with multiple options of different geographies. The only other hexmap
+coordinates of the United States that are easily available only include
+the 50 states and DC: [R Graph
+Gallery](https://r-graph-gallery.com/328-hexbin-map-of-the-usa.html) and
+[Datawrapper](https://www.datawrapper.de/basemaps/usa-states-hexagons.html).
+
+However, this ignores territories (also referred to as outlying areas)
+and freely associated states. The [CDC Open-Source Visualization Editor
+(COVE)](https://www.cdc.gov/cove/data-visualization-types/hex-map.html)
+addresses this by putting hexagons in a line at the bottom of the widly
+used 50 states + DC hex map. Although, I was unable to provide
+‘coordinates’ that include these hexagons at the bottom; the [json file
+available on cdc-open-vis
+GitHub](https://github.com/CDCgov/cdc-open-viz/blob/main/packages/map/src/components/UsaMap/data/us-hex-topo.json)
+mirrored the R Graph Gallery version (50 states + DC).
+
+## Benefits of this package
+
+- includes hex maps **with** territories and freely associate states
+- simple hexagon coordinates (not based on lat/long coordinates): which
+  makes it much easier to add/subtract/move hexagons so if you want a
+  map with different permutations, you can make it yourself!
+
+## WHY?
+
+Hex maps are much better when displaying information on a state-by-state
+basis. Most of the US choropleth maps are not using metrics that relate
+to land size, so there is no need to use a traditional lat/long map.
+Traditional maps over emphasis large-land geographies and makes
+small-land geographies difficult to see.
+
+Hex maps are easier for displaying data on a unique state basis and
+allow for enough space to put actual values on the map FOR EVERY
+GEOGRAPHY (not just the large-land geographies)
+
+## Original Coordinates Source
+
+Back during covid times, [NPR used hex maps (that included US
+territories)](https://www.npr.org/2021/12/27/1068303629/covid-19-omicron-maps-data-states)
+to show different covid related metrics. I reached out to [Alyson Hurt,
+Supervising Graphics
+Editor](https://www.npr.org/people/348735573/alyson-hurt) who pointed me
+to the [dailygraphics-templates file on
+GitHub](https://github.com/nprapps/dailygraphics-templates/blob/129967a4ae36f14cf299f434f9814f7314a00cde/state_grid_map/index.html#L49-L110)
+that contained the coordinates for the map. I’ve made some small
+adjustments, moving some of the pacific island hexagons around and
+adding some new ones; but these coordinates are the basis for all of the
+maps in this package. The y values have been reversed so that the plot
+is not upside down.
+
+## R Installation
+
+The packages uses [sf](https://r-spatial.github.io/sf/) package (sf =
+simple features) to create shape objects that are easy to plot using the
+[ggplot2](https://ggplot2.tidyverse.org/) package, my preferred medium
+for data visualizations.
 
 ``` r
 # install.packages("devtools")
@@ -10,41 +66,117 @@ devtools::install_github("mareichler/usahex")
 
 ## Hex Maps
 
-<!--                      |50 states| DC | PR | VI | GU | AS | MP | PW |  -->
-
-| map name / geos include | 50 states | District of Columbia | Puerto Rico | U.S. Virgin Islands | Guam | American Samoa | Northern Mariana Islands | Palau |
-|:---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| usa50 | X | \- | \- | \- | \- | \- | \- | \- |
-| usa51 | X | X | \- | \- | \- | \- | \- | \- |
-| usa52 | X | X | X | \- | \- | \- | \- | \- |
-| usa53 | X | X | X | X | \- | \- | \- | \- |
-| usa56 | X | X | X | X | X | X | X | \- |
-| usaETA | X | X | X | X | X | X | X | X |
-| ETAregions\* | x | x | x | x | x | x | x | x |
-
-\* *Note:* Does not include individual geography hexagons, combines
-hexagons to create grouped regions of hexagons.
-
-The original source of the coordinates are from the NPR Graphics team:
-[github.com/nprapps/dailygraphics-templates](https://github.com/nprapps/dailygraphics-templates/blob/129967a4ae36f14cf299f434f9814f7314a00cde/state_grid_map/index.html#L50-L110).
-The y values have been reversed so that the plot is not upside down.
+| geos / map name | `usa50` | `usa51` | `usa52` | `usa53` | `usa56` | `usa59` | `usaETA`/`ETAregions` |
+|:---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| 50 states | X | X | X | X | X | X | X |
+| District of Columbia | \- | X | X | X | X | X | X |
+| Puerto Rico | \- | \- | X | X | X | X | X |
+| U.S. Virgin Islands | \- | \- | \- | X | X | X | X |
+| Guam | \- | \- | \- | \- | X | X | X |
+| American Samoa | \- | \- | \- | \- | X | X | X |
+| Northern Mariana Islands | \- | \- | \- | \- | X | X | X |
+| Palau | \- | \- | \- | \- | \- | X | X |
+| Micronesia | \- | \- | \- | \- | X | X | \- |
+| Marshall Islands | \- | \- | \- | \- | X | X | \- |
 
 ``` r
 library(usahex)
-library(tidyverse)
+library(ggplot2)
 ```
 
 ``` r
-get_coordinates(map = "usaETA", coords = "hexmap") |> 
+allgeos <- get_coordinates(map = "usa59", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(aes(fill = geo_type)) + 
   geom_sf_text(aes(label = abbr_usps)) + 
   theme_void()
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+``` r
+allgeos
+```
+
+<figure>
+<img src="man/figures/example_map_showing_all_geos.png"
+alt="usa59 hex map showing all geographies available" />
+<figcaption aria-hidden="true">usa59 hex map showing all geographies
+available</figcaption>
+</figure>
 
 ## Don’t Use R?
 
-Have no fear! I saved a csv of each map with the coordinates. These
-files can be found in the data-raw folder on github.
+### CVS Files
+
+These files can be found in the
+[data-raw](https://github.com/MarEichler/usahex/tree/main/data-raw)
+folder on GitHub.
+
+``` r
+csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv"
+read.csv(csv)[1:14,]
+```
+
+    ##    hexmap abbr_usps abbr_gpo abbr_ap    name fips geo_type         X    Y
+    ## 1   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0
+    ## 2   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -10
+    ## 3   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -30
+    ## 4   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559  -40
+    ## 5   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -30
+    ## 6   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -10
+    ## 7   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0
+    ## 8   usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180
+    ## 9   usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -190
+    ## 10  usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -210
+    ## 11  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -220
+    ## 12  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -210
+    ## 13  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -190
+    ## 14  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180
+    ##           cX   cY
+    ## 1   35.52559  -20
+    ## 2   35.52559  -20
+    ## 3   35.52559  -20
+    ## 4   35.52559  -20
+    ## 5   35.52559  -20
+    ## 6   35.52559  -20
+    ## 7   35.52559  -20
+    ## 8  278.01270 -200
+    ## 9  278.01270 -200
+    ## 10 278.01270 -200
+    ## 11 278.01270 -200
+    ## 12 278.01270 -200
+    ## 13 278.01270 -200
+    ## 14 278.01270 -200
+
+The `X` and `Y` coordinates are the 7 coordinates for each state that
+create the hexagon. The `cX` and `cY` are repeated center coordinates
+that create a single point in the center of the given hexagons.
+
+These raw files can also be used to create ggplot2 items if you don’t
+want to work with simple features (sf) objects:
+
+``` r
+df <- read.csv("https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv") 
+
+
+gg <- ggplot(df, aes(group=abbr_usps)) +
+  geom_polygon(aes(x=X, y=Y), color = "white", fill = "grey35") +
+  geom_text(
+    data=dplyr::distinct(df, abbr_usps, cX, cY), # only need 1coord per state
+    aes(label=abbr_usps, x = cX, y = cY), 
+    size = 3.25, 
+    color = "white"
+  ) +
+  coord_fixed() + 
+  theme_void() 
+```
+
+``` r
+gg
+```
+
+<figure>
+<img src="man/figures/csv_example_map.png"
+alt="usa53 hex map created from csv file" />
+<figcaption aria-hidden="true">usa53 hex map created from csv
+file</figcaption>
+</figure>

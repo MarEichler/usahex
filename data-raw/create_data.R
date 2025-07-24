@@ -124,13 +124,27 @@ c_usa56$MP<-c( 35.5255888 , -240,  52.8460969, -250,  52.8460969, -270,  35.5255
 # change HI location, moving closer to lower 48 to make space for pacific islands 
 c_usa56$HI<-c(  70.166605 , -240,  87.4871131, -250,  87.4871131, -270,  70.166605 , -280,  52.8460969, -270,  52.8460969, -250,  70.166605 , -240)
 
+
+
+# usa59 - 50 states, DC, Territories (PR, VI, AS, GU, & MP) and freely associate states (FM, MH, PW) -----
+# add FM, MH, PW-
+c_usa59 <- c_usa56
+# new position for PW - to the right of MP (-35 on x corrds, same y coords )
+c_usa59$PW<-c(  0.5255888 , -240,  17.8460969, -250,  17.8460969, -270,   0.5255888, -280, -17.2050808, -270, -17.2050808, -250,   0.5255888, -240)
+# new position for FM - two rows above GU (same x corrds, +60 to Y corrds)
+c_usa59$FM<-c(  18.204981 , -210,  35.5254891, -220,  35.5254891, -240,  18.204981 , -250,   0.8844729, -240,   0.8844729, -220,  18.204981 , -210)
+# new position for MH - two rows above AS (same x coords, +60 to Y corrds, same Y coords as PW)
+c_usa59$MH<-c(  52.845997 , -210,  70.1665051, -220,  70.1665051, -240,  52.845997 , -250,  35.5254889, -240,  35.5254889, -220,  52.845997 , -210)
+
+
+
 # usaETA- 50 states, DC, all outlying areas (territories) and Palau -----------
 # Employment Training Administration geo's 
 # https://www.dol.gov/agencies/eta/regions
 c_usaETA <- c_usa56
 # add Palau in Guam's spot 
 c_usaETA$PW<-c(  18.204981 , -270,  35.5254891, -280,  35.5254891, -300,  18.204981 , -310,   0.8844729, -300,   0.8844729, -280,  18.204981 , -270)
-# create new position to the left for AS 
+# create new position to the left of original AS spot for new AS 
 c_usaETA$AS<-c(  87.4871131, -270, 104.8075   , -280, 104.8075   , -300,  87.4871131, -310,  70.1665051, -300,  70.1665051, -280,  87.4871131, -270)
 # put GU in old AS spot 
 c_usaETA$GU<-c(  52.845997 , -270,  70.1665051, -280,  70.1665051, -300,  52.845997 , -310,  35.5254889, -300,  35.5254889, -280,  52.845997 , -270)
@@ -204,6 +218,7 @@ usa51  <- create_sf(c_usa51, geo_info)
 usa52  <- create_sf(c_usa52, geo_info) 
 usa53  <- create_sf(c_usa53, geo_info) 
 usa56  <- create_sf(c_usa56, geo_info)
+usa59  <- create_sf(c_usa59, geo_info)
 usaETA <- create_sf(c_usaETA, geo_info_wioaeta)
 
 
@@ -224,6 +239,7 @@ usa51_labels  <- create_labels(usa51)
 usa52_labels  <- create_labels(usa52)
 usa53_labels  <- create_labels(usa53)
 usa56_labels  <- create_labels(usa56)
+usa59_labels  <- create_labels(usa59)
 usaETA_labels <- create_labels(usaETA)
 
 
@@ -282,6 +298,9 @@ usethis::use_data(usa53_labels, overwrite = ut_overwrite)
 usethis::use_data(usa56       , overwrite = ut_overwrite)
 usethis::use_data(usa56_labels, overwrite = ut_overwrite)
 
+usethis::use_data(usa59       , overwrite = ut_overwrite)
+usethis::use_data(usa59_labels, overwrite = ut_overwrite)
+
 usethis::use_data(usaETA       , overwrite = ut_overwrite)
 usethis::use_data(usaETA_labels, overwrite = ut_overwrite)
 
@@ -314,6 +333,7 @@ create_csv_fortified_df <- function(sfobj, sfobj_labels){
   
   # join both df's together and add map label 
   df <- full_join(df_hex, df_labels, by = "abbr_usps", relationship = "many-to-one") |> 
+    arrange(fips) |> 
     mutate(hexmap = nm, .before = 1)
   
   write_csv(df, file = file.path("data-raw", paste0(nm, ".csv")))
@@ -326,6 +346,7 @@ create_csv_fortified_df(usa51, usa51_labels)
 create_csv_fortified_df(usa52, usa52_labels)
 create_csv_fortified_df(usa53, usa53_labels)
 create_csv_fortified_df(usa56, usa56_labels)
+create_csv_fortified_df(usa59, usa59_labels)
 create_csv_fortified_df(usaETA, usaETA_labels)
 
 # ggplot(df, aes(group=abbr_usps)) + 

@@ -1,9 +1,10 @@
-#' usa52_labels shapefile data
+#' usa59 shapefile data
 #' 
-#' Point coordinates for the center of the hexagon that includes: 
+#' Hexagon map shape file that includes:  
 #' - 50 States  
 #' - 1 federal district: District of Columbia 
-#' - 1 territory: Puerto Rico
+#' - 5 territories: Puerto Rico, Virgin Islands, American Samoa, and the Northern Mariana Islands  
+#' - 3 freely associates states: Micronesia, Marshall Islands, Palau
 #'
 #' @format Simple feature collection 
 #' \describe{
@@ -15,7 +16,7 @@
 #' \item{name}{Name of geographic area}
 #' \item{fips}{2-digit FIPS code (Federal Information Processing Standard)}
 #' \item{geo_type}{Type of region: state, federal district, territory, freely associated state}
-#' \item{geometry}{point coordinates for the center of the hexagon}
+#' \item{geometry}{polygon coordinates for hexagon}
 #' }
-'usa52_labels'
+'usa59'
 
