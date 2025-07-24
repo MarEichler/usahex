@@ -56,8 +56,8 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="usahex">usahex<a class="anchor" aria-label="anchor" href="#usahex"></a>
 </h1></div>
-<p>This is a simple packages that includes hex maps of the United States with multiple options of different geographies. The only other hexmap coordinates of the United States that are easily available only include the 50 states and DC: <a href="https://r-graph-gallery.com/328-hexbin-map-of-the-usa.html" class="external-link">R Graph Gallery</a> and <a href="https://www.datawrapper.de/basemaps/usa-states-hexagons.html" class="external-link">Datawrapper</a>.</p>
-<p>However, this ignores territories (also referred to as outlying areas) and freely associated states. The <a href="https://www.cdc.gov/cove/data-visualization-types/hex-map.html" class="external-link">CDC Open-Source Visualization Editor (COVE)</a> addresses this by putting hexagons in a line at the bottom of the widly used 50 states + DC hex map. Although, I was unable to provide ‘coordinates’ that include these hexagons at the bottom; the <a href="https://github.com/CDCgov/cdc-open-viz/blob/main/packages/map/src/components/UsaMap/data/us-hex-topo.json" class="external-link">json file available on cdc-open-vis GitHub</a> mirrored the R Graph Gallery version (50 states + DC).</p>
+<p>This is a simple packages that includes hex maps of the United States with multiple options of different geographies. Other hex maps available for public use only have the 50 states + DC: <a href="https://r-graph-gallery.com/328-hexbin-map-of-the-usa.html" class="external-link">R Graph Gallery</a> and <a href="https://www.datawrapper.de/basemaps/usa-states-hexagons.html" class="external-link">Datawrapper</a>.</p>
+<p>However, this ignores territories (also referred to as outlying areas) and freely associated states. The <a href="https://www.cdc.gov/cove/data-visualization-types/hex-map.html" class="external-link">CDC Open-Source Visualization Editor (COVE)</a> addresses this by putting hexagons in a line at the bottom of the 50 states + DC hex map. However, the coordinates provided on the <a href="https://github.com/CDCgov/cdc-open-viz/blob/main/packages/map/src/components/UsaMap/data/us-hex-topo.json" class="external-link">json file available on cdc-open-vis GitHub</a> only has the 50 states + DC and <strong>does not provide</strong> coordinates for territories or freely associated states.</p>
 <div class="section level2">
 <h2 id="benefits-of-this-package">Benefits of this package<a class="anchor" aria-label="anchor" href="#benefits-of-this-package"></a>
 </h2>
@@ -133,7 +133,8 @@
 <td align="center">X</td>
 </tr>
 <tr class="odd">
-<td align="left">Puerto Rico</td>
+<td align="left">Puerto Rico - <em>territory</em>
+</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">X</td>
@@ -143,7 +144,8 @@
 <td align="center">X</td>
 </tr>
 <tr class="even">
-<td align="left">U.S. Virgin Islands</td>
+<td align="left">U.S. Virgin Islands - <em>territory</em>
+</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -153,7 +155,8 @@
 <td align="center">X</td>
 </tr>
 <tr class="odd">
-<td align="left">Guam</td>
+<td align="left">GU, AS, MP - <em>territories</em>
+</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -163,27 +166,8 @@
 <td align="center">X</td>
 </tr>
 <tr class="even">
-<td align="left">American Samoa</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
-</tr>
-<tr class="odd">
-<td align="left">Northern Mariana Islands</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">X</td>
-<td align="center">X</td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="left">Palau</td>
+<td align="left">Palau - <em>freely associate state</em>
+</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
@@ -193,22 +177,13 @@
 <td align="center">X</td>
 </tr>
 <tr class="odd">
-<td align="left">Micronesia</td>
+<td align="left">FM &amp; MH - <em>freely associate states</em>
+</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
 <td align="center">-</td>
-<td align="center">X</td>
-<td align="center">X</td>
 <td align="center">-</td>
-</tr>
-<tr class="even">
-<td align="left">Marshall Islands</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">-</td>
-<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">-</td>
 </tr>
@@ -239,36 +214,36 @@ usa59 hex map showing all geographies available
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">csv</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">csv</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">14</span>,<span class="op">]</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="do">##    hexmap abbr_usps abbr_gpo abbr_ap    name fips geo_type         X    Y</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="do">## 1   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="do">## 2   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -10</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="do">## 3   usa53        AK   Alaska  Alaska  Alaska    2    state  52.84610  -30</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="do">## 4   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559  -40</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="do">## 5   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -30</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="do">## 6   usa53        AK   Alaska  Alaska  Alaska    2    state  18.20508  -10</span></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="do">## 7   usa53        AK   Alaska  Alaska  Alaska    2    state  35.52559    0</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="do">## 8   usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180</span></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="do">## 9   usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -190</span></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="do">## 10  usa53        AL     Ala.    Ala. Alabama    1    state 295.33321 -210</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="do">## 11  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -220</span></span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="do">## 12  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -210</span></span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="do">## 13  usa53        AL     Ala.    Ala. Alabama    1    state 260.69219 -190</span></span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="do">## 14  usa53        AL     Ala.    Ala. Alabama    1    state 278.01270 -180</span></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="do">##           cX   cY</span></span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="do">## 1   35.52559  -20</span></span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="do">## 2   35.52559  -20</span></span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="do">## 3   35.52559  -20</span></span>
-<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="do">## 4   35.52559  -20</span></span>
-<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a><span class="do">## 5   35.52559  -20</span></span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="do">## 6   35.52559  -20</span></span>
-<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="do">## 7   35.52559  -20</span></span>
-<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="do">## 8  278.01270 -200</span></span>
-<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="do">## 9  278.01270 -200</span></span>
-<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="do">## 10 278.01270 -200</span></span>
-<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="do">## 11 278.01270 -200</span></span>
-<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a><span class="do">## 12 278.01270 -200</span></span>
-<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a><span class="do">## 13 278.01270 -200</span></span>
-<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a><span class="do">## 14 278.01270 -200</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="do">##    hexmap abbr_usps abbr_gpo abbr_ap abbr_short abbr_long    name fips geo_type</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="do">## 1   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="do">## 2   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="do">## 3   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="do">## 4   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="do">## 5   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="do">## 6   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="do">## 7   usa53        AL     Ala.    Ala.       Ala.     Alab. Alabama    1    state</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="do">## 8   usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="do">## 9   usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="do">## 10  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="do">## 11  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="do">## 12  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="do">## 13  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a><span class="do">## 14  usa53        AK   Alaska  Alaska        Ak.    Alaska  Alaska    2    state</span></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="do">##            X    Y        cX   cY</span></span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="do">## 1  278.01270 -180 278.01270 -200</span></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="do">## 2  295.33321 -190 278.01270 -200</span></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="do">## 3  295.33321 -210 278.01270 -200</span></span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="do">## 4  278.01270 -220 278.01270 -200</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a><span class="do">## 5  260.69219 -210 278.01270 -200</span></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a><span class="do">## 6  260.69219 -190 278.01270 -200</span></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a><span class="do">## 7  278.01270 -180 278.01270 -200</span></span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="do">## 8   35.52559    0  35.52559  -20</span></span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="do">## 9   52.84610  -10  35.52559  -20</span></span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="do">## 10  52.84610  -30  35.52559  -20</span></span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="do">## 11  35.52559  -40  35.52559  -20</span></span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a><span class="do">## 12  18.20508  -30  35.52559  -20</span></span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a><span class="do">## 13  18.20508  -10  35.52559  -20</span></span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a><span class="do">## 14  35.52559    0  35.52559  -20</span></span></code></pre></div>
 <p>The <code>X</code> and <code>Y</code> coordinates are the 7 coordinates for each state that create the hexagon. The <code>cX</code> and <code>cY</code> are repeated center coordinates that create a single point in the center of the given hexagons.</p>
 <p>These raw files can also be used to create ggplot2 items if you don’t want to work with simple features (sf) objects:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
