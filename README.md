@@ -110,25 +110,25 @@ These files can be found in the
 [data-raw/geojson](https://github.com/MarEichler/usahex/tree/main/data-raw/geojson)
 folder on GitHub.
 
+geojson files are *supposed* to be lat/long coordinates. In order to
+play nice with typical geojson set up, I adjusted the coordinates for
+the hex map so be in the middle of the pacific ocean ([divide by 8;
+subtract 190 from X/long, add 25 to
+Y/lat)](https://github.com/MarEichler/usahex/blob/6f1aec363c984bb4683784836305d8b1cda6e236/data-raw/create_data.R#L333)).
+I also added a coordinate reference systmem (CRS): WGS 84 /
+Pseudo-Mercator ([EPSG code
+3857](https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html)).
+
 ``` r
-geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
-
-library(sf)
-```
-
-    ## Warning: package 'sf' was built under R version 4.4.3
-
-    ## Linking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE
-
-``` r
-read_sf(geojson)[1:5,]
+geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/develop/data-raw/geojson/usa56.geojson"
+sf::read_sf(geojson)[1:5,]
 ```
 
     ## Simple feature collection with 5 features and 8 fields
     ## Geometry type: POLYGON
     ## Dimension:     XY
-    ## Bounding box:  xmin: 18.20508 ymin: -310 xmax: 295.3332 ymax: 0
-    ## Geodetic CRS:  WGS 84
+    ## Bounding box:  xmin: -187.7244 ymin: -13.75 xmax: -153.0833 ymax: 25
+    ## Projected CRS: WGS 84 / Pseudo-Mercator
     ## # A tibble: 5 × 9
     ##   abbr_usps abbr_gpo abbr_ap abbr_short abbr_long name           fips  geo_type 
     ##   <chr>     <chr>    <chr>   <chr>      <chr>     <chr>          <chr> <chr>    
@@ -137,10 +137,10 @@ read_sf(geojson)[1:5,]
     ## 3 AR        Ark.     Ark.    Ark.       Arkan.    Arkansas       05    state    
     ## 4 AS        A.S.     A.S.    A.S.       Am.Sa.    American Samoa 60    territory
     ## 5 AZ        Ariz.    Ariz.   Arz.       Ariz.     Arizona        04    state    
-    ## # ℹ 1 more variable: geometry <POLYGON [°]>
+    ## # ℹ 1 more variable: geometry <POLYGON [m]>
 
 ``` r
-df <- read_sf(geojson) 
+df <- sf::read_sf(geojson) 
 
 gggeojson <- ggplot(df) + 
   geom_sf() +
@@ -148,18 +148,9 @@ gggeojson <- ggplot(df) +
   theme_void()
 ```
 
-ggplot2 gets a lil angry when adding labels because geojson files are
-supposed to be lat/long coordinates, and these are clearly not.
-
 ``` r
 gggeojson
 ```
-
-    ## Warning in st_is_longlat(x): bounding box has potentially an invalid value
-    ## range for longlat data
-
-    ## Warning in st_point_on_surface.sfc(sf::st_zm(x)): st_point_on_surface may not
-    ## give correct results for longitude/latitude data
 
 <figure>
 <img src="man/figures/geojson_example_map.png"

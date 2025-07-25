@@ -90,23 +90,21 @@ ggsave(filename = "man/figures/example_map_showing_all_geos.png", plot = allgeos
 
 These files can be found in the [data-raw/geojson](https://github.com/MarEichler/usahex/tree/main/data-raw/geojson) folder on GitHub. 
 
+geojson files are *supposed* to be lat/long coordinates.  In order to play nice with typical geojson set up, I adjusted the coordinates for the hex map so be in the middle of the pacific ocean ([divide by 8; subtract 190 from X/long, add 25 to Y/lat)](https://github.com/MarEichler/usahex/blob/6f1aec363c984bb4683784836305d8b1cda6e236/data-raw/create_data.R#L333)).  I also added a coordinate reference systmem (CRS): WGS 84 / Pseudo-Mercator ([EPSG code 3857](https://epsg.io/3857)).  
+
 ```{r}
 geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
-
-library(sf)
-read_sf(geojson)[1:5,]
+sf::read_sf(geojson)[1:5,]
 ```
 
 ```{r}
-df <- read_sf(geojson) 
+df <- sf::read_sf(geojson) 
 
 gggeojson <- ggplot(df) + 
   geom_sf() +
   geom_sf_text(aes(label = abbr_short)) + 
   theme_void()
 ```
-
-ggplot2 gets a lil angry when adding labels because geojson files are supposed to be lat/long coordinates, and these are clearly not. 
 
 ```{r, eval = FALSE, echo = TRUE}
 gggeojson
