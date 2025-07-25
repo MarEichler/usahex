@@ -10,7 +10,13 @@ library(sf)
 geo_abbr_and_names <- read_csv(
   "./data-raw/geo_abbr_and_names.csv", 
   show_col_types = FALSE
-  ) 
+  ) |> 
+  mutate(geo_type = factor(geo_type, levels = c(
+    "state", 
+    "federal district", 
+    "territory", 
+    "freely associated state")
+  ))
 
 # ETA Regional Data -----------------------------------------------------------
 # link: https://www.dol.gov/agencies/eta/regions
@@ -333,7 +339,7 @@ create_csv_fortified_df <- function(sfobj, sfobj_labels){
   
   # join both df's together and add map label 
   df <- full_join(df_hex, df_labels, by = "abbr_usps", relationship = "many-to-one") |> 
-    arrange(fips) |> 
+    arrange(geo_type, fips) |> 
     mutate(hexmap = nm, .before = 1)
   
   write_csv(df, file = file.path("data-raw", paste0(nm, ".csv")))

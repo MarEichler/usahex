@@ -1,6 +1,5 @@
 ---
 title: "Geography Abbreviations and Information"
-date: "2025-07-18"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Geography Abbreviations and Information}
@@ -41,7 +40,7 @@ Abbreviations from the AP Stylebook.  AP abbreviations are pulled from Wikipedia
 
 ### abbr_short 
 
-Abbreviation or name for each geography that is either 3-4 characters. 
+Abbreviation or name for each geography that is either 3-4 characters
 
 ### abbr_long
 
@@ -73,7 +72,8 @@ Type of region: state, federal district, territory, freely associated state
 
 ```{r, echo = FALSE}
 DT::datatable(
-  sf::st_drop_geometry(usahex::usa59), 
+  sf::st_drop_geometry(usahex::usa59) |> 
+    dplyr::arrange(geo_type, fips), 
   rownames = FALSE, 
   options=list(
     initComplete = DT::JS(

@@ -1,6 +1,5 @@
 ---
 title: "Multiple Labels on Hex Map"
-date: "2025-07-18"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{Multiple Labels on Hex Map}
@@ -31,6 +30,9 @@ require(rvest)
 
 The code below pulls in population data from Wikipedia using `{rvest}` and the cleans it so it can be used in the hex map.  
 
+```{r}
+url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population" 
+```
 
 ```{r prep-other-data}
 remove_end_brackets <- function(string){
@@ -42,8 +44,6 @@ remove_end_brackets <- function(string){
   }
   return(out)
 }
-
-url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population"
 
 wikiTable <- url |> 
   read_html() |>
@@ -82,20 +82,21 @@ Plot data with state label and value label of percentage change in population.
 ```{r create-chart, fig.width=7.15, fig.height=5.2, warning = FALSE}
 
 NA_color <- "grey80"
-scale_colors <- c("#E9A3C9", "#F7F7F7", "#A1D76A") # RColorBrewer::brewer.pal(3, "PiYG")
+# RColorBrewer::brewer.pal(3, "PiYG")
+scale_colors <- c("#E9A3C9", "#F7F7F7", "#A1D76A") 
 
 ggplot(combined) + 
   geom_sf(aes(fill = pop_change),     color = NA       ) +  #color (non-NA) hex
-  geom_sf(    fill = NA,          aes(color = "NA")    ) +  #dummy legend for NA values 
+  geom_sf(    fill = NA,          aes(color = "NA")    ) +  #dummy for NA values 
   geom_sf(    fill = NA,              color = "grey50" ) +  #hex borders 
   geom_sf_text(
-    data=mutate(combined, geometry=geometry+c(0, 5)) # adjust state label up by 5
+    data=mutate(combined, geometry=geometry+c(0, 5)) # adj state label up by 5
     , aes(label=abbr_usps)
     , fontface="bold"
     , size=3.25
   ) + 
   geom_sf_text(
-    data=mutate(combined, geometry=geometry+c(0,-5)) # adjust percent label down by 5
+    data=mutate(combined, geometry=geometry+c(0,-5)) # adj percent label down by 5
     , aes(label=perc_label)
     , size=2.5
   ) + 
@@ -119,7 +120,12 @@ ggplot(combined) +
   ) +
   labs(
     title = title, 
-    caption = paste0("Source (as of ", format.Date(Sys.Date(), '%B %e, %Y'),"):\n", url)
+    caption = paste0(
+      "Source (as of ", 
+      format.Date(Sys.Date(), '%B %e, %Y'),
+      "):\n", 
+      url
+    )
   ) +
   theme_void()
 ```

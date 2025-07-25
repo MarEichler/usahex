@@ -55,13 +55,6 @@ usaETA,DE,Del.,Del.,Del.,Dela.,Delaware,10,2,state,Region 2,Philadelphia,381.935
 usaETA,DE,Del.,Del.,Del.,Dela.,Delaware,10,2,state,Region 2,Philadelphia,364.615242,-150,381.93575000000004,-140.00000000000003
 usaETA,DE,Del.,Del.,Del.,Dela.,Delaware,10,2,state,Region 2,Philadelphia,364.615242,-130,381.93575000000004,-140.00000000000003
 usaETA,DE,Del.,Del.,Del.,Dela.,Delaware,10,2,state,Region 2,Philadelphia,381.93575,-120,381.93575000000004,-140.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-160,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-180,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-190,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-180,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-160,364.615242,-170.00000000000003
-usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
 usaETA,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,3,state,Region 3,Atlanta,295.33321,-210,295.33321,-230
 usaETA,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,3,state,Region 3,Atlanta,312.653718,-220,295.33321,-230
 usaETA,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,3,state,Region 3,Atlanta,312.653718,-240,295.33321,-230
@@ -356,6 +349,13 @@ usaETA,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,4,state,Region 4,Dallas,122.128129,-13
 usaETA,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,4,state,Region 4,Dallas,104.807621,-120,122.12812899999999,-110.00000000000001
 usaETA,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,4,state,Region 4,Dallas,104.807621,-100,122.12812899999999,-110.00000000000001
 usaETA,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,4,state,Region 4,Dallas,122.128129,-90,122.12812899999999,-110.00000000000001
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-160,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,381.93575,-180,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-190,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-180,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,347.294734,-160,364.615242,-170.00000000000003
+usaETA,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,2,federal district,Region 2,Philadelphia,364.615242,-150,364.615242,-170.00000000000003
 usaETA,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,6,territory,Region 6,San Francisco,87.4871131,-270,87.48701483333332,-290
 usaETA,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,6,territory,Region 6,San Francisco,104.8075,-280,87.48701483333332,-290
 usaETA,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,6,territory,Region 6,San Francisco,104.8075,-300,87.48701483333332,-290
@@ -377,13 +377,6 @@ usaETA,MP,M.P.,NA,M.P.,N.Mar.I.,Northern Mariana Islands,69,6,territory,Region 6
 usaETA,MP,M.P.,NA,M.P.,N.Mar.I.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,18.2050808,-270,35.52558884444444,-259.99999999999994
 usaETA,MP,M.P.,NA,M.P.,N.Mar.I.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,18.2050808,-250,35.52558884444444,-259.99999999999994
 usaETA,MP,M.P.,NA,M.P.,N.Mar.I.,Northern Mariana Islands,69,6,territory,Region 6,San Francisco,35.5255888,-240,35.52558884444444,-259.99999999999994
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-280,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-300,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-310,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-300,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-280,18.204981,-290
-usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290
 usaETA,PR,P.R.,NA,P.R.,P.Rico,Puerto Rico,72,1,territory,Region 1,Boston,381.93575,-240,381.93575000000004,-260.00000000000006
 usaETA,PR,P.R.,NA,P.R.,P.Rico,Puerto Rico,72,1,territory,Region 1,Boston,399.256258,-250,381.93575000000004,-260.00000000000006
 usaETA,PR,P.R.,NA,P.R.,P.Rico,Puerto Rico,72,1,territory,Region 1,Boston,399.256258,-270,381.93575000000004,-260.00000000000006
@@ -398,3 +391,10 @@ usaETA,VI,V.I.,NA,V.I.,U.S.V.I.,U.S. Virgin Islands,78,1,territory,Region 1,Bost
 usaETA,VI,V.I.,NA,V.I.,U.S.V.I.,U.S. Virgin Islands,78,1,territory,Region 1,Boston,399.256258,-270,416.5767664444444,-259.99999999999994
 usaETA,VI,V.I.,NA,V.I.,U.S.V.I.,U.S. Virgin Islands,78,1,territory,Region 1,Boston,399.256258,-250,416.5767664444444,-259.99999999999994
 usaETA,VI,V.I.,NA,V.I.,U.S.V.I.,U.S. Virgin Islands,78,1,territory,Region 1,Boston,416.576766,-240,416.5767664444444,-259.99999999999994
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-280,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,35.5254891,-300,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-310,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-300,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,0.8844729,-280,18.204981,-290
+usaETA,PW,NA,NA,Pal.,Palau,Palau,70,6,freely associated state,Region 6,San Francisco,18.204981,-270,18.204981,-290

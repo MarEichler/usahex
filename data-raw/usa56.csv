@@ -55,13 +55,6 @@ usa56,DE,Del.,Del.,Del.,Dela.,Delaware,10,state,381.93575,-160,381.9357500000000
 usa56,DE,Del.,Del.,Del.,Dela.,Delaware,10,state,364.615242,-150,381.93575000000004,-140.00000000000003
 usa56,DE,Del.,Del.,Del.,Dela.,Delaware,10,state,364.615242,-130,381.93575000000004,-140.00000000000003
 usa56,DE,Del.,Del.,Del.,Dela.,Delaware,10,state,381.93575,-120,381.93575000000004,-140.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-150,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,381.93575,-160,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,381.93575,-180,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-190,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,347.294734,-180,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,347.294734,-160,364.615242,-170.00000000000003
-usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-150,364.615242,-170.00000000000003
 usa56,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,state,295.33321,-210,295.33321,-230
 usa56,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,state,312.653718,-220,295.33321,-230
 usa56,FL,Fla.,Fla.,Fla.,Flor.,Florida,12,state,312.653718,-240,295.33321,-230
@@ -356,6 +349,13 @@ usa56,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,state,122.128129,-130,122.1281289999999
 usa56,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,state,104.807621,-120,122.12812899999999,-110.00000000000001
 usa56,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,state,104.807621,-100,122.12812899999999,-110.00000000000001
 usa56,WY,Wyo.,Wyo.,Wyo.,Wyom.,Wyoming,56,state,122.128129,-90,122.12812899999999,-110.00000000000001
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-150,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,381.93575,-160,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,381.93575,-180,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-190,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,347.294734,-180,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,347.294734,-160,364.615242,-170.00000000000003
+usa56,DC,D.C.,D.C.,D.C.,D.Col.,District of Columbia,11,federal district,364.615242,-150,364.615242,-170.00000000000003
 usa56,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,territory,52.845997,-270,52.84599699999999,-290
 usa56,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,territory,70.1665051,-280,52.84599699999999,-290
 usa56,AS,A.S.,A.S.,A.S.,Am.Sa.,American Samoa,60,territory,70.1665051,-300,52.84599699999999,-290
