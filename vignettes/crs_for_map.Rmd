@@ -34,7 +34,7 @@ library(cowplot)
 
 ```{r import-data}
 sf_usahex <- get_coordinates("usa51")
-sf_geojson <- read_sf("us_states_hexgrid.geojson") |> 
+sf_latlong <- read_sf("us_states_hexgrid.geojson") |> 
   # rename abbreviation to match usahex variable name
   rename(abbr_usps = iso3166_2) |> 
   # join to add other abbreviations and fips 
@@ -43,9 +43,9 @@ sf_geojson <- read_sf("us_states_hexgrid.geojson") |>
 
 
 ```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
-gg1 <- ggplot(sf_geojson) + 
+gg1 <- ggplot(sf_latlong) + 
   geom_sf() +
-  labs(title = "geojson - hexagons vary in size") + 
+  labs(title = "latlong - hexagons vary in size") + 
   theme_void()
 
 gg2 <- ggplot(sf_usahex) + 
@@ -69,14 +69,14 @@ It's possible to 'square' the other hex map by changing the coordinate reference
 
 
 ```{r}
-sf_geojson <- st_transform(sf_geojson, 3857)
+sf_latlong <- st_transform(sf_latlong, 3857)
 ```
 
 ```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
-gg1 <- ggplot(sf_geojson) + 
+gg1 <- ggplot(sf_latlong) + 
   geom_sf() +
   geom_sf_text(aes(label=abbr_usps)) +
-  labs(title = "geojson - hexagons look the same size when change CRS to 3857") + 
+  labs(title = "latlong - hexagons look the same size when change CRS to 3857") + 
   theme_void()
 
 gg2 <- ggplot(sf_usahex) + 
@@ -91,25 +91,25 @@ plot_grid(gg1, gg2, nrow = 1)
 
 ## Two Labels for Each State 
 
-In order to plot two different labels, you will need to have two different points.  Both the geojson hex map and the **usahex** map will need to be transformed.  The geojson needs large numbers in order to adjust the plot location (+/- 100000) becuase the coordinates are actual lat/long values.  The **usahex** maps only needs a small +/- 5 units to adjust the labels.  
+In order to plot two different labels, you will need to have two different points.  Both the latlong hex map and the **usahex** map will need to be transformed.  The latlong needs large numbers in order to adjust the plot location (+/- 100000) becuase the coordinates are actual lat/long values.  The **usahex** maps only needs a small +/- 5 units to adjust the labels.  
 
 ```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
-gg1 <-ggplot(sf_geojson) + 
+gg1 <-ggplot(sf_latlong) + 
   geom_sf() +
   geom_sf_text(
-    data = mutate(sf_geojson, geometry = geometry + c(0, 100000)) |> 
+    data = mutate(sf_latlong, geometry = geometry + c(0, 100000)) |> 
       sf::st_set_crs(3857),  
     aes(label=abbr_usps), 
     fontface = "bold", 
     size = 3.25
   ) +
   geom_sf_text(
-    data = mutate(sf_geojson, geometry = geometry + c(0, -100000)) |> 
+    data = mutate(sf_latlong, geometry = geometry + c(0, -100000)) |> 
       sf::st_set_crs(3857),  
     aes(label=fips), 
     size = 2.25
   ) +
-  labs(title = "geojson -large adjustment values") + 
+  labs(title = "latlong -large adjustment values") + 
   theme_void()
 
 gg2 <- ggplot(sf_usahex) + 

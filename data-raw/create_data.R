@@ -314,6 +314,37 @@ usethis::use_data(usaETAregions       , overwrite = ut_overwrite)
 usethis::use_data(usaETAregions_labels, overwrite = ut_overwrite)
 
 
+# EXPORT ALL COORDINATES TO JSON FILE ##########################################
+
+wt_append <- FALSE # append = FALSE means recreate the file instead of 'adding' to it 
+
+gjpath <- "data-raw/geojson/"
+
+st_write(usa50       , paste0(gjpath,"usa50.geojson")       , append = wt_append)
+st_write(usa50_labels, paste0(gjpath,"usa50_labels.geojson"), append = wt_append)
+
+st_write(usa51       , paste0(gjpath,"usa51.geojson")       , append = wt_append)
+st_write(usa51_labels, paste0(gjpath,"usa51_labels.geojson"), append = wt_append)
+
+st_write(usa52       , paste0(gjpath,"usa52.geojson")       , append = wt_append)
+st_write(usa52_labels, paste0(gjpath,"usa52_labels.geojson"), append = wt_append)
+
+st_write(usa53       , paste0(gjpath,"usa53.geojson")       , append = wt_append)
+st_write(usa53_labels, paste0(gjpath,"usa53_labels.geojson"), append = wt_append)
+
+st_write(usa56       , paste0(gjpath,"usa56.geojson")       , append = wt_append)
+st_write(usa56_labels, paste0(gjpath,"usa56_labels.geojson"), append = wt_append)
+
+st_write(usa59       , paste0(gjpath,"usa59.geojson")       , append = wt_append)
+st_write(usa59_labels, paste0(gjpath,"usa59_labels.geojson"), append = wt_append)
+
+st_write(usaETA       , paste0(gjpath,"usaETA.geojson")       , append = wt_append)
+st_write(usaETA_labels, paste0(gjpath,"usaETA_labels.geojson"), append = wt_append)
+
+st_write(usaETAregions       , paste0(gjpath,"usaETAregions.geojson")       , append = wt_append)
+st_write(usaETAregions_labels, paste0(gjpath,"usaETAregions_labels.geojson"), append = wt_append)
+
+
 # EXPORT ALL COORDINATES TO CSV FILE  ##########################################
 
 
@@ -342,10 +373,9 @@ create_csv_fortified_df <- function(sfobj, sfobj_labels){
     arrange(geo_type, fips) |> 
     mutate(hexmap = nm, .before = 1)
   
-  write_csv(df, file = file.path("data-raw", paste0(nm, ".csv")))
+  write_csv(df, file = file.path("data-raw/csv", paste0(nm, ".csv")))
   
 }
-
 
 create_csv_fortified_df(usa50, usa50_labels)
 create_csv_fortified_df(usa51, usa51_labels)
@@ -354,11 +384,8 @@ create_csv_fortified_df(usa53, usa53_labels)
 create_csv_fortified_df(usa56, usa56_labels)
 create_csv_fortified_df(usa59, usa59_labels)
 create_csv_fortified_df(usaETA, usaETA_labels)
+# can't do it for usaETAregions b/c have MULTIPOLYGONS (instead of just single polygon for each row) 
 
-# ggplot(df, aes(group=abbr_usps)) + 
-#   geom_polygon(aes(x=X, y=Y), color = "white", fill = "grey35") + 
-#   geom_text(data=distinct(df, abbr_usps, cX, cY), aes(label=abbr_usps, x = cX, y = cY), size = 3.25, color = "white") + 
-#   coord_fixed() 
 
 
 

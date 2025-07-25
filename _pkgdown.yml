@@ -4,7 +4,7 @@ template:
 reference:
 - contents:
   - get_coordinates
-- title: polygon sf data sets 
+- title: polygons 
 - contents:
   - usa50
   - usa51
@@ -14,8 +14,9 @@ reference:
   - usa59
   - usaETA
   - usaETAregions
-- title: point sf data sets 
-- contents:
+- title: center point of polygons
+  desc: These data is not required for adding labels to the hexmaps in ggplot2; ggplot2 automatically finds the center of the polygon. 
+- contents: 
   - contains("labels")
 navbar:
  components:
