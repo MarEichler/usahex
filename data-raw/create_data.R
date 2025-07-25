@@ -349,34 +349,27 @@ create_geojson <- function(sfobj){
 create_geojson(usa50)
 create_geojson(usa50_labels)
 
+create_geojson(usa51)
+create_geojson(usa51_labels)
 
-# wt_append <- FALSE # append = FALSE means recreate the file instead of 'adding' to it 
-# 
-# gjpath <- "data-raw/geojson/"
-# 
-# st_write(usa50       , paste0(gjpath,"usa50.geojson")       , append = wt_append)
-# st_write(usa50_labels, paste0(gjpath,"usa50_labels.geojson"), append = wt_append)
-# 
-# st_write(usa51       , paste0(gjpath,"usa51.geojson")       , append = wt_append)
-# st_write(usa51_labels, paste0(gjpath,"usa51_labels.geojson"), append = wt_append)
-# 
-# st_write(usa52       , paste0(gjpath,"usa52.geojson")       , append = wt_append)
-# st_write(usa52_labels, paste0(gjpath,"usa52_labels.geojson"), append = wt_append)
-# 
-# st_write(usa53       , paste0(gjpath,"usa53.geojson")       , append = wt_append)
-# st_write(usa53_labels, paste0(gjpath,"usa53_labels.geojson"), append = wt_append)
-# 
-# st_write(usa56       , paste0(gjpath,"usa56.geojson")       , append = wt_append)
-# st_write(usa56_labels, paste0(gjpath,"usa56_labels.geojson"), append = wt_append)
-# 
-# st_write(usa59       , paste0(gjpath,"usa59.geojson")       , append = wt_append)
-# st_write(usa59_labels, paste0(gjpath,"usa59_labels.geojson"), append = wt_append)
-# 
-# st_write(usaETA       , paste0(gjpath,"usaETA.geojson")       , append = wt_append)
-# st_write(usaETA_labels, paste0(gjpath,"usaETA_labels.geojson"), append = wt_append)
-# 
-# st_write(usaETAregions       , paste0(gjpath,"usaETAregions.geojson")       , append = wt_append)
-# st_write(usaETAregions_labels, paste0(gjpath,"usaETAregions_labels.geojson"), append = wt_append)
+create_geojson(usa52)
+create_geojson(usa52_labels)
+
+create_geojson(usa53)
+create_geojson(usa53_labels)
+
+create_geojson(usa56)
+create_geojson(usa56_labels)
+
+create_geojson(usa59)
+create_geojson(usa59_labels)
+
+create_geojson(usaETA)
+create_geojson(usaETA_labels)
+
+create_geojson(usaETAregions)
+create_geojson(usaETAregions_labels)
+
 
 
 # EXPORT ALL COORDINATES TO CSV FILE  ##########################################
