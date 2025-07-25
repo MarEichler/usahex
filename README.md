@@ -116,11 +116,10 @@ the hex map so be in the middle of the pacific ocean ([divide by 8;
 subtract 190 from X/long, add 25 to
 Y/lat)](https://github.com/MarEichler/usahex/blob/6f1aec363c984bb4683784836305d8b1cda6e236/data-raw/create_data.R#L333)).
 I also added a coordinate reference systmem (CRS): WGS 84 /
-Pseudo-Mercator ([EPSG code
-3857](https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html)).
+Pseudo-Mercator ([EPSG code 3857](https://epsg.io/3857)).
 
 ``` r
-geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/develop/data-raw/geojson/usa56.geojson"
+geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
 sf::read_sf(geojson)[1:5,]
 ```
 
