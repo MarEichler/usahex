@@ -1,7 +1,6 @@
 {
 "type": "FeatureCollection",
 "name": "test",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
 "features": [
 { "type": "Feature", "properties": { "abbr_usps": "AK", "abbr_gpo": "Alaska", "abbr_ap": "Alaska", "abbr_short": "Ak.", "abbr_long": "Alaska", "name": "Alaska", "fips": "02", "geo_type": "state" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -116.052712355555556, 50.0 ], [ -114.128211455555558, 48.888888888888886 ], [ -114.128211455555558, 46.666666666666664 ], [ -116.052712355555556, 45.555555555555557 ], [ -117.977213244444442, 46.666666666666664 ], [ -117.977213244444442, 48.888888888888886 ], [ -116.052712355555556, 50.0 ] ] ] } },
 { "type": "Feature", "properties": { "abbr_usps": "AL", "abbr_gpo": "Ala.", "abbr_ap": "Ala.", "abbr_short": "Ala.", "abbr_long": "Alab.", "name": "Alabama", "fips": "01", "geo_type": "state" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -89.109699777777777, 30.0 ], [ -87.185198888888891, 28.888888888888889 ], [ -87.185198888888891, 26.666666666666668 ], [ -89.109699777777777, 25.555555555555557 ], [ -91.034200666666663, 26.666666666666668 ], [ -91.034200666666663, 28.888888888888889 ], [ -89.109699777777777, 30.0 ] ] ] } },
