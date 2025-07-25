@@ -316,33 +316,60 @@ usethis::use_data(usaETAregions_labels, overwrite = ut_overwrite)
 
 # EXPORT ALL COORDINATES TO JSON FILE ##########################################
 
-wt_append <- FALSE # append = FALSE means recreate the file instead of 'adding' to it 
+# to make it display nicely as geojson -- want to have it be valid lat/long values 
+# LONG: -180 to 180 (Y)
+# LAT: -90 to 90 (X)
+# adjust coordinates values so that hexagons are in the middle of pacific ocean
+# add CRS 3857: WGS 84/Pseudo-Mercator/Google Maps, OpenStreetMap, etc - https://epsg.io/3857 
 
-gjpath <- "data-raw/geojson/"
 
-st_write(usa50       , paste0(gjpath,"usa50.geojson")       , append = wt_append)
-st_write(usa50_labels, paste0(gjpath,"usa50_labels.geojson"), append = wt_append)
 
-st_write(usa51       , paste0(gjpath,"usa51.geojson")       , append = wt_append)
-st_write(usa51_labels, paste0(gjpath,"usa51_labels.geojson"), append = wt_append)
+create_geojson <- function(sfobj){
+  
+  nm <-deparse(substitute(sfobj))
+  gjpath <- "data-raw/geojson/"
+  
+  # adjust hexagon coordinates so they fall in the middle of the pacific ocean 
+  adj <- mutate(sfobj, geometry = geometry*(1/8)+c(-190, 25)) 
+  
+  # add crs, so that when map data it automatically squares 
+  st_crs(adj) <- 3857
+  
+  # if file exits, remove it 
+  if (file.exists( paste0(gjpath, nm, ".geojson"))){
+    file.remove(paste0(gjpath, nm, ".geojson"))
+  }
+  
+  # save obj as geojson file 
+  st_write(adj, paste0(gjpath, nm, ".geojson"))
+  
+}
 
-st_write(usa52       , paste0(gjpath,"usa52.geojson")       , append = wt_append)
-st_write(usa52_labels, paste0(gjpath,"usa52_labels.geojson"), append = wt_append)
 
-st_write(usa53       , paste0(gjpath,"usa53.geojson")       , append = wt_append)
-st_write(usa53_labels, paste0(gjpath,"usa53_labels.geojson"), append = wt_append)
+create_geojson(usa50)
+create_geojson(usa50_labels)
 
-st_write(usa56       , paste0(gjpath,"usa56.geojson")       , append = wt_append)
-st_write(usa56_labels, paste0(gjpath,"usa56_labels.geojson"), append = wt_append)
+create_geojson(usa51)
+create_geojson(usa51_labels)
 
-st_write(usa59       , paste0(gjpath,"usa59.geojson")       , append = wt_append)
-st_write(usa59_labels, paste0(gjpath,"usa59_labels.geojson"), append = wt_append)
+create_geojson(usa52)
+create_geojson(usa52_labels)
 
-st_write(usaETA       , paste0(gjpath,"usaETA.geojson")       , append = wt_append)
-st_write(usaETA_labels, paste0(gjpath,"usaETA_labels.geojson"), append = wt_append)
+create_geojson(usa53)
+create_geojson(usa53_labels)
 
-st_write(usaETAregions       , paste0(gjpath,"usaETAregions.geojson")       , append = wt_append)
-st_write(usaETAregions_labels, paste0(gjpath,"usaETAregions_labels.geojson"), append = wt_append)
+create_geojson(usa56)
+create_geojson(usa56_labels)
+
+create_geojson(usa59)
+create_geojson(usa59_labels)
+
+create_geojson(usaETA)
+create_geojson(usaETA_labels)
+
+create_geojson(usaETAregions)
+create_geojson(usaETAregions_labels)
+
 
 
 # EXPORT ALL COORDINATES TO CSV FILE  ##########################################

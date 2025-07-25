@@ -65,7 +65,7 @@ In order to 'square' the hexagons based on lat/long coordinates, you need to [up
 
 ## Update CRS to Square Hexagons  
 
-It's possible to 'square' the other hex map by changing the coordinate reference system (CRS) to the WGS 84 / Pseudo-Mercator CRS ([EPSG code 3857](https://epsg.org/crs_3857/WGS-84-Pseudo-Mercator.html?sessionkey=330b562ysa)).  
+It's possible to 'square' the other hex map by changing the coordinate reference system (CRS) to the WGS 84 / Pseudo-Mercator CRS ([EPSG code 3857](https://epsg.io/3857)).  
 
 
 ```{r}
