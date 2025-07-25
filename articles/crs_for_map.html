@@ -44,6 +44,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/MarEichler/usahex/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -61,7 +62,7 @@
             
             <h4 data-toc-skip class="date">2025-07-18</h4>
       
-
+      <small class="dont-index">Source: <a href="https://github.com/MarEichler/usahex/blob/main/vignettes/crs_for_map.Rmd" class="external-link"><code>vignettes/crs_for_map.Rmd</code></a></small>
       <div class="d-none name"><code>crs_for_map.Rmd</code></div>
     </div>
 
@@ -77,11 +78,11 @@ hexagons.</p>
 <p>The differences are illustrated below.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mareichler.github.io/usahex/">usahex</a></span><span class="op">)</span> </span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/cowplot/" class="external-link">cowplot</a></span><span class="op">)</span> </span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/cowplot/" class="external-link">cowplot</a></span><span class="op">)</span> </span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">sf_usahex</span> <span class="op">&lt;-</span> <span class="fu">usahex</span><span class="fu">::</span><span class="va"><a href="../reference/usa51.html">usa51</a></span></span>
+<code class="sourceCode R"><span><span class="va">sf_usahex</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="st">"usa51"</span><span class="op">)</span></span>
 <span><span class="va">sf_geojson</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">read_sf</a></span><span class="op">(</span><span class="st">"us_states_hexgrid.geojson"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># rename abbreviation to match usahex variable name</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>abbr_usps <span class="op">=</span> <span class="va">iso3166_2</span><span class="op">)</span> <span class="op">|&gt;</span> </span>

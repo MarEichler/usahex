@@ -25,6 +25,7 @@
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/MarEichler/usahex/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
 
@@ -34,7 +35,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Import hex map coordinates</h1>
-
+      <small class="dont-index">Source: <a href="https://github.com/MarEichler/usahex/blob/main/R/get_coordinates.R" class="external-link"><code>R/get_coordinates.R</code></a></small>
       <div class="d-none name"><code>get_coordinates.Rd</code></div>
     </div>
 
@@ -58,11 +59,12 @@ Current options are
 <code>"usa51"</code> (50 states and DC),
 <code>"usa52"</code> (50 states, DC, and Puerto Rico),
 <code>"usa53"</code> (50 states, DC, PUerto Rico and Virgin Islands),
-<code>"usa56"</code> (50 states, DC, Puerto Rico, Virgin Islands, Guam,
-American Samoa, and Marshall Islands),
-<code>"usaETA"</code> (WIOA ETA geographies, same as statesTerr with the addition
-of Palau), and
-<code>"ETARegions"</code> (unified maps of WIOA ETA regions) .</p></dd>
+<code>"usa56"</code> (50 states, DC, territories (PR, VI, AS, GU, MP)),
+<code>"usa56"</code> (50 states, DC, territories (PR, VI, AS, GU, MP), and freely
+associate states (FM, MH, PW)),
+<code>"usaETA"</code> (US DOL ETA geographies, same as usa56 with the addition
+of the freely associate state of Palau), and
+<code>"usaETARegions"</code> (unified maps of US DOL ETA regions) .</p></dd>
 
 
 <dt id="arg-coords">coords<a class="anchor" aria-label="anchor" href="#arg-coords"></a></dt>
