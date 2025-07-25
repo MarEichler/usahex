@@ -13,11 +13,12 @@ Current options are
 \code{"usa51"} (50 states and DC),
 \code{"usa52"} (50 states, DC, and Puerto Rico),
 \code{"usa53"} (50 states, DC, PUerto Rico and Virgin Islands),
-\code{"usa56"} (50 states, DC, Puerto Rico, Virgin Islands, Guam,
-American Samoa, and Marshall Islands),
-\code{"usaETA"} (WIOA ETA geographies, same as statesTerr with the addition
-of Palau), and
-\code{"ETARegions"} (unified maps of WIOA ETA regions) .}
+\code{"usa56"} (50 states, DC, territories (PR, VI, AS, GU, MP)),
+\code{"usa56"} (50 states, DC, territories (PR, VI, AS, GU, MP), and freely
+associate states (FM, MH, PW)),
+\code{"usaETA"} (US DOL ETA geographies, same as usa56 with the addition
+of the freely associate state of Palau), and
+\code{"usaETARegions"} (unified maps of US DOL ETA regions) .}
 
 \item{coords}{A \code{character} string specifying \code{"hexmap"} for the
 hexagon coordinates or \code{"labels"} for the label coordinates for the hex map}

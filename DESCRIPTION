@@ -1,5 +1,5 @@
 Package: usahex
-Title: Hex Maps of US States and Territories
+Title: Hex Maps of USA Geographies (states, federal district, territories, and freely associated states) 
 Version: 0.0.0.9000
 Authors@R: 
     person("Martha", "Eichlersmith", , "myeichlersmith@pm.me", role = c("aut", "cre"))
@@ -22,4 +22,5 @@ Suggests:
     DT
 LazyData: true
 VignetteBuilder: knitr
-URL: https://mareichler.github.io/usahex/
+URL: https://mareichler.github.io/usahex/, https://github.com/MarEichler/usahex
+BugReports: https://github.com/MarEichler/usahex/issues

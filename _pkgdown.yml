@@ -1,4 +1,20 @@
 url: https://mareichler.github.io/usahex/
 template:
   bootstrap: 5
+reference:
+- contents:
+  - get_coordinates
+- title: polygon sf data sets 
+- contents:
+  - usa50
+  - usa51
+  - usa52
+  - usa53
+  - usa56
+  - usa59
+  - usaETA
+  - usaETAregions
+- title: point sf data sets 
+- contents:
+  - contains("labels")
 

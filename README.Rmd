@@ -39,7 +39,7 @@ devtools::install_github("mareichler/usahex")
 
 ## Hex Maps 
 
-| geos / map name              |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`ETAregions`| 
+| geos / map name              |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`usaETAregions`| 
 |:------------                 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | 50 states                    | X     | X     | X     | X     | X     | X     | X     |
 | District of Columbia         | -     | X     | X     | X     | X     | X     | X     |

@@ -27,14 +27,14 @@ The differences are illustrated below.
 
 ```{r setup, warning = FALSE, message = FALSE}
 library(usahex) 
-library(sf)
 library(tidyverse)
-require(cowplot) 
+library(sf)
+library(cowplot) 
 ```
 
 
 ```{r import-data}
-sf_usahex <- usahex::usa51
+sf_usahex <- get_coordinates("usa51")
 sf_geojson <- read_sf("us_states_hexgrid.geojson") |> 
   # rename abbreviation to match usahex variable name
   rename(abbr_usps = iso3166_2) |> 

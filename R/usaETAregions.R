@@ -1,4 +1,4 @@
-#' ETAregions shapefile data
+#' usaETAregions shapefile data
 #' 
 #' Multi-polygon shape file for the 6 ETA regions.  
 #' 
@@ -17,5 +17,5 @@
 #' \item{etaA_region_city}{City headquarters for ETA region}
 #' \item{geometry}{Multi-polygon coordinates region borders on hexagon map}
 #' }
-'ETAregions'
+'usaETAregions'
 

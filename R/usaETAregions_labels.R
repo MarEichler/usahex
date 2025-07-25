@@ -1,4 +1,4 @@
-#' ETAregions_labels shapefile data
+#' usaETAregions_labels shapefile data
 #' 
 #' Point coordinates for the center of the hexagon that includes:
 #' - 50 States  
@@ -27,5 +27,5 @@
 #' \item{geo_type}{Type of region: state, federal district, territory, freely associated state}
 #' \item{geometry}{point coordinates for the center of the hexagon}
 #' }
-'ETAregions_labels'
+'usaETAregions_labels'
 

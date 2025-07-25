@@ -7,11 +7,12 @@
 #'   `"usa51"` (50 states and DC), 
 #'   `"usa52"` (50 states, DC, and Puerto Rico), 
 #'   `"usa53"` (50 states, DC, PUerto Rico and Virgin Islands), 
-#'   `"usa56"` (50 states, DC, Puerto Rico, Virgin Islands, Guam, 
-#'   American Samoa, and Marshall Islands), 
-#'   `"usaETA"` (WIOA ETA geographies, same as statesTerr with the addition 
-#'   of Palau), and 
-#'   `"ETARegions"` (unified maps of WIOA ETA regions) .
+#'   `"usa56"` (50 states, DC, territories (PR, VI, AS, GU, MP)), 
+#'   `"usa56"` (50 states, DC, territories (PR, VI, AS, GU, MP), and freely 
+#'    associate states (FM, MH, PW)), 
+#'   `"usaETA"` (US DOL ETA geographies, same as usa56 with the addition 
+#'   of the freely associate state of Palau), and 
+#'   `"usaETARegions"` (unified maps of US DOL ETA regions) .
 #'   
 #' @param coords A \code{character} string specifying `"hexmap"` for the 
 #'   hexagon coordinates or `"labels"` for the label coordinates for the hex map
@@ -31,7 +32,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
   stopifnot("Enter 'map' argument" = !is.null(map))
   stopifnot("Invlaid 'map' argument" = map %in% c("usa50", "usa51", "usa52", "usa53", 
                                                   "usa56", "usa59", "usaETA", 
-                                                  "ETAregions"))
+                                                  "usaETAregions"))
   stopifnot("Invalid 'coords' argument, options are 'hexmap' or 'labels'" = 
               coords %in% c("hexmap", "labels"))
   
@@ -44,7 +45,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
       "usa56"      = usahex::usa56, 
       "usa59"      = usahex::usa59, 
       "usaETA"     = usahex::usaETA, 
-      "ETAregions" = usahex::ETAregions
+      "usaETAregions" = usahex::usaETAregions
     )
   } else if (coords == "labels"){
     switch(map, 
@@ -55,7 +56,7 @@ get_coordinates <- function(map = NULL, coords = "hexmap"){
       "usa56"      = usahex::usa56_labels, 
       "usa59"      = usahex::usa59_labels, 
       "usaETA"     = usahex::usaETA_labels, 
-      "ETAregions" = usahex::ETAregions_labels
+      "usaETAregions" = usahex::usaETAregions_labels
     ) 
   } else {
     stop("Invalid 'coords' argument, options are: 'hexmap' or 'labels'")

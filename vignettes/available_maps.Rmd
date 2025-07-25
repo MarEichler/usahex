@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-| geos / map name              |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`ETAregions`| 
+| geos / map name              |`usa50`|`usa51`|`usa52`|`usa53`|`usa56`|`usa59`|`usaETA`/`usaETAregions`| 
 |:------------                 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | 50 states                    | X     | X     | X     | X     | X     | X     | X     |
 | District of Columbia         | -     | X     | X     | X     | X     | X     | X     |
@@ -107,7 +107,7 @@ get_coordinates(map = "usa59", coords = "hexmap") |>
 ```
 
 
-## `usaETA` and `ETAregions` 
+## `usaETA` and `usaETAregions` 
 
 50 US States, District of Columbia (DC), 5 territories (Puerto Rico, Virgin Islands, American Samoa, and the Northern Marina Islands), and the freely associated state of Palau. 
 
@@ -121,7 +121,7 @@ The [ETA regions](https://www.dol.gov/agencies/eta/regions) will rarely be plott
 get_coordinates(map = "usaETA", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(aes(fill = eta_region_name), color = "white") + 
-  geom_sf(data = get_coordinates("ETAregions", "hexmap"), 
+  geom_sf(data = get_coordinates("usaETAregions", "hexmap"), 
           fill = NA, color = "grey35", linewidth = 1) + 
   geom_sf_text(aes(label = abbr_usps), color = "white") + 
   theme_void()

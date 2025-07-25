@@ -243,9 +243,9 @@ usa59_labels  <- create_labels(usa59)
 usaETA_labels <- create_labels(usaETA)
 
 
-# ETAregions - combined hexagons for borders of ETA regions --------------------
+# usaETAregions - combined hexagons for borders of ETA regions --------------------
 
-gcol_ETAregions <- usaETA |>
+gcol_usaETAregions <- usaETA |>
   # remove pacific islands
   # trying to unify pacific island using st_union doesn't work
   filter(!abbr_usps %in% c("MP", "HI", "PW", "GU", "AS")) |>
@@ -262,20 +262,20 @@ gcol_ETAregions <- usaETA |>
   st_sfc()
 
 # add coordinates for unified pacific islands
-gcol_ETAregions[6] <- sf::st_union(c(gcol_ETAregions[6], sf::st_geometry(make_hexagon(c_unifiedPAislands))))
+gcol_usaETAregions[6] <- sf::st_union(c(gcol_usaETAregions[6], sf::st_geometry(make_hexagon(c_unifiedPAislands))))
 
-ETAregions <- st_sf(wioa_eta_regions, geometry = gcol_ETAregions)
+usaETAregions <- st_sf(wioa_eta_regions, geometry = gcol_usaETAregions)
 
 # create region labels  
-ETAregions_labels <- create_labels(ETAregions)
+usaETAregions_labels <- create_labels(usaETAregions)
 
 # make adjustments to label location 
-ETAregions_labels[1,]$geometry <- ETAregions_labels[1,]$geometry + c(-6, 25)
-ETAregions_labels[2,]$geometry <- ETAregions_labels[2,]$geometry + c( 0,  4)
-ETAregions_labels[3,]$geometry <- ETAregions_labels[3,]$geometry + c( 5,  0)
-ETAregions_labels[4,]$geometry <- sf::st_geometry(sf::st_point(c(191.4102, -205)))
-ETAregions_labels[5,]$geometry <- ETAregions_labels[5,]$geometry + c( 0,  5)
-ETAregions_labels[6,]$geometry <- sf::st_geometry(sf::st_point(c(87.48711, -140)))
+usaETAregions_labels[1,]$geometry <- usaETAregions_labels[1,]$geometry + c(-6, 25)
+usaETAregions_labels[2,]$geometry <- usaETAregions_labels[2,]$geometry + c( 0,  4)
+usaETAregions_labels[3,]$geometry <- usaETAregions_labels[3,]$geometry + c( 5,  0)
+usaETAregions_labels[4,]$geometry <- sf::st_geometry(sf::st_point(c(191.4102, -205)))
+usaETAregions_labels[5,]$geometry <- usaETAregions_labels[5,]$geometry + c( 0,  5)
+usaETAregions_labels[6,]$geometry <- sf::st_geometry(sf::st_point(c(87.48711, -140)))
 
 
 
@@ -304,8 +304,8 @@ usethis::use_data(usa59_labels, overwrite = ut_overwrite)
 usethis::use_data(usaETA       , overwrite = ut_overwrite)
 usethis::use_data(usaETA_labels, overwrite = ut_overwrite)
 
-usethis::use_data(ETAregions       , overwrite = ut_overwrite)
-usethis::use_data(ETAregions_labels, overwrite = ut_overwrite)
+usethis::use_data(usaETAregions       , overwrite = ut_overwrite)
+usethis::use_data(usaETAregions_labels, overwrite = ut_overwrite)
 
 
 # EXPORT ALL COORDINATES TO CSV FILE  ##########################################
