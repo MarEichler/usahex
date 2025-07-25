@@ -61,6 +61,9 @@ library(ggplot2)
 allgeos <- get_coordinates(map = "usa59", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(aes(fill = geo_type)) + 
+  ## don't need to use usa59_labels df, ggplot2 automatically finds center 
+  ## labels df can be used if interested, mostly there for back-up 
+  # geom_sf_text(data = get_coordinates("usa59", "labels"), aes(label = abbr_usps)) + 
   geom_sf_text(aes(label = abbr_usps)) + 
   theme_void()
 ```
@@ -79,16 +82,52 @@ ggsave(filename = "man/figures/example_map_showing_all_geos.png", plot = allgeos
 
 
 
+
+
 ## Don't Use R? 
+
+### geojson files 
+
+These files can be found in the [data-raw/geojson](https://github.com/MarEichler/usahex/tree/main/data-raw/geojson) folder on GitHub. 
+
+```{r}
+geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
+
+library(sf)
+read_sf(geojson)[1:5,]
+```
+
+```{r}
+df <- read_sf(geojson) 
+
+gggeojson <- ggplot(df) + 
+  geom_sf() +
+  geom_sf_text(aes(label = abbr_short)) + 
+  theme_void()
+```
+
+ggplot2 gets a lil angry when adding labels because geojson files are supposed to be lat/long coordinates, and these are clearly not. 
+
+```{r, eval = FALSE, echo = TRUE}
+gggeojson
+```
+
+```{r, eval = TRUE, echo = FALSE, message = FALSE}
+# need to do this so that it shows up in pkgdown website 
+# https://github.com/r-lib/pkgdown/issues/133
+ggsave(filename = "man/figures/geojson_example_map.png", plot = gggeojson)
+```
+
+![usa56 hex map created from geojson file](man/figures/geojson_example_map.png)
 
 
 ### CVS Files 
 
-These files can be found in the [data-raw](https://github.com/MarEichler/usahex/tree/main/data-raw) folder on GitHub.   
+These files can be found in the [data-raw/csv](https://github.com/MarEichler/usahex/tree/main/data-raw/csv) folder on GitHub.   
 
 
 ```{r}
-csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv"
+csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/csv/usa53.csv"
 read.csv(csv)[1:14,]
 ```
 
@@ -97,10 +136,9 @@ The `X` and `Y` coordinates are the 7 coordinates for each state that create the
 These raw files can also be used to create ggplot2 items if you don't want to work with simple features (sf) objects: 
 
 ```{r}
-df <- read.csv("https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv") 
+df <- read.csv(csv) 
 
-
-gg <- ggplot(df, aes(group=abbr_usps)) +
+ggcsv <- ggplot(df, aes(group=abbr_usps)) +
   geom_polygon(aes(x=X, y=Y), color = "white", fill = "grey35") +
   geom_text(
     data=dplyr::distinct(df, abbr_usps, cX, cY), # only need 1coord per state
@@ -113,13 +151,13 @@ gg <- ggplot(df, aes(group=abbr_usps)) +
 ```
 
 ```{r, eval = FALSE, echo = TRUE}
-gg
+ggcsv
 ```
 
 ```{r, eval = TRUE, echo = FALSE, message = FALSE}
 # need to do this so that it shows up in pkgdown website 
 # https://github.com/r-lib/pkgdown/issues/133
-ggsave(filename = "man/figures/csv_example_map.png", plot = gg)
+ggsave(filename = "man/figures/csv_example_map.png", plot = ggcsv)
 ```
 
 ![usa53 hex map created from csv file](man/figures/csv_example_map.png)

@@ -84,6 +84,9 @@ library(ggplot2)
 allgeos <- get_coordinates(map = "usa59", coords = "hexmap") |> 
   ggplot() + 
   geom_sf(aes(fill = geo_type)) + 
+  ## don't need to use usa59_labels df, ggplot2 automatically finds center 
+  ## labels df can be used if interested, mostly there for back-up 
+  # geom_sf_text(data = get_coordinates("usa59", "labels"), aes(label = abbr_usps)) + 
   geom_sf_text(aes(label = abbr_usps)) + 
   theme_void()
 ```
@@ -101,14 +104,78 @@ available</figcaption>
 
 ## Don’t Use R?
 
-### CVS Files
+### geojson files
 
 These files can be found in the
-[data-raw](https://github.com/MarEichler/usahex/tree/main/data-raw)
+[data-raw/geojson](https://github.com/MarEichler/usahex/tree/main/data-raw/geojson)
 folder on GitHub.
 
 ``` r
-csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv"
+geojson <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
+
+library(sf)
+```
+
+    ## Warning: package 'sf' was built under R version 4.4.3
+
+    ## Linking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE
+
+``` r
+read_sf(geojson)[1:5,]
+```
+
+    ## Simple feature collection with 5 features and 8 fields
+    ## Geometry type: POLYGON
+    ## Dimension:     XY
+    ## Bounding box:  xmin: 18.20508 ymin: -310 xmax: 295.3332 ymax: 0
+    ## Geodetic CRS:  WGS 84
+    ## # A tibble: 5 × 9
+    ##   abbr_usps abbr_gpo abbr_ap abbr_short abbr_long name           fips  geo_type 
+    ##   <chr>     <chr>    <chr>   <chr>      <chr>     <chr>          <chr> <chr>    
+    ## 1 AK        Alaska   Alaska  Ak.        Alaska    Alaska         02    state    
+    ## 2 AL        Ala.     Ala.    Ala.       Alab.     Alabama        01    state    
+    ## 3 AR        Ark.     Ark.    Ark.       Arkan.    Arkansas       05    state    
+    ## 4 AS        A.S.     A.S.    A.S.       Am.Sa.    American Samoa 60    territory
+    ## 5 AZ        Ariz.    Ariz.   Arz.       Ariz.     Arizona        04    state    
+    ## # ℹ 1 more variable: geometry <POLYGON [°]>
+
+``` r
+df <- read_sf(geojson) 
+
+gggeojson <- ggplot(df) + 
+  geom_sf() +
+  geom_sf_text(aes(label = abbr_short)) + 
+  theme_void()
+```
+
+ggplot2 gets a lil angry when adding labels because geojson files are
+supposed to be lat/long coordinates, and these are clearly not.
+
+``` r
+gggeojson
+```
+
+    ## Warning in st_is_longlat(x): bounding box has potentially an invalid value
+    ## range for longlat data
+
+    ## Warning in st_point_on_surface.sfc(sf::st_zm(x)): st_point_on_surface may not
+    ## give correct results for longitude/latitude data
+
+<figure>
+<img src="man/figures/geojson_example_map.png"
+alt="usa56 hex map created from geojson file" />
+<figcaption aria-hidden="true">usa56 hex map created from geojson
+file</figcaption>
+</figure>
+
+### CVS Files
+
+These files can be found in the
+[data-raw/csv](https://github.com/MarEichler/usahex/tree/main/data-raw/csv)
+folder on GitHub.
+
+``` r
+csv <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/csv/usa53.csv"
 read.csv(csv)[1:14,]
 ```
 
@@ -151,10 +218,9 @@ These raw files can also be used to create ggplot2 items if you don’t
 want to work with simple features (sf) objects:
 
 ``` r
-df <- read.csv("https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/usa53.csv") 
+df <- read.csv(csv) 
 
-
-gg <- ggplot(df, aes(group=abbr_usps)) +
+ggcsv <- ggplot(df, aes(group=abbr_usps)) +
   geom_polygon(aes(x=X, y=Y), color = "white", fill = "grey35") +
   geom_text(
     data=dplyr::distinct(df, abbr_usps, cX, cY), # only need 1coord per state
@@ -167,7 +233,7 @@ gg <- ggplot(df, aes(group=abbr_usps)) +
 ```
 
 ``` r
-gg
+ggcsv
 ```
 
 <figure>
