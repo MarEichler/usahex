@@ -35,8 +35,9 @@
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><a class="dropdown-item" href="../articles/available_maps.html">Available Maps</a></li>
     <li><a class="dropdown-item" href="../articles/geography_abbr_and_info.html">Geo. Abbr &amp; Info</a></li>
-    <li><a class="dropdown-item" href="../articles/crs_for_map.html">CRS for Map</a></li>
     <li><a class="dropdown-item" href="../articles/multiple_labels.html">Multiple Lables on Hex Map</a></li>
+    <li><a class="dropdown-item" href="../articles/crs_for_map.html">CRS for Map</a></li>
+    <li><a class="dropdown-item" href="../articles/labels.html">Labels</a></li>
   </ul>
 </li>
       </ul>
@@ -180,6 +181,56 @@ the labels.</p>
 <span></span>
 <span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html" class="external-link">plot_grid</a></span><span class="op">(</span><span class="va">gg1</span>, <span class="va">gg2</span>, nrow <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
 <p><img src="crs_for_map_files/figure-html/unnamed-chunk-5-1.png" width="100%"></p>
+</div>
+<div class="section level2">
+<h2 id="usahex-geogjson-files-and-crs">usahex geogjson files and CRS<a class="anchor" aria-label="anchor" href="#usahex-geogjson-files-and-crs"></a>
+</h2>
+<p>Although the R package data does not require a CRS, the geojson data
+avialable on github does have a CRS. In order to have the geojson files
+‘play nice’ I needed to make updated to the coordinates.</p>
+<p>The original coordinates do not fit onto a map as many hexagon values
+fall outside the lat/long boundaries. I adjusted the coordinates to make
+the hex map smaller and the shifted the map to be in the middle of the
+pacific ocean (based on lat/long coordinates). Finally I added the
+common CRS of WGS 84 / Pseudo-Mercator (<a href="https://epsg.io/3857" class="external-link">EPSG code 3857</a>).</p>
+<p>I’m hoping these adjustments will make the geojson files easy to
+plot.</p>
+<p>You can view the difference in coordinates easily by reviewing any
+state:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">link</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"</span></span>
+<span><span class="va">usa56_gj</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">read_sf</a></span><span class="op">(</span><span class="va">link</span><span class="op">)</span> </span>
+<span><span class="va">usa56</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_coordinates.html">get_coordinates</a></span><span class="op">(</span><span class="st">"usa56"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">usa56_gj</span>, <span class="va">abbr_usps</span> <span class="op">==</span> <span class="st">"AL"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">geometry</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Geometry set for 1 feature </span></span>
+<span><span class="co">#&gt; Geometry type: POLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: -157.4135 ymin: -2.5 xmax: -153.0833 ymax: 2.5</span></span>
+<span><span class="co">#&gt; Projected CRS: WGS 84 / Pseudo-Mercator</span></span>
+<span><span class="co">#&gt; POLYGON ((-155.2484 2.5, -153.0833 1.25, -153.0...</span></span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">usa56</span>,    <span class="va">abbr_usps</span> <span class="op">==</span> <span class="st">"AL"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">geometry</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Geometry set for 1 feature </span></span>
+<span><span class="co">#&gt; Geometry type: POLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: 260.6922 ymin: -220 xmax: 295.3332 ymax: -180</span></span>
+<span><span class="co">#&gt; CRS:           NA</span></span>
+<span><span class="co">#&gt; POLYGON ((278.0127 -180, 295.3332 -190, 295.333...</span></span></code></pre></div>
+<p>The output of either file will look the same (evenly sized hexagons),
+but they will be on different coordinates:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">gg_gj</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">usa56_gj</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">abbr_gpo</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"adj coordinates for geojson files"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gg_pkg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">usa56</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">abbr_gpo</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"default coordiantes from package"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://wilkelab.org/cowplot/reference/plot_grid.html" class="external-link">plot_grid</a></span><span class="op">(</span><span class="va">gg_gj</span>, <span class="va">gg_pkg</span>, nrow <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<p><img src="crs_for_map_files/figure-html/unnamed-chunk-7-1.png" width="100%"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
