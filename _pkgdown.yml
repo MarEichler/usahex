@@ -14,7 +14,7 @@ reference:
   - usa59
   - usaETA
   - usaETAregions
-- title: center point of polygons
+- title: point for labels of polygons
   desc: These data is not required for adding labels to the hexmaps in ggplot2; ggplot2 automatically finds the center of the polygon. 
 - contents: 
   - contains("labels")
@@ -27,7 +27,9 @@ navbar:
       href: articles/available_maps.html
     - text: Geo. Abbr & Info
       href: articles/geography_abbr_and_info.html
-    - text: CRS for Map 
-      href: articles/crs_for_map.html
     - text: Multiple Lables on Hex Map
       href: articles/multiple_labels.html
+    - text: CRS for Map 
+      href: articles/crs_for_map.html
+    - text: Labels
+      href: articles/labels.html

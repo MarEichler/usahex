@@ -63,7 +63,7 @@ In order to 'square' the hexagons based on lat/long coordinates, you need to [up
 **Again,  usahex coordinates are not based on lat/long, a CRS is not required for plotting.** 
 
 
-## Update CRS to Square Hexagons  
+## Update CRS to Square Hexagons
 
 It's possible to 'square' the other hex map by changing the coordinate reference system (CRS) to the WGS 84 / Pseudo-Mercator CRS ([EPSG code 3857](https://epsg.io/3857)).  
 
@@ -129,5 +129,41 @@ gg2 <- ggplot(sf_usahex) +
   theme_void()
 
 plot_grid(gg1, gg2, nrow = 1)
+```
+
+
+## usahex geogjson files and CRS 
+
+Although the R package data does not require a CRS, the geojson data avialable on github does have a CRS.  In order to have the geojson files 'play nice' I needed to make updated to the coordinates.  
+
+The original coordinates do not fit onto a map as many hexagon values fall outside the lat/long boundaries.  I adjusted the coordinates to make the hex map smaller and the shifted the map to be in the middle of the pacific ocean (based on lat/long coordinates).  Finally I added the common CRS of WGS 84 / Pseudo-Mercator ([EPSG code 3857](https://epsg.io/3857)).  
+
+I'm hoping these adjustments will make the geojson files easy to plot.  
+
+You can view the difference in coordinates easily by reviewing any state: 
+
+```{r}
+link <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
+usa56_gj <- sf::read_sf(link) 
+usa56 <- get_coordinates("usa56")
+
+filter(usa56_gj, abbr_usps == "AL") |> pull(geometry)
+filter(usa56,    abbr_usps == "AL") |> pull(geometry)
+```
+
+The output of either file will look the same (evenly sized hexagons), but they will be on different coordinates: 
+
+```{r, out.width = "100%", fig.width = 15, fig.height = 4.5}
+gg_gj <- ggplot(usa56_gj) + 
+  geom_sf() +
+  geom_sf_text(aes(label = abbr_gpo), size = 2.5) + 
+  labs(title = "adj coordinates for geojson files", x = NULL, y = NULL)
+
+gg_pkg <- ggplot(usa56) + 
+  geom_sf() +
+  geom_sf_text(aes(label = abbr_gpo), size = 2.5) + 
+  labs(title = "default coordiantes from package", x = NULL, y = NULL)
+
+plot_grid(gg_gj, gg_pkg, nrow = 1)
 ```
 
