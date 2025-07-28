@@ -24,43 +24,23 @@ There may be instances where you want to include the geography label as well as 
 library(usahex) 
 library(sf)
 library(tidyverse)
-require(rvest)
 ```
 
 
-The code below pulls in population data from Wikipedia using `{rvest}` and the cleans it so it can be used in the hex map.  
 
-```{r}
-url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population" 
-```
+Population Change for the US from 2010 to 2020, pulled from Wikipedia using [this code](https://github.com/MarEichler/usahex/blob/main/data-raw/pop_change_data.R)
 
 ```{r prep-other-data}
-remove_end_brackets <- function(string){
-  first_bracket <- str_locate(string, "\\[")[1]
-  if (is.na(first_bracket)){
-    out <- string 
-  } else {
-    out <- str_sub(string, 1, first_bracket-1)
-  }
-  return(out)
-}
+other_data <- read.csv("https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/us_population_change_2010_to_2020.csv")
 
-wikiTable <- url |> 
-  read_html() |>
-  html_nodes("table") |> 
-  html_table(fill = T)
+title <- "Population Change, 2010 to 2020"
 
-variable_name <- variable.names(wikiTable[[1]])[4]
-title <- paste("Population", remove_end_brackets(variable_name))
-
-other_data <- wikiTable[[1]][-1,] |> 
-  select(name = 1, pop_change = 4) |> 
-  mutate(perc_label = str_replace(pop_change, "−", "-")) |> 
-  mutate(pop_change = as.numeric(str_replace_all(perc_label, "%",  ""))/100) |> 
-  rowwise() |> 
-  mutate(name = remove_end_brackets(name)) |> 
-  ungroup() |> 
-  mutate(name = ifelse(name == "U.S. Virgin Islands",  "Virgin Islands", name)) 
+source <- paste0(
+      "Source (as of ", 
+      format.Date(as.Date("2025-07-28"), '%B %e, %Y'),
+      "):\n", 
+      "en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population"
+)
 ```
 
 
@@ -86,7 +66,7 @@ NA_color <- "grey80"
 scale_colors <- c("#E9A3C9", "#F7F7F7", "#A1D76A") 
 
 ggplot(combined) + 
-  geom_sf(aes(fill = pop_change),     color = NA       ) +  #color (non-NA) hex
+  geom_sf(aes(fill = perc),     color = NA       ) +  #color (non-NA) hex
   geom_sf(    fill = NA,          aes(color = "NA")    ) +  #dummy for NA values 
   geom_sf(    fill = NA,              color = "grey50" ) +  #hex borders 
   geom_sf_text(
@@ -106,7 +86,7 @@ ggplot(combined) +
     , mid  = scale_colors[2]
     , high = scale_colors[3]
     , midpoint = 0
-    , labels = ~sprintf("%1.f%%", 100*.x)
+    , labels = ~sprintf("%1.f%%", .x)
     , na.value = NA_color
   ) + 
   scale_color_manual( #dummy legend for NA color 
@@ -120,12 +100,7 @@ ggplot(combined) +
   ) +
   labs(
     title = title, 
-    caption = paste0(
-      "Source (as of ", 
-      format.Date(Sys.Date(), '%B %e, %Y'),
-      "):\n", 
-      url
-    )
+    caption = source
   ) +
   theme_void()
 ```
