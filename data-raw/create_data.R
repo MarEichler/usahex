@@ -214,7 +214,8 @@ create_sf <- function(coords, metadata){
   gsf <- st_sf(gdat[order(gdat$abbr_usps),], geometry = gcol) 
   
   # add factor levels based on fips code (so consistent across abbreviations and names) 
-  hexsf <- mutate_at(gsf, vars(abbr_usps, abbr_gpo, abbr_ap, name), ~fct_reorder(., as.numeric(fips))) 
+  hexsf <- mutate_at(gsf, vars(abbr_usps, abbr_gpo, abbr_ap, name), ~fct_reorder(., as.numeric(fips))) |> 
+    arrange(geo_type, fips)
   
 }
 

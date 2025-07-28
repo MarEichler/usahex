@@ -7,7 +7,7 @@
 { "type": "Feature", "properties": { "eta_region": 2.0, "eta_region_name": "Region 2", "eta_region_city": "Philadelphia" }, "geometry": { "type": "Point", "coordinates": [ -148.03153391666666, 8.0 ] } },
 { "type": "Feature", "properties": { "eta_region": 3.0, "eta_region_name": "Region 3", "eta_region_city": "Atlanta" }, "geometry": { "type": "Point", "coordinates": [ -154.082146374999979, 1.875 ] } },
 { "type": "Feature", "properties": { "eta_region": 4.0, "eta_region_name": "Region 4", "eta_region_city": "Dallas" }, "geometry": { "type": "Point", "coordinates": [ -166.073725, -0.625 ] } },
-{ "type": "Feature", "properties": { "eta_region": 5.0, "eta_region_name": "Region 5", "eta_region_city": "Chicago" }, "geometry": { "type": "Point", "coordinates": [ -162.39312188, 11.499999982679492 ] } },
+{ "type": "Feature", "properties": { "eta_region": 5.0, "eta_region_name": "Region 5", "eta_region_city": "Chicago" }, "geometry": { "type": "Point", "coordinates": [ -162.39312188, 11.499999982679487 ] } },
 { "type": "Feature", "properties": { "eta_region": 6.0, "eta_region_name": "Region 6", "eta_region_city": "San Francisco" }, "geometry": { "type": "Point", "coordinates": [ -179.06411125, 7.5 ] } }
 ]
 }

@@ -42,5 +42,5 @@ pop_data <- wikiTable[[1]][-1,] |>
   arrange(name)
 
 
-write.csv(pop_data, "us_population_change_2010_to_2020.csv")
+write.csv(pop_data, "data-raw/us_population_change_2010_to_2020.csv")
   
