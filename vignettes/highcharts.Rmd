@@ -1,0 +1,231 @@
+---
+title: "Highcharts"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Highcharts}
+    %\VignetteEncoding{UTF-8}
+    %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup, warning = FALSE, message = FALSE}
+library(usahex) 
+library(tidyverse)
+library(highcharter) 
+
+library(rvest) 
+library(jsonlite) 
+library(rjson)
+```
+
+You can create responsive and interactive plots using [Highcharts](https://www.highcharts.com/).  I will be showing how to create a hex map highchart object using **usahex** and [highchater](https://jkunst.com/highcharter/).  
+
+
+## Get Data 
+
+### Data to Dispaly 
+
+Population Change for the US from 2010 to 2020, pulled from Wikipedia using [this code](https://github.com/MarEichler/usahex/blob/main/data-raw/pop_change_data.R)
+
+```{r prep-other-data}
+other_data <- read.csv("https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/us_population_change_2010_to_2020.csv")
+```
+
+### Map Coordinates 
+
+highcharter only works with geojson/json so it'a easies to import the geojson file from github
+
+```{r}
+link <- "https://raw.githubusercontent.com/MarEichler/usahex/refs/heads/main/data-raw/geojson/usa56.geojson"
+hex_map <- fromJSON(file = link)
+# need jsonlite AND rjson package for this code to work 
+```
+
+
+## Highchart Hex Map 
+
+### Prep for Map 
+
+Prep the display data. 
+
+```{r}
+values_to_plot <-other_data |> 
+  # create new variables 
+  mutate(
+    category = cut(
+      perc,
+      breaks = c( -20, -10 , -5, 5, 10, 20),
+      labels = c("less than -10%", "-10% to -5%", "-5% to 5%", "5% to 10%", "more than 10%"),
+    ),
+    # recreate perc_label so only 1 digit
+    perc_label = scales::comma(perc, accuracy = 0.1, suffix = "%"),
+    #  variable did population inc/decrease
+    inc_dec = case_when(
+      n == 0 ~ "did not change",
+      n > 0 ~ "increased",
+      n < 0 ~ "decreased"
+    )
+  ) |> 
+  # join with geo abbr & info 
+  right_join(
+    sf::st_drop_geometry(usahex::get_coordinates("usa56")), 
+    by = "name"
+  ) |> 
+  # create and style the tool tip
+  mutate(
+    tooltip = paste0(
+      "<b>", name, "</b><br>", 
+      "Population <b>",inc_dec, "</b> by ", scales::comma(abs(n)), 
+      " people (", 
+       scales::comma(abs(perc), accuracy = 0.1, suffix = "%"), 
+      ") from 2010 to 2020"
+    )
+  )
+```
+
+
+Prep for highchart object
+
+```{r}
+map_theme <- hc_theme(
+  chart = list(style = list(fontFamily = "Arial", color = "#666666")),
+  title = list(
+    style = list(
+      fontFamily = "Arial",
+      fontWeight = "bold",
+      color = "black",
+      fontSize   = "30px"
+      )
+    )
+  )
+
+color_scale <- c("#D01C8B", "#F1B6DA", "#F7F7F7", "#B8E186","#4DAC26")
+
+min_map <- min(values_to_plot$perc, na.rm = TRUE)
+max_map <- max(values_to_plot$perc, na.rm = TRUE)
+```
+
+
+### Hex Map: Continous Variable
+
+
+```{r}
+highchart() |> 
+  hc_add_series_map(
+    map = hex_map,
+    df = values_to_plot, 
+    joinBy = "name",
+    value = "perc", 
+    dataLabels = list(
+      enabled = TRUE,
+      useHTML = TRUE,
+      formatter = JS(
+      "function() {return '<div style=\"text-align:center;\">' +
+      '<span style=\"font-weight:bold;\">' + this.point.abbr_gpo + 
+      '</span><br>' +
+      '<span style=\"font-weight:normal;font-size: 0.85em;\">' + 
+      this.point.perc_label + '</span>' +
+      '</div>';}"
+      )
+    ),
+    nullColor = "#e8e8e8",
+    accessibility = list(
+      point = list(
+        valueDescriptionFormat = 
+          "geography: {point.name}, value of interest: {point.pop_change:.1f}"
+      )
+    )
+  ) |>
+  # style hc object
+  hc_colorAxis(
+    min = min_map,
+    max =  max_map,
+    stops = color_stops(5, color_scale),
+    labels = list(format = "{value}%")
+    ) |>
+  hc_legend(
+    align = "right",
+    layout = "vertical",
+    verticalAlign = "bottom"
+  ) |>
+  # add title and tool tips
+  hc_title(text = "Population Change, 2010 to 2020") |>
+  hc_tooltip(
+    formatter = JS("function(){return(this.point.tooltip)}"),
+    outside = TRUE
+  ) |>
+  # add theme
+  hc_add_theme(map_theme)
+```
+
+
+### Hex Map: Discrete Variable
+
+Highcharter does not work automatically with discrete variables in the same way as ggplot.  In order to plot discrete variables on a highchater hex map, you need to section off the data and add each category individually.  
+
+
+```{r}
+add_cat_to_hex_map <- function(hc, df, cat, color){
+
+hc |> 
+  hc_add_series(
+    name = cat, 
+    data = filter(df, category == cat), 
+    dataLabels = list(
+      enabled = TRUE,
+      useHTML = TRUE,
+      formatter = JS("function() {return '<div style=\"text-align:center;\">' +
+        '<span style=\"font-weight:bold;\">' + this.point.abbr_gpo + 
+        '</span><br>' +
+        '<span style=\"font-weight:normal;font-size: 0.85em;\">' + 
+        this.point.perc_label + '</span>' +
+        '</div>';}")
+    ),
+    color = color, 
+    accessibility = list(
+      point = list(
+        valueDescriptionFormat = "geography: {point.name}, value of interest: {point.pop_change:.1f}"
+      )
+    )
+  )
+  
+}
+```
+
+```{r}
+highchart(type = "map") |> 
+  hc_plotOptions(map = list(
+    allAreas = FALSE,
+    joinBy = c("name"),
+    mapData = hex_map
+  )) |> 
+  add_cat_to_hex_map(values_to_plot, "less than -10%", color = color_scale[1]) |> 
+  add_cat_to_hex_map(values_to_plot, "-10% to 5%"    , color = color_scale[2]) |> 
+  add_cat_to_hex_map(values_to_plot, "-5% to 5%"     , color = color_scale[3]) |> 
+  add_cat_to_hex_map(values_to_plot, "5% to 10%"     , color = color_scale[4]) |> 
+  add_cat_to_hex_map(values_to_plot, "more than 10%" , color = color_scale[5]) |> 
+  hc_legend(
+    align = "right",
+    layout = "horizontal",
+    verticalAlign = "bottom"
+  ) |> 
+  # add title and tool tips 
+  hc_title(text = "Population Change, 2010 to 2020") |> 
+  hc_tooltip(
+    formatter = JS("function(){return(this.point.tooltip)}"),
+    outside = TRUE
+  ) |> 
+  # add theme
+  hc_add_theme(map_theme)
+```
+
+

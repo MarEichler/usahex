@@ -33,3 +33,5 @@ navbar:
       href: articles/crs_for_map.html
     - text: Labels
       href: articles/labels.html
+    - text: Highcharts
+      href: articles/highcharts.html
